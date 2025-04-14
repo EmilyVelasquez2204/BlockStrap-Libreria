@@ -1,1 +1,1 @@
-# BlockStrap-Libreria
+BlockStrap es una librería de estilos inspirada en la estética visual de Minecraft. Incluye componentes personalizables como botones, formularios y tarjetas con un diseño pixelado y una paleta de colores temática, ideal para sitios web con un estilo retro o creativo.# BlockStrap-Libreria
