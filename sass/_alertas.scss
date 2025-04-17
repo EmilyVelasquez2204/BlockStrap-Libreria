@@ -1,0 +1,39 @@
+
+// ======= ALERTAS ESTILO MINECRAFT =======
+
+// Alerta base
+.alert {
+    padding: 1rem;
+    border-radius: 4px;
+    font-family: 'Press Start 2P', cursive;
+    color: white;
+    margin-bottom: 1rem;
+    box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.4);
+  }
+  
+  // Creeper (verde explosivo)
+  .alert-creeper {
+    background-color: #3A5E0E;         // Verde oscuro creeper
+    border: 3px solid #5E7C16;         // Verde claro contorno
+  }
+  
+  // Zombie (verde putrefacto)
+  .alert-zombie {
+    background-color: #4A7A3D;         // Verde mohoso
+    border: 3px solid #264d28;         // Verde muy oscuro
+  }
+  
+  // Skeleton (gris hueso)
+  .alert-skeleton {
+    background-color: #AAAAAA;         // Gris claro
+    color: #111;                       // Texto negro
+    border: 3px solid #7D7D7D;         // Gris oscuro
+  }
+  
+  // Enderman (púrpura místico)
+  .alert-enderman {
+    background-color: #2B0033;         // Púrpura oscuro
+    border: 3px solid #8A2BE2;         // Púrpura brillante
+    color: #E0D4FF;                    // Texto lila claro
+  }
+  
