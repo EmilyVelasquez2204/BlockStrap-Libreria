@@ -10,6 +10,7 @@ $verde-lodoso: #4B5632;
 $blanco-azulado: #F4F8FB;
 $azul-profundo:#3D5B94;
 $turquesa-brillante:#38D2C5;
+$azul-mar: #5555FF;
 
 //Minerales y bloques
 
@@ -29,29 +30,17 @@ $naranja-lava: #FF6A00;
 $beige-palido: #E3E39C;
 $purpura-oscuro: #1A0A24;
 
+//Animales
+$gris-lobo: #B3B3B3;
+$crema-gato: #EAD2AC;
+$marron-caballo:#8B5A2B;
+$marron-vaca:  mix(#3F2A19, #8C6E50, 50%);
 //criaturas
 $verde-neon: #5FC22E;
-$negro-purpura: #1C1C1C + #9441E3;
+$negro-purpura: mix(#1C1C1C, #9441E3, 50%);
 $verde-gel: #B3F26E;
 $amarillo-fuego: #F8C03A;
-$gris-fantasma:#3A3A3A;
+$gris-fantasma:#414040;
+$rosa-ajolote: #F9C7DC;
+$palido-fantasma: #EDEDED;
 
-
-$color-claro: (
-    "exito": $exito,
-    "avertencia": $advertencia,
-    "informacion": $informacion,
-    "claro": $claro,
-    "primario": $primario,
-    "terciario": $terciario,
-
-
-)
- 
-$color-oscuro(
-    "peligro": $peligro,
-    "oscuro": $oscuro,
-    "secundario": $secundario,
-    "terciario": $terciario,
-
-)

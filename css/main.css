@@ -1,0 +1,323 @@
+.btn-mar {
+  width: 110px;
+  height: 66px;
+  background-color: #5555FF;
+  color: white;
+  border: none;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn-mar:hover {
+  background-color: #2222ff;
+  color: white;
+}
+.btn-mar:active {
+  background-color: #0000ee;
+  color: white;
+}
+
+.btn-arena {
+  width: 110px;
+  height: 66px;
+  background-color: #F0E68C;
+  color: white;
+  border: none;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn-arena:hover {
+  background-color: rgb(234.1153846154, 220.1923076923, 94.8846153846);
+  color: white;
+}
+.btn-arena:active {
+  background-color: rgb(228.2307692308, 210.3846153846, 49.7692307692);
+  color: white;
+}
+
+.btn-tierra {
+  width: 110px;
+  height: 66px;
+  background-color: #835C3B;
+  color: rgb(218.9789473684, 195.1684210526, 175.0210526316);
+  border: none;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn-tierra:hover {
+  background-color: rgb(95.8368421053, 67.3052631579, 43.1631578947);
+  color: rgb(250.6526315789, 247.7789473684, 245.3473684211);
+}
+.btn-tierra:active {
+  background-color: rgb(60.6736842105, 42.6105263158, 27.3263157895);
+  color: white;
+}
+
+.btn-hoja {
+  width: 110px;
+  height: 66px;
+  background-color: #3A7425;
+  color: #a0da8b;
+  border: none;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn-hoja:hover {
+  background-color: rgb(38.6666666667, 77.3333333333, 24.6666666667);
+  color: rgb(223.3333333333, 242.6666666667, 216.3333333333);
+}
+.btn-hoja:active {
+  background-color: rgb(19.3333333333, 38.6666666667, 12.3333333333);
+  color: white;
+}
+
+.btn-TNT {
+  width: 110px;
+  height: 66px;
+  background-color: #E03E3E;
+  color: rgb(252.2321428571, 237.7678571429, 237.7678571429);
+  border: none;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn-TNT:hover {
+  background-color: rgb(202.4776785714, 32.5223214286, 32.5223214286);
+  color: white;
+}
+.btn-TNT:active {
+  background-color: rgb(158.5357142857, 25.4642857143, 25.4642857143);
+  color: white;
+}
+
+.btn-oro {
+  width: 110px;
+  height: 66px;
+  background-color: #FCEE4B;
+  color: white;
+  border: none;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn-oro:hover {
+  background-color: rgb(251.1639344262, 233.262295082, 24.8360655738);
+  color: white;
+}
+.btn-oro:active {
+  background-color: rgb(221.3114754098, 204.0983606557, 3.6885245902);
+  color: white;
+}
+
+.btn-diamante {
+  width: 110px;
+  height: 66px;
+  background-color: #41C6EC;
+  color: rgb(250.4545454545, 253.6363636364, 254.5454545455);
+  border: none;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn-diamante:hover {
+  background-color: rgb(22.7272727273, 181.8181818182, 227.2727272727);
+  color: white;
+}
+.btn-diamante:active {
+  background-color: rgb(18.0909090909, 144.7272727273, 180.9090909091);
+  color: white;
+}
+
+.btn-piedraDelEnd {
+  width: 110px;
+  height: 66px;
+  background-color: #E3E39C;
+  color: white;
+  border: none;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn-piedraDelEnd:hover {
+  background-color: rgb(215.7559055118, 215.7559055118, 116.2440944882);
+  color: white;
+}
+.btn-piedraDelEnd:active {
+  background-color: rgb(204.5118110236, 204.5118110236, 76.4881889764);
+  color: white;
+}
+
+.btn-obsidiana {
+  width: 110px;
+  height: 66px;
+  background-color: #1A0A24;
+  color: rgb(141.3043478261, 54.347826087, 195.652173913);
+  border: none;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn-obsidiana:hover {
+  background-color: black;
+  color: rgb(186.3043478261, 131.347826087, 220.652173913);
+}
+.btn-obsidiana:active {
+  background-color: black;
+  color: rgb(208.4782608696, 171.2608695652, 231.7391304348);
+}
+
+.btn-xs-axolote {
+  width: 60px;
+  height: 36px;
+  background-color: #F9C7DC;
+  color: white;
+  border: none;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn-xs-axolote:hover {
+  background-color: rgb(244.064516129, 152.935483871, 191.2096774194);
+  color: white;
+}
+.btn-xs-axolote:active {
+  background-color: rgb(239.1290322581, 106.8709677419, 162.4193548387);
+  color: white;
+}
+
+.btn-sm-gato {
+  width: 110px;
+  height: 66px;
+  background-color: #EAD2AC;
+  color: white;
+  border: none;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn-sm-gato:hover {
+  background-color: rgb(223.7019230769, 187.9326923077, 131.2980769231);
+  color: white;
+}
+.btn-sm-gato:active {
+  background-color: rgb(213.4038461538, 165.8653846154, 90.5961538462);
+  color: white;
+}
+
+.btn-md-lobo {
+  width: 140px;
+  height: 84px;
+  background-color: #B3B3B3;
+  color: white;
+  border: none;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn-md-lobo:hover {
+  background-color: rgb(153.5, 153.5, 153.5);
+  color: white;
+}
+.btn-md-lobo:active {
+  background-color: gray;
+  color: white;
+}
+
+.btn-lg-caballo {
+  width: 180px;
+  height: 108px;
+  background-color: #8B5A2B;
+  color: rgb(225.7032967033, 192.3186813187, 160.2967032967);
+  border: none;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn-lg-caballo:hover {
+  background-color: rgb(100.0494505495, 64.7802197802, 30.9505494505);
+  color: rgb(249.8021978022, 243.8791208791, 238.1978021978);
+}
+.btn-lg-caballo:active {
+  background-color: rgb(61.0989010989, 39.5604395604, 18.9010989011);
+  color: white;
+}
+
+.btn-xl-vaca {
+  width: 220px;
+  height: 132px;
+  background-color: rgb(101.5, 76, 52.5);
+  color: rgb(203.1818181818, 178.012987013, 154.8181818182);
+  border: none;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn-xl-vaca:hover {
+  background-color: rgb(67.8863636364, 50.8311688312, 35.1136363636);
+  color: rgb(237.9545454545, 229.6753246753, 222.0454545455);
+}
+.btn-xl-vaca:active {
+  background-color: rgb(34.2727272727, 25.6623376623, 17.7272727273);
+  color: white;
+}
+
+/*# sourceMappingURL=main.css.map */
