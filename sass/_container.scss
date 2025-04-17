@@ -1,0 +1,82 @@
+// ======= BREAKPOINTS PARA RESPONSIVE DESIGN =======
+$breakpoint-sm: 576px;   // Celulares
+$breakpoint-md: 768px;   // Tablets
+$breakpoint-lg: 992px;   // Escritorio
+
+// ======= ESTILO BASE DE TODOS LOS CONTAINERS =======
+.container {
+  width: 100%;               // Ocupa todo el ancho disponible
+  margin-left: auto;         // Centrado horizontal
+  margin-right: auto;        // Centrado horizontal
+  padding: 1rem;             // Espaciado interno
+  box-sizing: border-box;    // El padding y border se incluyen en el tamaño total
+}
+
+// ======= CONTAINER: OVERWORLD (Pasto y tierra) =======
+.container-overworld {
+  background-color: #5E7C16;               // Fondo verde (césped)
+  border: 5px solid #8B5A2B;               // Borde marrón (tierra)
+  box-shadow: 4px 4px 0 #3A5E0E;           // Sombra verde oscura para simular profundidad
+  font-family: 'Press Start 2P', cursive;  // Fuente estilo pixel-art
+  border-radius: 8px;                      // Bordes redondeados
+  color: white;                            // Texto en blanco
+
+  // Breakpoint para celular
+  @media (min-width: $breakpoint-sm) {
+    max-width: 540px;                      // Ancho máximo en pantallas pequeñas
+  }
+
+  // Breakpoint para tablet
+  @media (min-width: $breakpoint-md) {
+    max-width: 720px;                      // Ancho máximo en pantallas medianas
+  }
+
+  // Breakpoint para escritorio
+  @media (min-width: $breakpoint-lg) {
+    max-width: 960px;                      // Ancho máximo en pantallas grandes
+  }
+}
+
+// ======= CONTAINER: NETHER (Rojo fuego e infierno) =======
+.container-nether {
+  background-color: #6C0000;               // Fondo rojo oscuro
+  border: 5px dashed #FF4500;              // Borde naranja en estilo "fuego"
+  box-shadow: 4px 4px 0 #300000;           // Sombra negra para simular profundidad infernal
+  font-family: 'Press Start 2P', cursive;  // Fuente estilo pixel
+  color: #FFEEDD;                          // Texto en color crema claro
+  border-radius: 8px;                      // Bordes redondeados
+
+  @media (min-width: $breakpoint-sm) {
+    max-width: 540px;                      // Responsive en celulares
+  }
+
+  @media (min-width: $breakpoint-md) {
+    max-width: 720px;                      // Responsive en tablets
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    max-width: 960px;                      // Responsive en escritorio
+  }
+}
+
+// ======= CONTAINER: THE END (Púrpura y obsidiana) =======
+.container-end {
+  background-color: #2B0033;               // Fondo púrpura muy oscuro
+  border: 5px dotted #8A2BE2;              // Borde punteado con púrpura brillante
+  box-shadow: 4px 4px 0 #1A001F;           // Sombra oscura simulando obsidiana
+  font-family: 'Press Start 2P', cursive;  // Fuente retro
+  color: #E0D4FF;                          // Texto lila claro
+  border-radius: 8px;                      // Bordes redondeados
+
+  @media (min-width: $breakpoint-sm) {
+    max-width: 540px;                      // Responsive en celulares
+  }
+
+  @media (min-width: $breakpoint-md) {
+    max-width: 720px;                      // Responsive en tablets
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    max-width: 960px;                      // Responsive en escritorio
+  }
+}
