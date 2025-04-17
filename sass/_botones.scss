@@ -1,10 +1,36 @@
 @use 'paleta' as p;
 
-$extra-small:20px;
+$xs:20px;
 $small: 50px;
 $medium: 150px;
 $large: 220px;
-$extra-large:300px;
+$xl:300px;
 
+@mixin boton-minecraft($nombre, $size, $color) {
+    .btn-#{$nombre} {
+      width: $size;
+      height: $size - ($size / 2.5);
+      background-color: $color;
+      color: lighten($color, 40%);
+      border: none;
+      border-radius: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+  
+      &:hover {
+        background-color: darken($color, 10%);
+        color: lighten($color, 60%);
+      }
+  
+      &:active {
+        background-color: darken($color, 20%);
+        color: lighten($color, 70%);
+      }
+    }
+  }
 
 
