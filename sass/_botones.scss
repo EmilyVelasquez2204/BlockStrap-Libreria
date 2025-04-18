@@ -8,53 +8,103 @@ $xl:220px;
 
 
 
-
-
-@mixin boton-minecraft($nombre, $size, $color) {
-    .btn-#{$nombre} {
-      width: $size;
-      height: $size - ($size / 2.5);
-      background-color: $color;
-      color: lighten($color, 40%);
-      border: none;
-      border-radius: 2px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-weight: bold;
-      cursor: pointer;
-      transition: 0.3s;
-     
-      
-
-      &:hover {
-        background-color: darken($color, 10%);
-        color: lighten($color, 60%);
-      }
+.panel {
+  background-color: p.$color-panel;
+  border: 3px solid p.$color-borde;
+  border-radius: 8px;
+  width: 400px;
   
-      &:active {
-        background-color: darken($color, 20%);
-        color: lighten($color, 70%);
+  padding: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+
+  h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: p.$color-texto;
+  }
+
+  .m-5 {
+    margin: 20px 0;
+    font-family: monospace;
+    background-color: darken(p.$color-panel, 10%);
+    padding: 10px;
+    border-left: 4px solid lighten(p.$color-borde, 10%);
+    overflow-x: auto;
+    color: p.$color-texto;
+
+    span {
+      color: p.$color-atributo;
+
+      &:first-child,
+      &:last-child {
+        color: p.$color-etiqueta;
       }
     }
   }
+}
+@mixin boton-minecraft($nombre, $size, $color-claro, $color) {
+  
+  $text-color: null;
+  $hover-bg: null;
+  $hover-text: null;
+  $active-bg: null;
+  $active-text: null;
+
+  @if $color-claro {
+    $text-color: darken($color, 40%);
+    $hover-bg: darken($color, 10%);
+    $hover-text: darken($color, 40%);
+    $active-bg: darken($color, 20%);
+    $active-text: darken($color, 70%);
+  } @else {
+    $text-color: lighten($color, 40%);
+    $hover-bg: lighten($color, 10%);
+    $hover-text: lighten($color, 60%);
+    $active-bg: lighten($color, 20%);
+    $active-text: lighten($color, 70%);
+  }
+
+  .btn-#{$nombre} {
+    width: $size;
+    height: $size - ($size / 2.5);
+    background-color: $color;
+    color: $text-color;
+    border: none;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      background-color: $hover-bg;
+      color: $hover-text;
+    }
+
+    &:active {
+      background-color: $active-bg;
+      color: $active-text;
+    }
+  }
+}
+
 
   
- @include boton-minecraft(mar,$small,p.$azul-mar);
- @include boton-minecraft(arena,$small, p.$arena-clara);
-@include boton-minecraft(tierra,$small,p.$marron-tierra );
-  @include boton-minecraft(hoja,$small, p.$verde-hoja);
-@include boton-minecraft(TNT,$small, p.$rojo-explosivo);
-@include boton-minecraft(oro,$small, p.$amarillo-oro);
-@include boton-minecraft(diamante,$small, p.$azul-diamante);
-@include boton-minecraft(piedraDelEnd,$small, p.$beige-palido);
-@include boton-minecraft(obsidiana,$small, p.$purpura-oscuro);
+@include boton-minecraft(sm-mar, $small, false, p.$azul-mar);
+@include boton-minecraft(sm-arena, $small, true, p.$arena-clara);
+@include boton-minecraft(sm-tierra, $small, false, p.$marron-tierra);
+@include boton-minecraft(sm-hoja, $small, false, p.$verde-hoja);
+@include boton-minecraft(sm-TNT, $small, false, p.$rojo-explosivo);
+@include boton-minecraft(sm-oro, $small, true, p.$amarillo-oro);
+@include boton-minecraft(sm-diamante, $small, false, p.$azul-diamante);
+@include boton-minecraft(sm-piedraDelEnd, $small, true, p.$beige-palido);
+@include boton-minecraft(sm-obsidiana, $small, false, p.$purpura-oscuro);
 
-
-@include boton-minecraft(xs-axolote, $xs, p.$rosa-ajolote);
-@include boton-minecraft(sm-gato, $small, p.$crema-gato);
-@include boton-minecraft(md-lobo, $medium, p.$gris-lobo);
-@include boton-minecraft(lg-caballo, $large, p.$marron-caballo);
-@include boton-minecraft(xl-vaca, $xl, p.$marron-vaca);
-
+@include boton-minecraft(xs-axolote, $xs, true, p.$rosa-ajolote);
+@include boton-minecraft(sm-gato, $small, true, p.$crema-gato);
+@include boton-minecraft(md-lobo, $medium, true, p.$gris-lobo);
+@include boton-minecraft(lg-caballo, $large, false, p.$marron-caballo);
+@include boton-minecraft(xl-vaca, $xl, false, p.$marron-vaca);
 

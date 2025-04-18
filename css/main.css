@@ -1,10 +1,39 @@
-.btn-mar {
+.panel {
+  background-color: #2d2d2d;
+  border: 3px solid #555;
+  border-radius: 8px;
+  width: 400px;
+  padding: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+.panel h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #ffffff;
+}
+.panel .m-5 {
+  margin: 20px 0;
+  font-family: monospace;
+  background-color: rgb(19.5, 19.5, 19.5);
+  padding: 10px;
+  border-left: 4px solid rgb(110.5, 110.5, 110.5);
+  overflow-x: auto;
+  color: #ffffff;
+}
+.panel .m-5 span {
+  color: #00ffff;
+}
+.panel .m-5 span:first-child, .panel .m-5 span:last-child {
+  color: #ff5555;
+}
+
+.btn-sm-mar {
   width: 110px;
   height: 66px;
   background-color: #5555FF;
   color: white;
   border: none;
-  border-radius: 2px;
+  border-radius: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,22 +41,22 @@
   cursor: pointer;
   transition: 0.3s;
 }
-.btn-mar:hover {
-  background-color: #2222ff;
+.btn-sm-mar:hover {
+  background-color: #8888ff;
   color: white;
 }
-.btn-mar:active {
-  background-color: #0000ee;
+.btn-sm-mar:active {
+  background-color: #bbbbff;
   color: white;
 }
 
-.btn-arena {
+.btn-sm-arena {
   width: 110px;
   height: 66px;
   background-color: #F0E68C;
-  color: white;
+  color: rgb(155.6923076923, 142.1538461538, 20.3076923077);
   border: none;
-  border-radius: 2px;
+  border-radius: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -35,22 +64,22 @@
   cursor: pointer;
   transition: 0.3s;
 }
-.btn-arena:hover {
+.btn-sm-arena:hover {
   background-color: rgb(234.1153846154, 220.1923076923, 94.8846153846);
-  color: white;
+  color: rgb(155.6923076923, 142.1538461538, 20.3076923077);
 }
-.btn-arena:active {
+.btn-sm-arena:active {
   background-color: rgb(228.2307692308, 210.3846153846, 49.7692307692);
-  color: white;
+  color: rgb(20.3461538462, 18.5769230769, 2.6538461538);
 }
 
-.btn-tierra {
+.btn-sm-tierra {
   width: 110px;
   height: 66px;
   background-color: #835C3B;
   color: rgb(218.9789473684, 195.1684210526, 175.0210526316);
   border: none;
-  border-radius: 2px;
+  border-radius: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -58,22 +87,22 @@
   cursor: pointer;
   transition: 0.3s;
 }
-.btn-tierra:hover {
-  background-color: rgb(95.8368421053, 67.3052631579, 43.1631578947);
+.btn-sm-tierra:hover {
+  background-color: rgb(166.1631578947, 116.6947368421, 74.8368421053);
   color: rgb(250.6526315789, 247.7789473684, 245.3473684211);
 }
-.btn-tierra:active {
-  background-color: rgb(60.6736842105, 42.6105263158, 27.3263157895);
+.btn-sm-tierra:active {
+  background-color: rgb(187.3052631579, 142.5578947368, 104.6947368421);
   color: white;
 }
 
-.btn-hoja {
+.btn-sm-hoja {
   width: 110px;
   height: 66px;
   background-color: #3A7425;
   color: #a0da8b;
   border: none;
-  border-radius: 2px;
+  border-radius: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -81,22 +110,22 @@
   cursor: pointer;
   transition: 0.3s;
 }
-.btn-hoja:hover {
-  background-color: rgb(38.6666666667, 77.3333333333, 24.6666666667);
+.btn-sm-hoja:hover {
+  background-color: rgb(77.3333333333, 154.6666666667, 49.3333333333);
   color: rgb(223.3333333333, 242.6666666667, 216.3333333333);
 }
-.btn-hoja:active {
-  background-color: rgb(19.3333333333, 38.6666666667, 12.3333333333);
+.btn-sm-hoja:active {
+  background-color: rgb(96.6666666667, 193.3333333333, 61.6666666667);
   color: white;
 }
 
-.btn-TNT {
+.btn-sm-TNT {
   width: 110px;
   height: 66px;
   background-color: #E03E3E;
   color: rgb(252.2321428571, 237.7678571429, 237.7678571429);
   border: none;
-  border-radius: 2px;
+  border-radius: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -104,22 +133,22 @@
   cursor: pointer;
   transition: 0.3s;
 }
-.btn-TNT:hover {
-  background-color: rgb(202.4776785714, 32.5223214286, 32.5223214286);
+.btn-sm-TNT:hover {
+  background-color: rgb(231.0580357143, 105.9419642857, 105.9419642857);
   color: white;
 }
-.btn-TNT:active {
-  background-color: rgb(158.5357142857, 25.4642857143, 25.4642857143);
+.btn-sm-TNT:active {
+  background-color: rgb(238.1160714286, 149.8839285714, 149.8839285714);
   color: white;
 }
 
-.btn-oro {
+.btn-sm-oro {
   width: 110px;
   height: 66px;
   background-color: #FCEE4B;
-  color: white;
+  color: rgb(120.9836065574, 111.5737704918, 2.0163934426);
   border: none;
-  border-radius: 2px;
+  border-radius: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -127,22 +156,22 @@
   cursor: pointer;
   transition: 0.3s;
 }
-.btn-oro:hover {
+.btn-sm-oro:hover {
   background-color: rgb(251.1639344262, 233.262295082, 24.8360655738);
-  color: white;
+  color: rgb(120.9836065574, 111.5737704918, 2.0163934426);
 }
-.btn-oro:active {
+.btn-sm-oro:active {
   background-color: rgb(221.3114754098, 204.0983606557, 3.6885245902);
-  color: white;
+  color: black;
 }
 
-.btn-diamante {
+.btn-sm-diamante {
   width: 110px;
   height: 66px;
   background-color: #41C6EC;
   color: rgb(250.4545454545, 253.6363636364, 254.5454545455);
   border: none;
-  border-radius: 2px;
+  border-radius: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -150,22 +179,22 @@
   cursor: pointer;
   transition: 0.3s;
 }
-.btn-diamante:hover {
-  background-color: rgb(22.7272727273, 181.8181818182, 227.2727272727);
+.btn-sm-diamante:hover {
+  background-color: rgb(111.3636363636, 211.9090909091, 240.6363636364);
   color: white;
 }
-.btn-diamante:active {
-  background-color: rgb(18.0909090909, 144.7272727273, 180.9090909091);
+.btn-sm-diamante:active {
+  background-color: rgb(157.7272727273, 225.8181818182, 245.2727272727);
   color: white;
 }
 
-.btn-piedraDelEnd {
+.btn-sm-piedraDelEnd {
   width: 110px;
   height: 66px;
   background-color: #E3E39C;
-  color: white;
+  color: rgb(139.5354330709, 139.5354330709, 39.4645669291);
   border: none;
-  border-radius: 2px;
+  border-radius: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -173,22 +202,22 @@
   cursor: pointer;
   transition: 0.3s;
 }
-.btn-piedraDelEnd:hover {
+.btn-sm-piedraDelEnd:hover {
   background-color: rgb(215.7559055118, 215.7559055118, 116.2440944882);
-  color: white;
+  color: rgb(139.5354330709, 139.5354330709, 39.4645669291);
 }
-.btn-piedraDelEnd:active {
+.btn-sm-piedraDelEnd:active {
   background-color: rgb(204.5118110236, 204.5118110236, 76.4881889764);
-  color: white;
+  color: rgb(20.2677165354, 20.2677165354, 5.7322834646);
 }
 
-.btn-obsidiana {
+.btn-sm-obsidiana {
   width: 110px;
   height: 66px;
   background-color: #1A0A24;
   color: rgb(141.3043478261, 54.347826087, 195.652173913);
   border: none;
-  border-radius: 2px;
+  border-radius: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -196,12 +225,12 @@
   cursor: pointer;
   transition: 0.3s;
 }
-.btn-obsidiana:hover {
-  background-color: black;
+.btn-sm-obsidiana:hover {
+  background-color: rgb(54.8260869565, 21.0869565217, 75.9130434783);
   color: rgb(186.3043478261, 131.347826087, 220.652173913);
 }
-.btn-obsidiana:active {
-  background-color: black;
+.btn-sm-obsidiana:active {
+  background-color: rgb(83.652173913, 32.1739130435, 115.8260869565);
   color: rgb(208.4782608696, 171.2608695652, 231.7391304348);
 }
 
@@ -209,9 +238,9 @@
   width: 60px;
   height: 36px;
   background-color: #F9C7DC;
-  color: white;
+  color: rgb(220.3870967742, 23.6129032258, 106.2580645161);
   border: none;
-  border-radius: 2px;
+  border-radius: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -221,20 +250,20 @@
 }
 .btn-xs-axolote:hover {
   background-color: rgb(244.064516129, 152.935483871, 191.2096774194);
-  color: white;
+  color: rgb(220.3870967742, 23.6129032258, 106.2580645161);
 }
 .btn-xs-axolote:active {
   background-color: rgb(239.1290322581, 106.8709677419, 162.4193548387);
-  color: white;
+  color: rgb(82.1935483871, 8.8064516129, 39.6290322581);
 }
 
 .btn-sm-gato {
   width: 110px;
   height: 66px;
   background-color: #EAD2AC;
-  color: white;
+  color: rgb(161.2115384615, 114.5961538462, 40.7884615385);
   border: none;
-  border-radius: 2px;
+  border-radius: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -244,20 +273,20 @@
 }
 .btn-sm-gato:hover {
   background-color: rgb(223.7019230769, 187.9326923077, 131.2980769231);
-  color: white;
+  color: rgb(161.2115384615, 114.5961538462, 40.7884615385);
 }
 .btn-sm-gato:active {
   background-color: rgb(213.4038461538, 165.8653846154, 90.5961538462);
-  color: white;
+  color: rgb(39.1057692308, 27.7980769231, 9.8942307692);
 }
 
 .btn-md-lobo {
   width: 140px;
   height: 84px;
   background-color: #B3B3B3;
-  color: white;
+  color: #4d4d4d;
   border: none;
-  border-radius: 2px;
+  border-radius: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -267,11 +296,11 @@
 }
 .btn-md-lobo:hover {
   background-color: rgb(153.5, 153.5, 153.5);
-  color: white;
+  color: #4d4d4d;
 }
 .btn-md-lobo:active {
   background-color: gray;
-  color: white;
+  color: rgb(0.5, 0.5, 0.5);
 }
 
 .btn-lg-caballo {
@@ -280,7 +309,7 @@
   background-color: #8B5A2B;
   color: rgb(225.7032967033, 192.3186813187, 160.2967032967);
   border: none;
-  border-radius: 2px;
+  border-radius: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -289,11 +318,11 @@
   transition: 0.3s;
 }
 .btn-lg-caballo:hover {
-  background-color: rgb(100.0494505495, 64.7802197802, 30.9505494505);
+  background-color: rgb(177.9505494505, 115.2197802198, 55.0494505495);
   color: rgb(249.8021978022, 243.8791208791, 238.1978021978);
 }
 .btn-lg-caballo:active {
-  background-color: rgb(61.0989010989, 39.5604395604, 18.9010989011);
+  background-color: rgb(201.6043956044, 140.7582417582, 82.3956043956);
   color: white;
 }
 
@@ -303,7 +332,7 @@
   background-color: rgb(101.5, 76, 52.5);
   color: rgb(203.1818181818, 178.012987013, 154.8181818182);
   border: none;
-  border-radius: 2px;
+  border-radius: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -312,11 +341,11 @@
   transition: 0.3s;
 }
 .btn-xl-vaca:hover {
-  background-color: rgb(67.8863636364, 50.8311688312, 35.1136363636);
+  background-color: rgb(135.1136363636, 101.1688311688, 69.8863636364);
   color: rgb(237.9545454545, 229.6753246753, 222.0454545455);
 }
 .btn-xl-vaca:active {
-  background-color: rgb(34.2727272727, 25.6623376623, 17.7272727273);
+  background-color: rgb(168.4090909091, 126.3506493506, 87.5909090909);
   color: white;
 }
 
