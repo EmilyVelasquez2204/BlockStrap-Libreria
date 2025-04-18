@@ -1,6 +1,6 @@
 @use 'paleta' as *;
 @use 'sass:math'; 
-
+@use 'sass:color';
 $xs:60px;
 $small: 110px;
 $medium: 140px;
@@ -57,6 +57,7 @@ $xl:220px;
     $hover-text: darken($color, 40%);
     $active-bg: darken($color, 20%);
     $active-text: darken($color, 70%);
+
   } @else {
     $text-color: lighten($color, 40%);
     $hover-bg: lighten($color, 10%);
