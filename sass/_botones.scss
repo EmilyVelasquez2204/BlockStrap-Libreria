@@ -1,4 +1,5 @@
-@use 'paleta' as p;
+@use 'paleta' as *;
+@use 'sass:math'; 
 
 $xs:60px;
 $small: 110px;
@@ -9,8 +10,8 @@ $xl:220px;
 
 
 .panel {
-  background-color: p.$color-panel;
-  border: 3px solid p.$color-borde;
+  background-color: $color-panel;
+  border: 3px solid $color-borde;
   border-radius: 8px;
   width: 400px;
   
@@ -20,24 +21,24 @@ $xl:220px;
   h2 {
     margin-bottom: 20px;
     text-align: center;
-    color: p.$color-texto;
+    color: $color-texto;
   }
 
   .m-5 {
     margin: 20px 0;
     font-family: monospace;
-    background-color: darken(p.$color-panel, 10%);
+    background-color: darken($color-panel, 10%);
     padding: 10px;
-    border-left: 4px solid lighten(p.$color-borde, 10%);
+    border-left: 4px solid lighten($color-borde, 10%);
     overflow-x: auto;
-    color: p.$color-texto;
+    color: $color-texto;
 
     span {
-      color: p.$color-atributo;
+      color: $color-atributo;
 
       &:first-child,
       &:last-child {
-        color: p.$color-etiqueta;
+        color: $color-etiqueta;
       }
     }
   }
@@ -66,7 +67,7 @@ $xl:220px;
 
   .btn-#{$nombre} {
     width: $size;
-    height: $size - ($size / 2.5);
+    height: $size - math.div($size, 2.5);
     background-color: $color;
     color: $text-color;
     border: none;
@@ -92,19 +93,19 @@ $xl:220px;
 
 
   
-@include boton-minecraft(sm-mar, $small, false, p.$azul-mar);
-@include boton-minecraft(sm-arena, $small, true, p.$arena-clara);
-@include boton-minecraft(sm-tierra, $small, false, p.$marron-tierra);
-@include boton-minecraft(sm-hoja, $small, false, p.$verde-hoja);
-@include boton-minecraft(sm-TNT, $small, false, p.$rojo-explosivo);
-@include boton-minecraft(sm-oro, $small, true, p.$amarillo-oro);
-@include boton-minecraft(sm-diamante, $small, false, p.$azul-diamante);
-@include boton-minecraft(sm-piedraDelEnd, $small, true, p.$beige-palido);
-@include boton-minecraft(sm-obsidiana, $small, false, p.$purpura-oscuro);
+@include boton-minecraft(sm-mar, $small, false, $azul-mar);
+@include boton-minecraft(sm-arena, $small, true, $arena-clara);
+@include boton-minecraft(sm-tierra, $small, false, $marron-tierra);
+@include boton-minecraft(sm-hoja, $small, false, $verde-hoja);
+@include boton-minecraft(sm-TNT, $small, false, $rojo-explosivo);
+@include boton-minecraft(sm-oro, $small, true, $amarillo-oro);
+@include boton-minecraft(sm-diamante, $small, false, $azul-diamante);
+@include boton-minecraft(sm-piedraDelEnd, $small, true, $beige-palido);
+@include boton-minecraft(sm-obsidiana, $small, false, $purpura-oscuro);
 
-@include boton-minecraft(xs-axolote, $xs, true, p.$rosa-ajolote);
-@include boton-minecraft(sm-gato, $small, true, p.$crema-gato);
-@include boton-minecraft(md-lobo, $medium, true, p.$gris-lobo);
-@include boton-minecraft(lg-caballo, $large, false, p.$marron-caballo);
-@include boton-minecraft(xl-vaca, $xl, false, p.$marron-vaca);
+@include boton-minecraft(xs-axolote, $xs, true, $rosa-ajolote);
+@include boton-minecraft(sm-gato, $small, true, $crema-gato);
+@include boton-minecraft(md-lobo, $medium, true, $gris-lobo);
+@include boton-minecraft(lg-caballo, $large, false, $marron-caballo);
+@include boton-minecraft(xl-vaca, $xl, false, $marron-vaca);
 
