@@ -10,12 +10,12 @@ $large: 180px;
 $xl:220px;
 
 body{
-  background-color: #f0f0f0;
+  background-color: $marron-tierra;
   font-family: 'Courier New', monospace;
   padding: 20px;
 }
 .panel {
-  background-color: #fff;
+  background-color: $naranja-oxido;
   border: 4px solid #7c4c11;
   padding: 20px;
   margin-bottom: 30px;
@@ -50,6 +50,7 @@ body{
   overflow-x: auto;
   white-space: pre-wrap;
   color: #222;
+
 }
 
 @mixin boton-minecraft($nombre, $size, $color-claro, $color) {
