@@ -1,8 +1,0 @@
-// ======= UTILIDADES PARA MOVER ELEMENTOS =======
-// Usa transformaciones simples tipo HUD
-
-.move-up     { transform: translateY(-10px); }
-.move-down   { transform: translateY(10px); }
-.move-left   { transform: translateX(-10px); }
-.move-right  { transform: translateX(10px); }
-.move-center { display: flex; justify-content: center; align-items: center; }
