@@ -1,4 +1,7 @@
 @use 'paleta' as *;
+@use 'sass:math'; 
+@use 'sass:color';
+@use 'fuente';
 
 $xs:60px;
 $small: 110px;
@@ -6,42 +9,50 @@ $medium: 140px;
 $large: 180px;
 $xl:220px;
 
-
-
-.panel {
-  background-color: $color-panel;
-  border: 3px solid $color-borde;
-  border-radius: 8px;
-  width: 400px;
-  
+body{
+  background-color: $marron-tierra;
+  font-family: 'Courier New', monospace;
   padding: 20px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-
-  h2 {
-    margin-bottom: 20px;
-    text-align: center;
-    color: $color-texto;
-  }
-
-  .m-5 {
-    margin: 20px 0;
-    font-family: monospace;
-    background-color: darken($color-panel, 10%);
-    padding: 10px;
-    border-left: 4px solid lighten($color-borde, 10%);
-    overflow-x: auto;
-    color: $color-texto;
-
-    span {
-      color: $color-atributo;
-
-      &:first-child,
-      &:last-child {
-        color: $color-etiqueta;
-      }
-    }
-  }
 }
+.panel {
+  background-color: $naranja-oxido;
+  border: 4px solid #7c4c11;
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  box-shadow: 4px 4px color.adjust(#c69c6d, $lightness: -10%);
+}
+
+.panel h2 {
+  margin-top: 0;
+  color: #3b2e1d;
+}
+
+.descripcion {
+  margin-bottom: 15px;
+  color: #444;
+  font-size: 1rem;
+}
+
+.btn-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.codigo {
+  background-color: $gris-carbon;
+  padding: 5px;
+  font-size: 18px;
+  border-left: 4px solid #7c4c11;
+  font-family: monospace;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  color: #222;
+
+}
+
 @mixin boton-minecraft($nombre, $size, $color-claro, $color) {
   
   $text-color: null;
@@ -51,22 +62,25 @@ $xl:220px;
   $active-text: null;
 
   @if $color-claro {
-    $text-color: darken($color, 40%);
-    $hover-bg: darken($color, 10%);
-    $hover-text: darken($color, 40%);
-    $active-bg: darken($color, 20%);
-    $active-text: darken($color, 70%);
-  } @else {
-    $text-color: lighten($color, 40%);
-    $hover-bg: lighten($color, 10%);
-    $hover-text: lighten($color, 60%);
-    $active-bg: lighten($color, 20%);
-    $active-text: lighten($color, 70%);
+
+    $text-color: color.adjust($color, $lightness: -40%);
+$hover-bg: color.adjust($color, $lightness: -10%);
+$hover-text: color.adjust($color, $lightness: -40%);
+$active-bg: color.adjust($color, $lightness: -20%);
+$active-text: color.adjust($color, $lightness: -70%);
+
+  } 
+  @else {
+    $text-color: color.adjust($color, $lightness: 40%);
+    $hover-bg: color.adjust($color, $lightness: 10%);
+    $hover-text: color.scale($color, $lightness: 60%);
+    $active-bg: color.adjust($color, $lightness: 20%);
+    $active-text: color.adjust($color, $lightness: 70%);
   }
 
   .btn-#{$nombre} {
     width: $size;
-    height: $size - ($size / 2.5);
+    height: $size - math.div($size, 2.5);
     background-color: $color;
     color: $text-color;
     border: none;
@@ -89,8 +103,6 @@ $xl:220px;
     }
   }
 }
-
-
   
 @include boton-minecraft(sm-mar, $small, false, $azul-mar);
 @include boton-minecraft(sm-arena, $small, true, $arena-clara);
@@ -107,4 +119,5 @@ $xl:220px;
 @include boton-minecraft(md-lobo, $medium, true, $gris-lobo);
 @include boton-minecraft(lg-caballo, $large, false, $marron-caballo);
 @include boton-minecraft(xl-vaca, $xl, false, $marron-vaca);
+
 
