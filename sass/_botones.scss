@@ -42,7 +42,7 @@ body{
 }
 
 .codigo {
-  background-color: $gris-carbon;
+  background-color: #eee;
   padding: 5px;
   font-size: 18px;
   border-left: 4px solid #7c4c11;
@@ -103,6 +103,8 @@ $active-text: color.adjust($color, $lightness: -70%);
     }
   }
 }
+
+
   
 @include boton-minecraft(sm-mar, $small, false, $azul-mar);
 @include boton-minecraft(sm-arena, $small, true, $arena-clara);
@@ -119,5 +121,4 @@ $active-text: color.adjust($color, $lightness: -70%);
 @include boton-minecraft(md-lobo, $medium, true, $gris-lobo);
 @include boton-minecraft(lg-caballo, $large, false, $marron-caballo);
 @include boton-minecraft(xl-vaca, $xl, false, $marron-vaca);
-
 
