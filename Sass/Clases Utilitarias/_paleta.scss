@@ -1,0 +1,55 @@
+@use 'sass:color';
+
+//Naturaleza
+$verde-pasto:#5E7C16;
+$marron-tierra: #835C3B;
+$marron-madera: #5A3A1A;
+$verde-hoja: #3A7425;
+$verde-oscuro: #2E4E1A;
+$arena-clara: #F0E68C;
+$verde-lodoso: #4B5632;
+$blanco-azulado: #F4F8FB;
+$azul-profundo:#3D5B94;
+$turquesa-brillante:#38D2C5;
+$azul-mar: #5555FF;
+
+//Minerales y bloques
+
+$gris-carbon:#1D1D1D;
+$naranja-oxido: #D8AF93;
+$amarillo-oro: #FCEE4B;
+$azul-diamante: #41C6EC;
+$rojo-intenso: #B80000;
+$verde-brillante: #1EC26B;
+$verde-menta:#7DC383;
+$purpura-cristal: #A472D9;
+$rojo-explosivo: #E03E3E;
+
+//Nether y end
+$rojo-oscuro: #812E24;
+$naranja-lava: #FF6A00;
+$beige-palido: #E3E39C;
+$purpura-oscuro: #1A0A24;
+
+//Animales
+$gris-lobo: #B3B3B3;
+$crema-gato: #EAD2AC;
+$marron-caballo:#8B5A2B;
+$marron-vaca:  color.mix(#3F2A19, #8C6E50, 50%);
+
+//criaturas
+$verde-neon: #5FC22E;
+$negro-purpura: color.mix(#1C1C1C, #9441E3, 50%);
+$verde-gel: #B3F26E;
+$amarillo-fuego: #F8C03A;
+$gris-fantasma:#414040;
+$rosa-ajolote: #F9C7DC;
+$palido-fantasma: #EDEDED;
+
+//botones página
+$color-fondo: #1e1e1e;
+$color-panel: #2d2d2d;
+$color-borde: #555;
+$color-etiqueta: #ff5555;
+$color-atributo: #00ffff;
+$color-texto: #ffffff;
