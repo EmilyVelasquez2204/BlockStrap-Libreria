@@ -103,8 +103,6 @@ $active-text: color.adjust($color, $lightness: -70%);
     }
   }
 }
-
-
   
 @include boton-minecraft(sm-mar, $small, false, $azul-mar);
 @include boton-minecraft(sm-arena, $small, true, $arena-clara);
