@@ -1,7 +1,7 @@
-@use 'paleta' as *;
+@use '../Clases_Utilitarias/paleta' as *;
 @use 'sass:math'; 
 @use 'sass:color';
-@use 'fuente';
+@use '../Clases_Utilitarias/fuente';
 
 $xs:60px;
 $small: 110px;
@@ -42,11 +42,11 @@ body{
 }
 
 .codigo {
-  background-color: $gris-carbon;
+
   padding: 5px;
   font-size: 18px;
   border-left: 4px solid #7c4c11;
-  font-family: monospace;
+  
   overflow-x: auto;
   white-space: pre-wrap;
   color: #222;

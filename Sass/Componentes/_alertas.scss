@@ -1,5 +1,5 @@
 // Importamos la paleta de colores personalizados desde un archivo SCSS externo
-@use 'paleta';
+@use '../Clases_Utilitarias/paleta' as *;
 
 // ======= ALERTAS ESTILO MINECRAFT =======
 
@@ -35,7 +35,7 @@ $shadow-default: 3px 3px 0 rgba(0, 0, 0, 0.4); // Sombra predeterminada tipo pix
   padding: $alert-padding;
   border-radius: 4px;
   font-family: 'Press Start 2P', cursive; // Fuente pixelada
-  color: paleta.$color-texto; // Color de texto desde la paleta
+  color: $color-texto; // Color de texto desde la paleta
   margin-bottom: 1rem;
   box-shadow: $shadow-default;
   position: relative;
@@ -46,28 +46,28 @@ $shadow-default: 3px 3px 0 rgba(0, 0, 0, 0.4); // Sombra predeterminada tipo pix
 
 // Alerta tipo Creeper (verde explosivo)
 .alert-creeper {
-  background-color: paleta.$verde-oscuro;
-  border: $border-width solid paleta.$verde-pasto;
+  background-color: $verde-oscuro;
+  border: $border-width solid $verde-pasto;
 
   &::before {
     content: "💥"; // Ícono de explosión
-    background-color: paleta.$verde-pasto;
+    background-color: $verde-pasto;
   }
 
   &:hover {
     // Sombra verdosa al pasar el mouse
-    box-shadow: 0 0 10px rgba(paleta.$verde-pasto, 0.7);
+    box-shadow: 0 0 10px rgba($verde-pasto, 0.7);
   }
 }
 
 // Alerta tipo Zombie (verde putrefacto)
 .alert-zombie {
-  background-color: paleta.$verde-lodoso;
-  border: $border-width solid darken(paleta.$verde-lodoso, 10%);
+  background-color: $verde-lodoso;
+  border: $border-width solid darken($verde-lodoso, 10%);
 
   &::before {
     content: "🧟"; // Ícono de zombie
-    background-color: darken(paleta.$verde-lodoso, 10%);
+    background-color: darken($verde-lodoso, 10%);
   }
 
   // Fondo con patrón pixelado de putrefacción
@@ -86,88 +86,88 @@ $shadow-default: 3px 3px 0 rgba(0, 0, 0, 0.4); // Sombra predeterminada tipo pix
 
 // Alerta tipo Skeleton (gris hueso)
 .alert-skeleton {
-  background-color: paleta.$gris-lobo;
+  background-color: $gris-lobo;
   color: #111; // Texto oscuro
-  border: $border-width solid darken(paleta.$gris-lobo, 20%);
+  border: $border-width solid darken($gris-lobo, 20%);
 
   &::before {
     content: "🏹"; // Ícono de arco
-    background-color: darken(paleta.$gris-lobo, 20%);
+    background-color: darken($gris-lobo, 20%);
     color: black;
   }
 }
 
 // Alerta tipo Enderman (púrpura místico)
 .alert-enderman {
-  background-color: paleta.$purpura-oscuro;
-  border: $border-width solid paleta.$purpura-cristal;
-  color: lighten(paleta.$purpura-cristal, 20%); // Texto más claro
+  background-color: $purpura-oscuro;
+  border: $border-width solid $purpura-cristal;
+  color: lighten($purpura-cristal, 20%); // Texto más claro
 
   &::before {
     content: "👁"; // Ícono de ojo
-    background-color: paleta.$purpura-cristal;
+    background-color: $purpura-cristal;
   }
 
   &:hover {
-    box-shadow: 0 0 10px paleta.$purpura-cristal;
+    box-shadow: 0 0 10px $purpura-cristal;
   }
 }
 
 // Alerta tipo Steve/Alex (personaje base)
 .alert-steve {
-  background-color: paleta.$azul-profundo;
-  border: $border-width solid paleta.$marron-caballo;
+  background-color: $azul-profundo;
+  border: $border-width solid $marron-caballo;
 
   &::before {
     content: "⛏"; // Ícono de pico
-    background-color: paleta.$marron-caballo;
+    background-color: $marron-caballo;
   }
 }
 
 // Alerta tipo Aldeano (Villager)
 .alert-aldeano {
-  background-color: paleta.$marron-tierra;
-  border: $border-width solid paleta.$verde-menta;
+  background-color: $marron-tierra;
+  border: $border-width solid $verde-menta;
 
   &::before {
     content: "💎"; // Ícono de esmeralda
-    background-color: paleta.$verde-menta;
+    background-color: $verde-menta;
   }
 }
 
 // Alerta tipo Redstone (energía)
 .alert-redstone {
-  background-color: paleta.$rojo-intenso;
-  border: $border-width solid paleta.$rojo-explosivo;
+  background-color: $rojo-intenso;
+  border: $border-width solid $rojo-explosivo;
 
   &::before {
     content: "⚡"; // Ícono de energía
-    background-color: paleta.$rojo-explosivo;
+    background-color: $rojo-explosivo;
   }
 
   &:hover {
-    box-shadow: 0 0 10px paleta.$rojo-explosivo;
+    box-shadow: 0 0 10px $rojo-explosivo;
   }
 }
 
 // Alerta tipo Agua
 .alert-agua {
-  background-color: paleta.$azul-profundo;
-  border: $border-width solid paleta.$azul-mar;
+  background-color: $azul-profundo;
+  border: $border-width solid $azul-mar;
 
   &::before {
     content: "🌊"; // Ícono de ola
-    background-color: paleta.$azul-mar;
+    background-color: $azul-mar;
   }
 
   // Efecto ondulado con fondo decorativo
   background-image: linear-gradient(
     45deg,
-    rgba(paleta.$azul-mar, 0.3) 25%,
+    rgba($azul-mar, 0.3) 25%,
     transparent 25%,
     transparent 50%,
-    rgba(paleta.$azul-mar, 0.3) 50%,
-    rgba(paleta.$azul-mar, 0.3) 75%,
+    rgba($azul-mar, 0.3) 50%,
+    rgba($azul-mar, 0.3) 75%,
     transparent 75%,
     transparent
   );
@@ -176,27 +176,27 @@ $shadow-default: 3px 3px 0 rgba(0, 0, 0, 0.4); // Sombra predeterminada tipo pix
 
 // Alerta tipo Nether (dimensión del infierno)
 .alert-nether {
-  background-color: paleta.$rojo-oscuro;
-  border: $border-width solid paleta.$naranja-lava;
-  color: paleta.$amarillo-oro;
+  background-color: $rojo-oscuro;
+  border: $border-width solid $naranja-lava;
+  color: $amarillo-oro;
 
   &::before {
     content: "🔥"; // Ícono de fuego
-    background-color: paleta.$naranja-lava;
+    background-color: $naranja-lava;
   }
 }
 
 // Alerta de Éxito (diamante)
 .alert-exito {
-  background-color: darken(paleta.$azul-diamante, 20%);
-  border: $border-width solid paleta.$azul-diamante;
+  background-color: darken($azul-diamante, 20%);
+  border: $border-width solid $azul-diamante;
 
   &::before {
     content: "💎"; // Ícono de diamante
-    background-color: paleta.$azul-diamante;
+    background-color: $azul-diamante;
   }
 
   &:hover {
-    box-shadow: 0 0 10px paleta.$azul-diamante;
+    box-shadow: 0 0 10px $azul-diamante;
   }
 }
