@@ -33,7 +33,8 @@ $t-a:center; //alineacion del texto
 .fondo-menu{
     width: 100%;
     height: auto;
-    background-color: $naranja-oxido;
+    background-color: $color-fondo;
+    color: #ccc;
 }
 
 .navbar{
@@ -52,7 +53,7 @@ $t-a:center; //alineacion del texto
     display:$ds-iblock;
     padding: $pd;
     margin-right: $mgr;
-    font-size: $size-2;
+    // font-size: $size-2;
     // font-family: $ft;
     transition: transform .2s ease-in;
 
@@ -61,12 +62,16 @@ $t-a:center; //alineacion del texto
 .tx-none{
     text-decoration: none;
     color: black;
+    
 }
 
 .etiqueta:hover{
-    color: black;
-    background-color:$verde-hoja;
-    transform:translate(5px)
+    color: $verde-hoja;
+    border: 1px solid $azul-profundo;
+    padding: 10px;
+    margin: 3px solid $blanco-azulado;
+    // background-color:$verde-hoja;
+    // transform:translate(5px);
 
 }
 
