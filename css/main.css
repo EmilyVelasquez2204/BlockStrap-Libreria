@@ -106,11 +106,11 @@ body {
 
 .btn-sm-mar {
   width: 110px;
-  height: 66px;
+  height: 55px;
   background-color: #5555FF;
   color: white;
   border: none;
-  border-radius: 3px;
+  border-radius: 2px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -129,11 +129,11 @@ body {
 
 .btn-sm-arena {
   width: 110px;
-  height: 66px;
+  height: 55px;
   background-color: #F0E68C;
   color: #9c8e14;
   border: none;
-  border-radius: 3px;
+  border-radius: 2px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -152,11 +152,11 @@ body {
 
 .btn-sm-tierra {
   width: 110px;
-  height: 66px;
+  height: 55px;
   background-color: #835C3B;
   color: #dbc3af;
   border: none;
-  border-radius: 3px;
+  border-radius: 2px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -175,11 +175,11 @@ body {
 
 .btn-sm-hoja {
   width: 110px;
-  height: 66px;
+  height: 55px;
   background-color: #3A7425;
   color: #a0da8b;
   border: none;
-  border-radius: 3px;
+  border-radius: 2px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -198,11 +198,11 @@ body {
 
 .btn-sm-TNT {
   width: 110px;
-  height: 66px;
+  height: 55px;
   background-color: #E03E3E;
   color: #fceeee;
   border: none;
-  border-radius: 3px;
+  border-radius: 2px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -221,11 +221,11 @@ body {
 
 .btn-sm-oro {
   width: 110px;
-  height: 66px;
+  height: 55px;
   background-color: #FCEE4B;
   color: #797002;
   border: none;
-  border-radius: 3px;
+  border-radius: 2px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -244,11 +244,11 @@ body {
 
 .btn-sm-diamante {
   width: 110px;
-  height: 66px;
+  height: 55px;
   background-color: #41C6EC;
   color: #fafeff;
   border: none;
-  border-radius: 3px;
+  border-radius: 2px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -267,11 +267,11 @@ body {
 
 .btn-sm-piedraDelEnd {
   width: 110px;
-  height: 66px;
+  height: 55px;
   background-color: #E3E39C;
   color: #8c8c27;
   border: none;
-  border-radius: 3px;
+  border-radius: 2px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -290,11 +290,11 @@ body {
 
 .btn-sm-obsidiana {
   width: 110px;
-  height: 66px;
+  height: 55px;
   background-color: #1A0A24;
   color: #8d36c4;
   border: none;
-  border-radius: 3px;
+  border-radius: 2px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -313,11 +313,11 @@ body {
 
 .btn-xs-axolote {
   width: 60px;
-  height: 36px;
+  height: 30px;
   background-color: #F9C7DC;
   color: #dc186a;
   border: none;
-  border-radius: 3px;
+  border-radius: 2px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -336,11 +336,11 @@ body {
 
 .btn-sm-gato {
   width: 110px;
-  height: 66px;
+  height: 55px;
   background-color: #EAD2AC;
   color: #a17329;
   border: none;
-  border-radius: 3px;
+  border-radius: 2px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -359,11 +359,11 @@ body {
 
 .btn-md-lobo {
   width: 140px;
-  height: 84px;
+  height: 70px;
   background-color: #B3B3B3;
   color: #4d4d4d;
   border: none;
-  border-radius: 3px;
+  border-radius: 2px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -382,11 +382,11 @@ body {
 
 .btn-lg-caballo {
   width: 180px;
-  height: 108px;
+  height: 90px;
   background-color: #8B5A2B;
   color: #e2c0a0;
   border: none;
-  border-radius: 3px;
+  border-radius: 2px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -405,11 +405,11 @@ body {
 
 .btn-xl-vaca {
   width: 220px;
-  height: 132px;
-  background-color: #664c35;
-  color: #cbb29c;
+  height: 110px;
+  background-color: rgb(101.5, 76, 52.5);
+  color: rgb(203.1818181818, 178.012987013, 154.8181818182);
   border: none;
-  border-radius: 3px;
+  border-radius: 2px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -426,11 +426,67 @@ body {
   color: white;
 }
 
+.minecraft-form {
+  background-color: #f4f1ee;
+  border: 4px solid #5A3A1A;
+  border-radius: 0.3vh;
+  padding: 2vh;
+  font-family: "monospace";
+  max-width: 500px;
+  margin: auto;
+  box-shadow: 4px 4px 0px #3b3b3b;
+}
+
+.minecraft-form-label {
+  font-size: 1.8vh;
+  color: #5A3A1A;
+  margin-bottom: 0.5vh;
+  display: block;
+}
+
+.minecraft-form-control {
+  background-color: #dad2c6;
+  border: 2px solid #5A3A1A;
+  border-radius: 0.3vh;
+  padding: 0.8vh;
+  width: 100%;
+  margin-bottom: 1.2vh;
+  font-family: "monospace";
+  font-size: 1.6vh;
+  color: #3a3a3a;
+}
+
+.minecraft-form-control:focus {
+  outline: none;
+  border-color: #31a6f6;
+  box-shadow: 0 0 1vh 0.2vh #31a6f6;
+}
+
+.minecraft-check {
+  display: flex;
+  align-items: center;
+  margin: 1vh 0;
+}
+.minecraft-check input {
+  margin-right: 1vh;
+  accent-color: #5A3A1A;
+}
+.minecraft-check label {
+  font-family: monospace;
+  font-size: 1.6vh;
+  color: #3a3a3a;
+}
+
+.disable {
+  background-color: #dadada;
+  color: #fff;
+}
+
 .alert {
   padding: 1rem;
   border-radius: 4px;
   font-family: "Press Start 2P", cursive;
-  color: #ffffff;
+  color: #3a3a3a;
   margin-bottom: 1rem;
   box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.4);
   position: relative;
