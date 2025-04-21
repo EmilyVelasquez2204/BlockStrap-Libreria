@@ -80,11 +80,11 @@ $active-text: color.adjust($color, $lightness: -70%);
 
   .btn-#{$nombre} {
     width: $size;
-    height: $size - math.div($size, 2.5);
+    height: $size - math.div($size, 2);
     background-color: $color;
     color: $text-color;
     border: none;
-    border-radius: 3px;
+    border-radius: 2px;
     display: flex;
     justify-content: center;
     align-items: center;
