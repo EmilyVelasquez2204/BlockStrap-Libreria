@@ -61,9 +61,11 @@
 }
 
 body {
-  background-color: #835C3B;
-  font-family: "Courier New", monospace;
-  padding: 20px;
+  background-image: url(/Imagenes/minecraft-inicio.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
 }
 
 .panel {
@@ -72,7 +74,7 @@ body {
   padding: 20px;
   margin-bottom: 30px;
   border-radius: 10px;
-  box-shadow: 4px 4px rgb(183.6798029557, 131.1280788177, 72.3201970443);
+  box-shadow: 4px 4px #b88348;
 }
 
 .panel h2 {
@@ -106,7 +108,7 @@ body {
   width: 110px;
   height: 66px;
   background-color: #5555FF;
-  color: hsl(240, 100%, 106.6666666667%);
+  color: white;
   border: none;
   border-radius: 8px;
   display: flex;
@@ -122,14 +124,14 @@ body {
 }
 .btn-sm-mar:active {
   background-color: #bbbbff;
-  color: hsl(240, 100%, 136.6666666667%);
+  color: white;
 }
 
 .btn-sm-arena {
   width: 110px;
   height: 66px;
   background-color: #F0E68C;
-  color: rgb(155.6923076923, 142.1538461538, 20.3076923077);
+  color: #9c8e14;
   border: none;
   border-radius: 8px;
   display: flex;
@@ -140,19 +142,19 @@ body {
   transition: 0.3s;
 }
 .btn-sm-arena:hover {
-  background-color: rgb(234.1153846154, 220.1923076923, 94.8846153846);
-  color: rgb(155.6923076923, 142.1538461538, 20.3076923077);
+  background-color: #eadc5f;
+  color: #9c8e14;
 }
 .btn-sm-arena:active {
-  background-color: rgb(228.2307692308, 210.3846153846, 49.7692307692);
-  color: rgb(20.3461538462, 18.5769230769, 2.6538461538);
+  background-color: #e4d232;
+  color: #141303;
 }
 
 .btn-sm-tierra {
   width: 110px;
   height: 66px;
   background-color: #835C3B;
-  color: rgb(218.9789473684, 195.1684210526, 175.0210526316);
+  color: #dbc3af;
   border: none;
   border-radius: 8px;
   display: flex;
@@ -163,12 +165,12 @@ body {
   transition: 0.3s;
 }
 .btn-sm-tierra:hover {
-  background-color: rgb(166.1631578947, 116.6947368421, 74.8368421053);
-  color: rgb(215.2526315789, 188.9789473684, 166.7473684211);
+  background-color: #a6754b;
+  color: #d7bda7;
 }
 .btn-sm-tierra:active {
-  background-color: rgb(187.3052631579, 142.5578947368, 104.6947368421);
-  color: hsl(27.5, 37.8947368421%, 107.2549019608%);
+  background-color: #bb8f69;
+  color: white;
 }
 
 .btn-sm-hoja {
@@ -186,11 +188,11 @@ body {
   transition: 0.3s;
 }
 .btn-sm-hoja:hover {
-  background-color: rgb(77.3333333333, 154.6666666667, 49.3333333333);
-  color: rgb(166.3333333333, 220.4666666667, 146.7333333333);
+  background-color: #4d9b31;
+  color: #a6dc93;
 }
 .btn-sm-hoja:active {
-  background-color: rgb(96.6666666667, 193.3333333333, 61.6666666667);
+  background-color: #61c13e;
   color: white;
 }
 
@@ -198,7 +200,7 @@ body {
   width: 110px;
   height: 66px;
   background-color: #E03E3E;
-  color: rgb(252.2321428571, 237.7678571429, 237.7678571429);
+  color: #fceeee;
   border: none;
   border-radius: 8px;
   display: flex;
@@ -209,19 +211,19 @@ body {
   transition: 0.3s;
 }
 .btn-sm-TNT:hover {
-  background-color: rgb(231.0580357143, 105.9419642857, 105.9419642857);
-  color: rgb(242.6, 177.8, 177.8);
+  background-color: #e76a6a;
+  color: #f3b2b2;
 }
 .btn-sm-TNT:active {
-  background-color: rgb(238.1160714286, 149.8839285714, 149.8839285714);
-  color: hsl(0, 72.3214285714%, 126.0784313725%);
+  background-color: #ee9696;
+  color: white;
 }
 
 .btn-sm-oro {
   width: 110px;
   height: 66px;
   background-color: #FCEE4B;
-  color: rgb(120.9836065574, 111.5737704918, 2.0163934426);
+  color: #797002;
   border: none;
   border-radius: 8px;
   display: flex;
@@ -232,19 +234,19 @@ body {
   transition: 0.3s;
 }
 .btn-sm-oro:hover {
-  background-color: rgb(251.1639344262, 233.262295082, 24.8360655738);
-  color: rgb(120.9836065574, 111.5737704918, 2.0163934426);
+  background-color: #fbe919;
+  color: #797002;
 }
 .btn-sm-oro:active {
-  background-color: rgb(221.3114754098, 204.0983606557, 3.6885245902);
-  color: hsl(55.2542372881, 96.7213114754%, -5.8823529412%);
+  background-color: #ddcc04;
+  color: black;
 }
 
 .btn-sm-diamante {
   width: 110px;
   height: 66px;
   background-color: #41C6EC;
-  color: rgb(250.4545454545, 253.6363636364, 254.5454545455);
+  color: #fafeff;
   border: none;
   border-radius: 8px;
   display: flex;
@@ -255,19 +257,19 @@ body {
   transition: 0.3s;
 }
 .btn-sm-diamante:hover {
-  background-color: rgb(111.3636363636, 211.9090909091, 240.6363636364);
-  color: rgb(179, 232.2, 247.4);
+  background-color: #6fd4f1;
+  color: #b3e8f7;
 }
 .btn-sm-diamante:active {
-  background-color: rgb(157.7272727273, 225.8181818182, 245.2727272727);
-  color: hsl(193.3333333333, 81.8181818182%, 129.0196078431%);
+  background-color: #9ee2f5;
+  color: white;
 }
 
 .btn-sm-piedraDelEnd {
   width: 110px;
   height: 66px;
   background-color: #E3E39C;
-  color: rgb(139.5354330709, 139.5354330709, 39.4645669291);
+  color: #8c8c27;
   border: none;
   border-radius: 8px;
   display: flex;
@@ -278,19 +280,19 @@ body {
   transition: 0.3s;
 }
 .btn-sm-piedraDelEnd:hover {
-  background-color: rgb(215.7559055118, 215.7559055118, 116.2440944882);
-  color: rgb(139.5354330709, 139.5354330709, 39.4645669291);
+  background-color: #d8d874;
+  color: #8c8c27;
 }
 .btn-sm-piedraDelEnd:active {
-  background-color: rgb(204.5118110236, 204.5118110236, 76.4881889764);
-  color: rgb(20.2677165354, 20.2677165354, 5.7322834646);
+  background-color: #cdcd4c;
+  color: #141406;
 }
 
 .btn-sm-obsidiana {
   width: 110px;
   height: 66px;
   background-color: #1A0A24;
-  color: rgb(141.3043478261, 54.347826087, 195.652173913);
+  color: #8d36c4;
   border: none;
   border-radius: 8px;
   display: flex;
@@ -301,19 +303,19 @@ body {
   transition: 0.3s;
 }
 .btn-sm-obsidiana:hover {
-  background-color: rgb(54.8260869565, 21.0869565217, 75.9130434783);
-  color: rgb(174.3043478261, 109.747826087, 214.652173913);
+  background-color: #37154c;
+  color: #ae6ed7;
 }
 .btn-sm-obsidiana:active {
-  background-color: rgb(83.652173913, 32.1739130435, 115.8260869565);
-  color: rgb(208.4782608696, 171.2608695652, 231.7391304348);
+  background-color: #542074;
+  color: #d0abe8;
 }
 
 .btn-xs-axolote {
   width: 60px;
   height: 36px;
   background-color: #F9C7DC;
-  color: rgb(220.3870967742, 23.6129032258, 106.2580645161);
+  color: #dc186a;
   border: none;
   border-radius: 8px;
   display: flex;
@@ -324,19 +326,19 @@ body {
   transition: 0.3s;
 }
 .btn-xs-axolote:hover {
-  background-color: rgb(244.064516129, 152.935483871, 191.2096774194);
-  color: rgb(220.3870967742, 23.6129032258, 106.2580645161);
+  background-color: #f499bf;
+  color: #dc186a;
 }
 .btn-xs-axolote:active {
-  background-color: rgb(239.1290322581, 106.8709677419, 162.4193548387);
-  color: rgb(82.1935483871, 8.8064516129, 39.6290322581);
+  background-color: #ef6ba2;
+  color: #520928;
 }
 
 .btn-sm-gato {
   width: 110px;
   height: 66px;
   background-color: #EAD2AC;
-  color: rgb(161.2115384615, 114.5961538462, 40.7884615385);
+  color: #a17329;
   border: none;
   border-radius: 8px;
   display: flex;
@@ -347,12 +349,12 @@ body {
   transition: 0.3s;
 }
 .btn-sm-gato:hover {
-  background-color: rgb(223.7019230769, 187.9326923077, 131.2980769231);
-  color: rgb(161.2115384615, 114.5961538462, 40.7884615385);
+  background-color: #e0bc83;
+  color: #a17329;
 }
 .btn-sm-gato:active {
-  background-color: rgb(213.4038461538, 165.8653846154, 90.5961538462);
-  color: rgb(39.1057692308, 27.7980769231, 9.8942307692);
+  background-color: #d5a65b;
+  color: #271c0a;
 }
 
 .btn-md-lobo {
@@ -370,19 +372,19 @@ body {
   transition: 0.3s;
 }
 .btn-md-lobo:hover {
-  background-color: rgb(153.5, 153.5, 153.5);
+  background-color: #9a9a9a;
   color: #4d4d4d;
 }
 .btn-md-lobo:active {
   background-color: gray;
-  color: rgb(0.5, 0.5, 0.5);
+  color: #010101;
 }
 
 .btn-lg-caballo {
   width: 180px;
   height: 108px;
   background-color: #8B5A2B;
-  color: rgb(225.7032967033, 192.3186813187, 160.2967032967);
+  color: #e2c0a0;
   border: none;
   border-radius: 8px;
   display: flex;
@@ -393,19 +395,19 @@ body {
   transition: 0.3s;
 }
 .btn-lg-caballo:hover {
-  background-color: rgb(177.9505494505, 115.2197802198, 55.0494505495);
-  color: rgb(224.0021978022, 188.6791208791, 154.7978021978);
+  background-color: #b27337;
+  color: #e0bd9b;
 }
 .btn-lg-caballo:active {
-  background-color: rgb(201.6043956044, 140.7582417582, 82.3956043956);
-  color: hsl(29.375, 52.7472527473%, 105.6862745098%);
+  background-color: #ca8d52;
+  color: white;
 }
 
 .btn-xl-vaca {
   width: 220px;
   height: 132px;
-  background-color: rgb(101.5, 76, 52.5);
-  color: rgb(203.1818181818, 178.012987013, 154.8181818182);
+  background-color: #664c35;
+  color: #cbb29c;
   border: none;
   border-radius: 8px;
   display: flex;
@@ -416,12 +418,12 @@ body {
   transition: 0.3s;
 }
 .btn-xl-vaca:hover {
-  background-color: rgb(135.1136363636, 101.1688311688, 69.8863636364);
-  color: rgb(206.4545454545, 182.8753246753, 161.1454545455);
+  background-color: #886546;
+  color: #ceb7a2;
 }
 .btn-xl-vaca:active {
-  background-color: rgb(168.4090909091, 126.3506493506, 87.5909090909);
-  color: hsl(28.7755102041, 31.8181818182%, 100.1960784314%);
+  background-color: #a87e59;
+  color: white;
 }
 
 .alert {
@@ -462,13 +464,13 @@ body {
 
 .alert-zombie {
   background-color: #4B5632;
-  border: 3px solid rgb(46.875, 53.75, 31.25);
+  border: 3px solid #2f361f;
   background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.1) 25%, transparent 25%, transparent 50%, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.1) 75%, transparent 75%, transparent);
   background-size: 8px 8px;
 }
 .alert-zombie::before {
   content: "🧟";
-  background-color: rgb(46.875, 53.75, 31.25);
+  background-color: #2f361f;
 }
 
 .alert-skeleton {
@@ -485,7 +487,7 @@ body {
 .alert-enderman {
   background-color: #1A0A24;
   border: 3px solid #A472D9;
-  color: rgb(215.8547486034, 194.3463687151, 238.6536312849);
+  color: #d8c2ef;
 }
 .alert-enderman::before {
   content: "👁";
@@ -547,7 +549,7 @@ body {
 }
 
 .alert-exito {
-  background-color: rgb(18.0909090909, 144.7272727273, 180.9090909091);
+  background-color: #1291b5;
   border: 3px solid #41C6EC;
 }
 .alert-exito::before {
@@ -556,6 +558,237 @@ body {
 }
 .alert-exito:hover {
   box-shadow: 0 0 10px #41C6EC;
+}
+
+.fondo-menu {
+  width: 100%;
+  height: auto;
+  background-color: #D8AF93;
+}
+
+.navbar {
+  text-align: center;
+}
+
+.img {
+  width: 8vh;
+  padding: 8px;
+  float: left;
+}
+
+.etiqueta {
+  list-style: none;
+  padding: 18px 0;
+  display: inline-block;
+  padding: 18px 0;
+  margin-right: 16px;
+  font-size: 2.3vh;
+  transition: transform 0.2s ease-in;
+}
+
+.tx-none {
+  text-decoration: none;
+  color: black;
+}
+
+.etiqueta:hover {
+  color: black;
+  background-color: #3A7425;
+  transform: translate(5px);
+}
+
+.color {
+  color: #F0E68C;
+}
+
+.barra-vertical {
+  background-color: ligthen(#FF6A00, 30);
+  width: 19.7%;
+  height: 95%;
+  margin-top: 9vh;
+  overflow-y: auto;
+}
+
+.link-s {
+  display: block;
+  text-decoration: none;
+  text-align: justify;
+  padding: 16px;
+  color: black;
+}
+
+.link-s:hover {
+  background-color: #3A7425;
+}
+
+.fj {
+  position: fixed;
+}
+
+.fondo-menu-craft {
+  width: 100%;
+  height: 9vh;
+  background-color: #1D1D1D;
+}
+
+.navbar-3 {
+  text-align: center;
+}
+
+.etiqueta-2 {
+  list-style: none;
+  padding: 18px 0;
+  display: inline-block;
+  margin-right: 16px;
+  font-size: 2.3vh;
+  font-family: "Open Sans";
+  transition: transform 0.5s ease-in;
+}
+
+.etiqueta-2:hover {
+  color: #f8f0f0;
+  background-color: #3D5B94;
+  transform: translateX(20px);
+}
+
+@media screen and (max-height: 860px) {
+  .barra-vertical {
+    background-color: white;
+    width: 19.7%;
+    height: 95%;
+    margin-top: 9vh;
+    overflow: auto;
+  }
+  .link-s {
+    display: block;
+    text-decoration: none;
+    text-align: justify;
+    padding: 10px;
+    color: #ccc;
+  }
+}
+@media screen and (max-width: 1490px) {
+  .barra-vertical {
+    background-color: white;
+    width: 19.7%;
+    height: 95%;
+    margin-top: 9vh;
+    overflow: auto;
+  }
+  .link-s {
+    display: block;
+    text-decoration: none;
+    text-align: justify;
+    padding: 10px;
+    color: #ccc;
+  }
+}
+.opc {
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+
+.navbar-2 {
+  width: 20%;
+  background-color: #1A0A24;
+  text-align: center;
+}
+
+.link- {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  letter-spacing: 2px;
+  display: list-item;
+  padding: 20px;
+  border-top: 1 px solid red;
+  border-bottom: 1px solid burlywood;
+  text-align: center;
+}
+
+.link-:hover {
+  background-color: #D8AF93;
+}
+
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.container-overworld {
+  background-color: #5E7C16;
+  border: 5px solid #8B5A2B;
+  box-shadow: 4px 4px 0 #3A5E0E;
+  font-family: "Press Start 2P", cursive;
+  border-radius: 8px;
+  color: white;
+}
+@media (min-width: 576px) {
+  .container-overworld {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container-overworld {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container-overworld {
+    max-width: 960px;
+  }
+}
+
+.container-nether {
+  background-color: #6C0000;
+  border: 5px dashed #FF4500;
+  box-shadow: 4px 4px 0 #300000;
+  font-family: "Press Start 2P", cursive;
+  color: #FFEEDD;
+  border-radius: 8px;
+}
+@media (min-width: 576px) {
+  .container-nether {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container-nether {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container-nether {
+    max-width: 960px;
+  }
+}
+
+.container-end {
+  background-color: #2B0033;
+  border: 5px dotted #8A2BE2;
+  box-shadow: 4px 4px 0 #1A001F;
+  font-family: "Press Start 2P", cursive;
+  color: #E0D4FF;
+  border-radius: 8px;
+}
+@media (min-width: 576px) {
+  .container-end {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container-end {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container-end {
+    max-width: 960px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
