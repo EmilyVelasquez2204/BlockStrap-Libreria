@@ -110,7 +110,7 @@ body {
   background-color: #5555FF;
   color: white;
   border: none;
-  border-radius: 8px;
+  border-radius: 3px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -133,7 +133,7 @@ body {
   background-color: #F0E68C;
   color: #9c8e14;
   border: none;
-  border-radius: 8px;
+  border-radius: 3px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -156,7 +156,7 @@ body {
   background-color: #835C3B;
   color: #dbc3af;
   border: none;
-  border-radius: 8px;
+  border-radius: 3px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -179,7 +179,7 @@ body {
   background-color: #3A7425;
   color: #a0da8b;
   border: none;
-  border-radius: 8px;
+  border-radius: 3px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -202,7 +202,7 @@ body {
   background-color: #E03E3E;
   color: #fceeee;
   border: none;
-  border-radius: 8px;
+  border-radius: 3px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -225,7 +225,7 @@ body {
   background-color: #FCEE4B;
   color: #797002;
   border: none;
-  border-radius: 8px;
+  border-radius: 3px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -248,7 +248,7 @@ body {
   background-color: #41C6EC;
   color: #fafeff;
   border: none;
-  border-radius: 8px;
+  border-radius: 3px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -271,7 +271,7 @@ body {
   background-color: #E3E39C;
   color: #8c8c27;
   border: none;
-  border-radius: 8px;
+  border-radius: 3px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -294,7 +294,7 @@ body {
   background-color: #1A0A24;
   color: #8d36c4;
   border: none;
-  border-radius: 8px;
+  border-radius: 3px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -317,7 +317,7 @@ body {
   background-color: #F9C7DC;
   color: #dc186a;
   border: none;
-  border-radius: 8px;
+  border-radius: 3px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -340,7 +340,7 @@ body {
   background-color: #EAD2AC;
   color: #a17329;
   border: none;
-  border-radius: 8px;
+  border-radius: 3px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -363,7 +363,7 @@ body {
   background-color: #B3B3B3;
   color: #4d4d4d;
   border: none;
-  border-radius: 8px;
+  border-radius: 3px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -386,7 +386,7 @@ body {
   background-color: #8B5A2B;
   color: #e2c0a0;
   border: none;
-  border-radius: 8px;
+  border-radius: 3px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -409,7 +409,7 @@ body {
   background-color: #664c35;
   color: #cbb29c;
   border: none;
-  border-radius: 8px;
+  border-radius: 3px;
   display: flex;
   justify-content: center;
   align-items: center;
