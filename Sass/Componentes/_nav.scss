@@ -1,5 +1,6 @@
-@use 'fuentes' as *;
-@use 'paleta' as *;
+//importe de archivos
+@use '../Clases_Utilitarias/fuente' as *; //trae todas las variables
+@use '../Clases_Utilitarias/paleta' as *;
 
 $ds-flex: flex;
 $ds-iblock: inline-block;
@@ -31,8 +32,8 @@ $t-a:center; //alineacion del texto
 //clases
 .fondo-menu{
     width: 100%;
-    height: 9vh;
-    background-color: $purpura-cristal;
+    height: auto;
+    background-color: $naranja-oxido;
 }
 
 .navbar{
@@ -52,7 +53,7 @@ $t-a:center; //alineacion del texto
     padding: $pd;
     margin-right: $mgr;
     font-size: $size-2;
-    font-family: $ft;
+    // font-family: $ft;
     transition: transform .2s ease-in;
 
 }
@@ -63,8 +64,8 @@ $t-a:center; //alineacion del texto
 }
 
 .etiqueta:hover{
-    color: $verde-hoja;
-    background-color:$azul-profundo;
+    color: black;
+    background-color:$verde-hoja;
     transform:translate(5px)
 
 }
