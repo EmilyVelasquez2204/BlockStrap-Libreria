@@ -108,7 +108,7 @@ body {
   background-color: #5555FF;
   color: hsl(240, 100%, 106.6666666667%);
   border: none;
-  border-radius: 8px;
+  border-radius: 3px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -131,7 +131,7 @@ body {
   background-color: #F0E68C;
   color: rgb(155.6923076923, 142.1538461538, 20.3076923077);
   border: none;
-  border-radius: 8px;
+  border-radius: 3px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -154,7 +154,7 @@ body {
   background-color: #835C3B;
   color: rgb(218.9789473684, 195.1684210526, 175.0210526316);
   border: none;
-  border-radius: 8px;
+  border-radius: 3px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -177,7 +177,7 @@ body {
   background-color: #3A7425;
   color: #a0da8b;
   border: none;
-  border-radius: 8px;
+  border-radius: 3px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -200,7 +200,7 @@ body {
   background-color: #E03E3E;
   color: rgb(252.2321428571, 237.7678571429, 237.7678571429);
   border: none;
-  border-radius: 8px;
+  border-radius: 3px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -223,7 +223,7 @@ body {
   background-color: #FCEE4B;
   color: rgb(120.9836065574, 111.5737704918, 2.0163934426);
   border: none;
-  border-radius: 8px;
+  border-radius: 3px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -246,7 +246,7 @@ body {
   background-color: #41C6EC;
   color: rgb(250.4545454545, 253.6363636364, 254.5454545455);
   border: none;
-  border-radius: 8px;
+  border-radius: 3px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -269,7 +269,7 @@ body {
   background-color: #E3E39C;
   color: rgb(139.5354330709, 139.5354330709, 39.4645669291);
   border: none;
-  border-radius: 8px;
+  border-radius: 3px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -292,7 +292,7 @@ body {
   background-color: #1A0A24;
   color: rgb(141.3043478261, 54.347826087, 195.652173913);
   border: none;
-  border-radius: 8px;
+  border-radius: 3px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -315,7 +315,7 @@ body {
   background-color: #F9C7DC;
   color: rgb(220.3870967742, 23.6129032258, 106.2580645161);
   border: none;
-  border-radius: 8px;
+  border-radius: 3px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -338,7 +338,7 @@ body {
   background-color: #EAD2AC;
   color: rgb(161.2115384615, 114.5961538462, 40.7884615385);
   border: none;
-  border-radius: 8px;
+  border-radius: 3px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -361,7 +361,7 @@ body {
   background-color: #B3B3B3;
   color: #4d4d4d;
   border: none;
-  border-radius: 8px;
+  border-radius: 3px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -384,7 +384,7 @@ body {
   background-color: #8B5A2B;
   color: rgb(225.7032967033, 192.3186813187, 160.2967032967);
   border: none;
-  border-radius: 8px;
+  border-radius: 3px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -407,7 +407,7 @@ body {
   background-color: rgb(101.5, 76, 52.5);
   color: rgb(203.1818181818, 178.012987013, 154.8181818182);
   border: none;
-  border-radius: 8px;
+  border-radius: 3px;
   display: flex;
   justify-content: center;
   align-items: center;
