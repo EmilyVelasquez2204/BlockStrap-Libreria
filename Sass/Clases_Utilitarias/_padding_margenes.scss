@@ -1,0 +1,24 @@
+$pixel-size: 4px;
+
+// Márgenes
+@for $i from 0 through 8 {
+  .m-#{$i}  { margin: $i * $pixel-size; }
+  .mt-#{$i} { margin-top: $i * $pixel-size; }
+  .mb-#{$i} { margin-bottom: $i * $pixel-size; }
+  .ml-#{$i} { margin-left: $i * $pixel-size; }
+  .mr-#{$i} { margin-right: $i * $pixel-size; }
+  .mx-#{$i} { margin-left: $i * $pixel-size; margin-right: $i * $pixel-size; }
+  .my-#{$i} { margin-top: $i * $pixel-size; margin-bottom: $i * $pixel-size; }
+}
+
+// Paddings
+@for $i from 0 through 8 {
+  .p-#{$i}  { padding: $i * $pixel-size; }
+  .pt-#{$i} { padding-top: $i * $pixel-size; }
+  .pb-#{$i} { padding-bottom: $i * $pixel-size; }
+  .pl-#{$i} { padding-left: $i * $pixel-size; }
+  .pr-#{$i} { padding-right: $i * $pixel-size; }
+  .px-#{$i} { padding-left: $i * $pixel-size; padding-right: $i * $pixel-size; }
+  .py-#{$i} { padding-top: $i * $pixel-size; padding-bottom: $i * $pixel-size }
+}
+
