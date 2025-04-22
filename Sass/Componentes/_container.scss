@@ -1,7 +1,7 @@
-// ======= BREAKPOINTS PARA RESPONSIVE DESIGN =======
-$breakpoint-sm: 576px;   // Celulares
-$breakpoint-md: 768px;   // Tablets
-$breakpoint-lg: 992px;   // Escritorio
+
+@use '../Clases_Utilitarias/paleta' as *;
+@use '../Clases_Utilitarias/breakpoints' as *;
+
 
 // ======= ESTILO BASE DE TODOS LOS CONTAINERS =======
 .container {
@@ -21,20 +21,6 @@ $breakpoint-lg: 992px;   // Escritorio
   border-radius: 8px;                      // Bordes redondeados
   color: white;                            // Texto en blanco
 
-  // Breakpoint para celular
-  @media (min-width: $breakpoint-sm) {
-    max-width: 540px;                      // Ancho máximo en pantallas pequeñas
-  }
-
-  // Breakpoint para tablet
-  @media (min-width: $breakpoint-md) {
-    max-width: 720px;                      // Ancho máximo en pantallas medianas
-  }
-
-  // Breakpoint para escritorio
-  @media (min-width: $breakpoint-lg) {
-    max-width: 960px;                      // Ancho máximo en pantallas grandes
-  }
 }
 
 // ======= CONTAINER: NETHER (Rojo fuego e infierno) =======
@@ -46,17 +32,6 @@ $breakpoint-lg: 992px;   // Escritorio
   color: #FFEEDD;                          // Texto en color crema claro
   border-radius: 8px;                      // Bordes redondeados
 
-  @media (min-width: $breakpoint-sm) {
-    max-width: 540px;                      // Responsive en celulares
-  }
-
-  @media (min-width: $breakpoint-md) {
-    max-width: 720px;                      // Responsive en tablets
-  }
-
-  @media (min-width: $breakpoint-lg) {
-    max-width: 960px;                      // Responsive en escritorio
-  }
 }
 
 // ======= CONTAINER: THE END (Púrpura y obsidiana) =======
@@ -68,15 +43,5 @@ $breakpoint-lg: 992px;   // Escritorio
   color: #E0D4FF;                          // Texto lila claro
   border-radius: 8px;                      // Bordes redondeados
 
-  @media (min-width: $breakpoint-sm) {
-    max-width: 540px;                      // Responsive en celulares
-  }
-
-  @media (min-width: $breakpoint-md) {
-    max-width: 720px;                      // Responsive en tablets
-  }
-
-  @media (min-width: $breakpoint-lg) {
-    max-width: 960px;                      // Responsive en escritorio
-  }
 }
+
