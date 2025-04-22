@@ -1,0 +1,31 @@
+@use '../Clases_Utilitarias/paleta' as *;
+@use 'sass:color';
+@use '../Clases_Utilitarias/fuente' as *;
+
+
+.creeper-shadow {
+    background-color: #0f0;
+    color: $verde-gel;
+    padding: 0.5rem 1rem;
+    border: 2px solid #000;
+    font-family: $font-minecraft1;
+    box-shadow: 4px 4px 0 #050;
+  }
+
+  .creeper-text {
+    font-family: $font-minecraft1;
+    font-size: 2rem;
+    color: null; /* Verde Creeper */
+    text-shadow: 
+      2px 2px 0 #050, /* sombra verde oscuro */
+      4px 4px 0 #000; /* sombra negra tipo bloque */
+  }
+
+  .skelet-text {
+    font-family: $font-minecraft1;
+    font-size: 2rem;
+    color: $color-fondo; /* Verde Creeper */
+    text-shadow: 
+      2px 2px 0 $blanco-azulado, /* sombra verde oscuro */
+      20px 20px 7px $marron-madera; /* sombra negra tipo bloque */
+  }
