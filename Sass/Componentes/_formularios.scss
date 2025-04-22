@@ -4,7 +4,7 @@
 $color-fondo: #f4f1ee;
 $color-borde: $marron-madera; // marrón tipo madera
 $color-input: #dad2c6;
-$color-focus: #31a6f6; // color diamante
+$color-focus: $azul-diamante; // color diamante
 $color-texto: #3a3a3a;
 $radio-pixel: 0.3vh;
 
@@ -62,7 +62,7 @@ $radio-pixel: 0.3vh;
 
 .disable {
     background-color: #dadada;
-    color: #fff;
+    color: $color-texto;
   }
 
   @mixin formSizeCmb($size, $nombre) {
