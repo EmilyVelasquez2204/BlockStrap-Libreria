@@ -3,7 +3,7 @@
  * 11 |     font-family: $font-minecraft1;
  *    |                  ^^^^^^^^^^^^^^^^
  *    '
- *   Sass\Clases_Utilitarias\_sombras.scss 11:18  @use
+ *   sass\Clases_Utilitarias\_sombras.scss 11:18  @use
  *   sass\main.scss 2:1                           root stylesheet */
 
 body::before {
@@ -14,5 +14,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: "Error: Undefined variable.\a    \2577 \a 11 \2502      font-family: $font-minecraft1;\d\a    \2502                   ^^^^^^^^^^^^^^^^\a    \2575 \a   Sass\\Clases_Utilitarias\\_sombras.scss 11:18  @use\a   sass\\main.scss 2:1                           root stylesheet";
+  content: "Error: Undefined variable.\a    \2577 \a 11 \2502      font-family: $font-minecraft1;\d\a    \2502                   ^^^^^^^^^^^^^^^^\a    \2575 \a   sass\\Clases_Utilitarias\\_sombras.scss 11:18  @use\a   sass\\main.scss 2:1                           root stylesheet";
 }
