@@ -1,6 +1,15 @@
 
+
+
+
+
+
 @use '../Clases_Utilitarias/paleta' as *;
 @use '../Clases_Utilitarias/breakpoints' as *;
+// ======= BREAKPOINTS PARA RESPONSIVE DESIGN =======
+$breakpoint-sm: 576px;   // Celulares
+$breakpoint-md: 768px;   // Tablets
+$breakpoint-lg: 992px;   // Escritorio
 
 
 // ======= ESTILO BASE DE TODOS LOS CONTAINERS =======
