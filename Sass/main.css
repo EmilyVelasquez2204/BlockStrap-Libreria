@@ -60,6 +60,35 @@
   text-align: end;
 }
 
+.Presentacion {
+  background: #5A3A1A;
+  font-family: "Press Start 2P";
+  color: #F4F8FB;
+}
+
+.creeper-shadow {
+  background-color: #0f0;
+  color: #B3F26E;
+  padding: 0.5rem 1rem;
+  border: 2px solid #000;
+  font-family: "Press Start 2P";
+  box-shadow: 4px 4px 0 #050;
+}
+
+.creeper-text {
+  font-family: "Press Start 2P";
+  font-size: 2rem;
+  /* Verde Creeper */
+  text-shadow: 2px 2px 0 #050, 4px 4px 0 #000; /* sombra negra tipo bloque */
+}
+
+.skelet-text {
+  font-family: "Press Start 2P";
+  font-size: 2rem;
+  color: #1e1e1e; /* Verde Creeper */
+  text-shadow: 2px 2px 0 #F4F8FB, 20px 20px 7px #5A3A1A; /* sombra negra tipo bloque */
+}
+
 .badge {
   font-family: "Press Start 2P";
   font-size: 0.4rem;

@@ -1,6 +1,16 @@
 @use '../Clases_Utilitarias/paleta' as *;
 @use 'sass:color';
 @use '../Clases_Utilitarias/fuente' as *;
+@use '../Clases_Utilitarias/padding_margenes' as *;
+
+.Presentacion{
+  background: $marron-madera;
+  font-family: $font-minecraft1;
+  color: $blanco-azulado;
+  padding: m-;
+  
+}
+
 
 
 .creeper-shadow {
