@@ -1,0 +1,95 @@
+
+$small: 10px; //Redondeado pequeño
+$medium: 25px; //Redondeo medio
+$large: 35px; //Redondeo grande
+$xl: 50px;     //Redondeo muy grande
+$xxl: 100px; //Redondeado  enorme
+
+
+.rde-s{
+    border-radius: $small;
+}
+//redondeo de elemento en la esquina superior izquierda
+.rde-tl-s{
+    border-top-left-radius: $small;
+}
+.rde-tl-m{
+    border-top-left-radius: $medium;
+}
+.rde-tl-l{
+    border-top-left-radius: $large;
+}
+.rde-tl-xl{
+    border-top-left-radius: $xl;
+}
+.rde-tl-xxl{
+    border-top-left-radius: $xxl;
+}
+//Redondeo de elemento en la esquina superior derecha
+.rde-tr-s{
+    border-top-right-radius: $small;
+}
+.rde-tr-m{
+    border-top-right-radius: $medium;
+}
+.rde-tr-l{
+    border-top-right-radius: $large;
+}
+.rde-tr-xl{
+    border-top-right-radius: $xl;
+}
+.rde-tr-xxl{
+    border-top-right-radius: $xxl;
+}
+//redondeo de elemento en la esquina inferior izquierda
+.rde-bl-s{
+    border-bottom-left-radius: $small;
+}
+.rde-bl-m{
+    border-bottom-left-radius: $medium;
+}
+.rde-bl-l{
+    border-bottom-left-radius: $large;
+}
+.rde-bl-xl{
+    border-bottom-left-radius: $xl;
+}
+.rde-bl-xxl{
+    border-bottom-left-radius: $xxl;
+}
+//redondeo de elemento en la esquina inferior derecha
+.rde-br-s{
+    border-bottom-right-radius: $small;
+}
+.rde-br-m{
+    border-bottom-right-radius: $medium;
+}
+.rde-br-l{
+    border-bottom-right-radius: $large;
+}
+.rde-br-xl{
+    border-bottom-right-radius: $xl;
+}
+.rde-br-xxl{
+    border-bottom-right-radius: $xxl;
+}
+//redondeo de elemento al tamaño mediano
+.rde-m{
+    border-radius: $medium;
+}
+//redondeo de elemento tamaño grande
+.rde-l{
+    border-radius: $large;
+}
+//redondeo de elemento tamaño extra grande
+.rde-xl{
+    border-radius: $xl;
+}
+//redondeo de elemento al tamaño extra extra grande
+.rde-xxl{
+    border-radius: $xxl;
+}
+//redondeo del elemento circulo
+.rde-circle{
+    border-radius: 50%;
+}

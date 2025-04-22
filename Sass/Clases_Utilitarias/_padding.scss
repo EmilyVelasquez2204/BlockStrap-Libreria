@@ -1,9 +1,0 @@
-// Paddings
-@for $i from 0 through 5 {
-    .p-#{$i}    { padding: $i * 4px; }
-    .pt-#{$i}   { padding-top: $i * 4px; }
-    .pb-#{$i}   { padding-bottom: $i * 4px; }
-    .pl-#{$i}   { padding-left: $i * 4px; }
-    .pr-#{$i}   { padding-right: $i * 4px; }
-  }
-  
