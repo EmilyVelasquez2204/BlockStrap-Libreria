@@ -1,14 +1,64 @@
-// Bordes pixelados (estilo bloques Minecraft)
-.border-stone {
-    border: 4px solid #7D7D7D;      // Gris piedra
-  }
-  .border-dirt {
-    border: 4px solid #8B5A2B;      // Marrón tierra
-  }
-  .border-grass {
-    border: 4px solid #5E7C16;      // Verde césped
-  }
-  .border-obsidian {
-    border: 4px solid #2B0033;      // Obsidiana (End)
-  }
-  
+@use '../Clases_Utilitarias/padding_margenes' as *;
+@use '../Clases_Utilitarias/fuente' as *;
+@use '../Clases_Utilitarias/paleta' as *;
+@use '../Clases_Utilitarias/redondear_elementos' as *;
+@use '../Clases_Utilitarias/sombras' as *;
+
+// Estilos de bordes personalizados usando clases y variables 
+
+.borde-basico {
+  border: 2px solid $color-borde;
+  @extend .p-2;
+  @extend .m-2;
+  @extend .rde-s;
+  @extend .creeper-shadow;
+  @extend .ta-center;
+  font-family: $font-minecraft1;
+  color: $color-texto;
+  background-color: $color-panel;
+}
+
+.borde-panel-importante {
+  border: 3px dashed $rojo-explosivo;
+  @extend .p-3;
+  @extend .m-3;
+  @extend .rde-l;
+  @extend .creeper-shadow;
+  @extend .sf-3;
+  font-family: $font-minecraft2;
+  color: $color-etiqueta;
+  background-color: $color-fondo;
+}
+
+.borde-diamante {
+  border: 4px double $azul-diamante;
+  @extend .p-4;
+  @extend .m-4;
+  @extend .rde-xl;
+  @extend .ta-left;
+  font-family: $font-minecraft3;
+  @extend .color-font-diamante;
+  background-color: $blanco-azulado;
+}
+
+.borde-oro-redondo {
+  border: 2px solid $amarillo-oro;
+  @extend .p-3;
+  @extend .m-2;
+  @extend .rde-circle;
+  @extend .sf-2;
+  @extend .color-font-oro;
+  font-family: $font-minecraft1;
+  background-color: $arena-clara;
+}
+
+.borde-end-sombras {
+  border: 2px groove $purpura-oscuro;
+  @extend .p-3;
+  @extend .m-3;
+  @extend .rde-xl;
+  @extend .creeper-shadow;
+  @extend .color-font-piedraDelEnd;
+  font-family: 'Press Start 2P';
+  background-color: $beige-palido;
+}
