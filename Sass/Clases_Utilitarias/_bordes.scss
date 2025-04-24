@@ -4,7 +4,7 @@
 @use '../Clases_Utilitarias/redondear_elementos' as *;
 @use '../Clases_Utilitarias/sombras' as *;
 
-// Estilos de bordes personalizados usando clases y variables existentes
+// Estilos de bordes personalizados usando clases y variables 
 
 .borde-basico {
   border: 2px solid $color-borde;
