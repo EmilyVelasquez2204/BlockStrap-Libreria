@@ -5,6 +5,7 @@
 @use '../Clases_Utilitarias/redondear_elementos' as *;
 @use '../Clases_Utilitarias/sombras' as *;
 @use '../Clases_Utilitarias/padding_margenes' as *;
+@use '../Clases_Utilitarias/bordes' as *;
 
 // ======= ESTILO BASE DE TODOS LOS CONTAINERS =======
 
@@ -55,10 +56,9 @@
 
 // ======= CONTAINER: OVERWORLD (Pasto y tierra) =======
 .container-overworld {
+  @extend .borde-basico;     // Implementamos el borde básico
   background-color: $verde-pasto;
-  border: $border-width solid $marron-caballo;
   @extend .creeper-shadow;     // Sombra de sombras.scss
-  @extend .rde-m;              // Borde redondeado de redondear_elementos
   @extend .color-font-hoja;    // Color de texto de fuente.scss
   @extend .ttxt-PressStart;    // Tipo de fuente
   
@@ -84,12 +84,10 @@
 
 // ======= CONTAINER: NETHER (Rojo fuego e infierno) =======
 .container-nether {
+  @extend .borde-panel-importante;  // Implementamos el borde de panel importante
   background-color: $rojo-oscuro;
-  border: $border-width dashed $naranja-lava;
-  @extend .rde-l;              // Borde redondeado grande
   @extend .color-font-oro;     // Color de texto oro
   @extend .ttxt-Minecraft;     // Tipo de fuente
-  box-shadow: 4px 4px 0 darken($rojo-oscuro, 15%);
   
   // Patrón de fondo tipo "netherrack"
   background-image: radial-gradient(
@@ -108,13 +106,11 @@
 
 // ======= CONTAINER: THE END (Púrpura y obsidiana) =======
 .container-end {
+  @extend .borde-end-sombras;  // Implementamos el borde end con sombras
   background-color: $purpura-oscuro;
-  border: $border-width dotted $purpura-cristal;
-  @extend .rde-xl;               // Borde redondeado extra grande
   @extend .color-font-piedraDelEnd; // Color de texto
   @extend .ttxt-PressStart;      // Tipo de fuente
   @extend .ta-center;            // Texto centrado
-  box-shadow: 4px 4px 0 darken($purpura-oscuro, 10%);
   
   // Patrón de fondo tipo "end stone"
   background-image: 
@@ -139,14 +135,11 @@
 
 // ======= CONTAINER: OCEANO (Azul profundo) =======
 .container-oceano {
+  @extend .borde-diamante;    // Implementamos el borde de diamante
   background-color: $azul-profundo;
-  border: $border-width solid $azul-mar;
-  @extend .rde-m;               // Borde redondeado medio
   @extend .color-font-mar;      // Color de texto
   @extend .ttxt-ChakraPetch;    // Tipo de fuente
-  @extend .p-4;                 // Padding
   @extend .sf-3;                // Tamaño de fuente
-  box-shadow: 4px 4px 0 darken($azul-profundo, 15%);
   
   // Efecto ondulado con fondo decorativo
   background-image: 
@@ -182,14 +175,10 @@
 
 // ======= CONTAINER: MINA (Piedra y minerales) =======
 .container-mina {
+  @extend .borde-diamante;    // Implementamos el borde de diamante
   background-color: $gris-lobo;
-  border: $border-width ridge $azul-diamante;
-  @extend .rde-s;               // Borde redondeado pequeño
   @extend .color-font-diamante; // Color de texto
   @extend .ttxt-ChakraPetch;    // Tipo de fuente
-  @extend .p-3;                 // Padding
-  @extend .m-3;                 // Margin
-  box-shadow: 0 0 15px rgba($azul-diamante, 0.5);
   
   // Patrón tipo piedra con destellos de mineral
   background-image: 
@@ -220,16 +209,13 @@
 
 // ======= CONTAINER: ALDEA (Madera y esmeraldas) =======
 .container-aldea {
+  @extend .borde-oro-redondo;  // Implementamos el borde de oro redondo
   background-color: $marron-tierra;
-  border: $border-width double $verde-menta;
-  @extend .rde-l;               // Borde redondeado grande
   @extend .ta-left;             // Alineación de texto
   @extend .ttxt-OpenSans;       // Tipo de fuente
   @extend .gf;                  // Grosor de fuente
-  @extend .p-4;                 // Padding
   @extend .sf-2;                // Tamaño de fuente
   @extend .color-font-tierra;   // Color de texto
-  box-shadow: 4px 4px 0 darken($marron-tierra, 15%);
   
   // Patrón tipo tablones de madera
   background-image: 
@@ -254,9 +240,8 @@
 
 // ======= CONTAINER: TNT (Explosivo) =======
 .container-tnt {
+  @extend .borde-panel-importante;  // Implementamos el borde de panel importante
   background-color: $rojo-intenso;
-  border: $border-width solid $negro-purpura;
-  @extend .rde-m;               // Borde redondeado medio
   @extend .color-font-TNT;      // Color de texto
   @extend .ttxt-PressStart;     // Tipo de fuente
   @extend .ta-center;           // Texto centrado
@@ -294,9 +279,8 @@
 
 // ======= CONTAINER: HIELO (Frío y cristalino) =======
 .container-hielo {
+  @extend .borde-diamante;    // Implementamos el borde de diamante
   background-color: $blanco-azulado;
-  border: $border-width solid $turquesa-brillante;
-  @extend .rde-xl;              // Borde redondeado extra grande
   @extend .ttxt-OpenSans;       // Tipo de fuente
   @extend .sf-3;                // Tamaño de fuente
   color: $azul-profundo;
