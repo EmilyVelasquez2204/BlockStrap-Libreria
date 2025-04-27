@@ -1,7 +1,8 @@
 @use '../Clases_Utilitarias/paleta' as *;
 @use 'sass:math'; 
 @use 'sass:color';
-@use '../Clases_Utilitarias/fuente';
+@use '../Clases_Utilitarias/fuente' as *;
+
 
 $xs:60px;
 $small: 110px;

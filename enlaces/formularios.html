@@ -9,7 +9,7 @@
 <body>
     <div class="minecraft-form">
         <div class="">
-     <label class="minecraft-form-label">Correo Electrónico</label>
+     <label class="">Correo Electrónico</label>
      <input type="text" class="" aria-placeholder="email">
      <div class="">Ingresa tu contraseña aqui</div>
      <input type="password" class="form-control" aria-placeholder="password">
@@ -17,9 +17,60 @@
         <br><label class="minecraft-form-label">Recordar contraseña</label>
         <input type="checkbox" name="a" id="check"><br>
         
-        <button type="submit" class="">Enviar</button>
     </div>
+    
+    <button type="submit" class="">Enviar</button>
     </div>
+
+    </div>
+
+    <div class="minecraft-form">
+    <span class="">ComboBox o listas</span>
+        <span class="">Se puede crear un combobox o lista con multiples opciones</span>
+        <div class="">
+            <select name="" id="" class=""size="1" >
+                <option selected>Selecciona una ciriatura:</option>
+                <option value="1">Creeper</option>
+                <option value="2">Golem</option>
+                <option value="3">Enderman</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="minecraft-form">
+        <span class="">Existen varios tamaños para los comboBox o listas, utilizando las medidas: small, medium, large y xl</span>
+        <div class="" style="display: flex; flex-direction: column;">
+            <select name="" id="" class="" size="1">
+                <option selected>Tamaño Small</option>
+            </select>
+            <select name="" id="" class="" size="1">
+                <option selected>Tamaño Medium</option>
+            </select>
+            <select name="" id="" class="" size="1">
+                <option selected>Tamaño Large</option>
+            </select>
+            <select name="" id="" class="" size="1">
+                <option selected>Tamaño XL</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="minecraft-form">
+        <span class="">Desactivado</span>
+        <span class="">Todos los apartados del formulario se pueden desactivar, para que el usuario no pueda seleccionar o presionar algun elemento</span>
+        <div class="" style="display: flex; flex-direction: column;">
+            <label class="">ComboBox desactivado</label>
+            <select  disabled name="" id="" class="" size="1">
+                <option selected>Criaturas:</option>
+                <option value="1">Creeper</option>
+                <option value="2">Golem</option>
+                <option value="3">Enderman</option>
+            </select>
+            <label class="">Boton desactivado</label>
+            <button disabled="disabled" class="" >Desactive </button>
+            <label class="" >TextBox Desactivados</label>
+            <input disabled type="text" class="" aria-placeholder="email" >
+        </div>
     </div>
 </body>
 </html>
