@@ -1,18 +1,20 @@
 @use '../Clases_Utilitarias/paleta' as *;
+
 //fuentes externas
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Press+Start+2P&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 /* Importar fuente de Minecraft */
 @font-face {
     font-family: 'MinecraftFont';
-    src: url('https://cdnjs.cloudflare.com/ajax/libs/font-minecraft/1.0.0/minecraft.woff2') format('woff2');}
+    src: url('/assets/fonts/minecraft.woff2') format('woff2');}
+
 
 //tamaño de la fuente
-$size-1: 1vh;   //variables con unidades vh (altura del viewport)
-$size-2: 2.3vh;
-$size-3: 3vh;
-$size-4: 4vh;
-$size-5: 5vh;
+$size-1: 12px;   //variables con unidades en pixeles
+$size-2: 16px;
+$size-3: 20px;
+$size-4: 32px;
+$size-5: 48px;
 
 @mixin sizefont($nombre, $size){   //mixin para generar clases con un nombre tipo sf-1, sf-2
     .sf-#{$nombre}{
@@ -28,9 +30,22 @@ $size-5: 5vh;
 @include sizefont('4',$size-4);
 @include sizefont('5',$size-5);
 
-//grosor de la fuente
-.gf{
-    font-weight: bold;
+
+//mixin para cambiar el grosor del texto
+
+@mixin grosorFuente($weight){
+    font-weight: $weight;
+}
+.txt-bold{
+    @include grosorFuente(bold);
+}
+
+.txt-normal{
+    @include grosorFuente(normal);
+}
+.txt-bolder{
+    @include grosorFuente(bolder);
+
 }
 
 @mixin colorfuente($nombre, $color){ //mixin para generar clases para color fuente
