@@ -1,32 +1,19 @@
-
-/* Error: Undefined variable.
- *    ,
- * 11 |     font-family: $font-minecraft1;
- *    |                  ^^^^^^^^^^^^^^^^
- *    '
- *   sass\Clases_Utilitarias\_sombras.scss 11:18  @use
- *   sass\main.scss 2:1                           root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Undefined variable.\a    \2577 \a 11 \2502      font-family: $font-minecraft1;\d\a    \2502                   ^^^^^^^^^^^^^^^^\a    \2575 \a   sass\\Clases_Utilitarias\\_sombras.scss 11:18  @use\a   sass\\main.scss 2:1                           root stylesheet";
-
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Press+Start+2P&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+/* Importar fuente de Minecraft */
+@font-face {
+  font-family: "MinecraftFont";
+  src: url("https://cdnjs.cloudflare.com/ajax/libs/font-minecraft/1.0.0/minecraft.woff2") format("woff2");
 }
 .sf-1 {
   font-size: 1vh;
 }
 
-.sf-2 {
+.sf-2, .container-aldea, .borde-oro-redondo {
   font-size: 2.3vh;
 }
 
-.sf-3 {
+.sf-3, .container-oceano, .container-tnt, .container-hielo, .borde-panel-importante, .container-nether {
   font-size: 3vh;
 }
 
@@ -38,11 +25,11 @@ body::before {
   font-size: 5vh;
 }
 
-.gf {
+.gf, .container-aldea {
   font-weight: bold;
 }
 
-.color-font-mar {
+.color-font-mar, .container-oceano {
   color: #5555FF;
 }
 
@@ -50,27 +37,27 @@ body::before {
   color: #F0E68C;
 }
 
-.color-font-tierra {
+.color-font-tierra, .container-aldea {
   color: #835C3B;
 }
 
-.color-font-hoja {
+.color-font-hoja, .container-overworld {
   color: #3A7425;
 }
 
-.color-font-TNT {
+.color-font-TNT, .container-tnt {
   color: #E03E3E;
 }
 
-.color-font-oro {
+.color-font-oro, .container-nether, .borde-oro-redondo, .container-aldea {
   color: #FCEE4B;
 }
 
-.color-font-diamante {
+.color-font-diamante, .container-mina, .borde-diamante, .container-oceano, .container-hielo {
   color: #41C6EC;
 }
 
-.color-font-piedraDelEnd {
+.color-font-piedraDelEnd, .container-end, .borde-end-sombras {
   color: #E3E39C;
 }
 
@@ -78,23 +65,23 @@ body::before {
   color: #1A0A24;
 }
 
-.ttxt-Minecraft {
+.ttxt-Minecraft, .container-nether {
   font-family: "MinecraftFont", sans-serif;
 }
 
-.ttxt-PressStart {
+.ttxt-PressStart, .container-overworld, .container-end, .container-tnt {
   font-family: "Press Start 2P";
 }
 
-.ttxt-ChakraPetch {
+.ttxt-ChakraPetch, .container-oceano, .container-mina {
   font-family: "Chakra Petch";
 }
 
-.ttxt-OpenSans {
+.ttxt-OpenSans, .container-aldea, .container-hielo {
   font-family: "Open Sans";
 }
 
-.ta-center {
+.ta-center, .container-end, .container-tnt, .borde-basico, .container-overworld {
   text-align: center;
 }
 
@@ -102,7 +89,7 @@ body::before {
   text-align: justify;
 }
 
-.ta-left {
+.ta-left, .container-aldea, .borde-diamante, .container-oceano, .container-mina, .container-hielo {
   text-align: left;
 }
 
@@ -118,7 +105,7 @@ body::before {
   text-align: end;
 }
 
-.creeper-shadow {
+.creeper-shadow, .container-overworld, .borde-basico, .borde-panel-importante, .borde-end-sombras, .container-nether, .container-tnt, .container-end {
   background-color: #0f0;
   color: #B3F26E;
   padding: 0.5rem 1rem;
@@ -141,6 +128,719 @@ body::before {
   text-shadow: 2px 2px 0 #F4F8FB, 20px 20px 7px #5A3A1A; /* sombra negra tipo bloque */
 }
 
+.m-0 {
+  margin: 0px;
+}
+
+.mt-0 {
+  margin-top: 0px;
+}
+
+.mb-0 {
+  margin-bottom: 0px;
+}
+
+.ml-0 {
+  margin-left: 0px;
+}
+
+.mr-0 {
+  margin-right: 0px;
+}
+
+.mx-0 {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.my-0 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.m-1 {
+  margin: 4px;
+}
+
+.mt-1 {
+  margin-top: 4px;
+}
+
+.mb-1 {
+  margin-bottom: 4px;
+}
+
+.ml-1 {
+  margin-left: 4px;
+}
+
+.mr-1 {
+  margin-right: 4px;
+}
+
+.mx-1 {
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+.my-1 {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.m-2, .container, .borde-basico, .borde-oro-redondo, .container-overworld, .container-aldea {
+  margin: 8px;
+}
+
+.mt-2 {
+  margin-top: 8px;
+}
+
+.mb-2 {
+  margin-bottom: 8px;
+}
+
+.ml-2 {
+  margin-left: 8px;
+}
+
+.mr-2 {
+  margin-right: 8px;
+}
+
+.mx-2 {
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.my-2 {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.m-3, .borde-panel-importante, .borde-end-sombras, .container-nether, .container-tnt, .container-end {
+  margin: 12px;
+}
+
+.mt-3 {
+  margin-top: 12px;
+}
+
+.mb-3 {
+  margin-bottom: 12px;
+}
+
+.ml-3 {
+  margin-left: 12px;
+}
+
+.mr-3 {
+  margin-right: 12px;
+}
+
+.mx-3 {
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+.my-3 {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.m-4, .borde-diamante, .container-oceano, .container-mina, .container-hielo {
+  margin: 16px;
+}
+
+.mt-4 {
+  margin-top: 16px;
+}
+
+.mb-4 {
+  margin-bottom: 16px;
+}
+
+.ml-4 {
+  margin-left: 16px;
+}
+
+.mr-4 {
+  margin-right: 16px;
+}
+
+.mx-4 {
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.my-4 {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.m-5 {
+  margin: 20px;
+}
+
+.mt-5 {
+  margin-top: 20px;
+}
+
+.mb-5 {
+  margin-bottom: 20px;
+}
+
+.ml-5 {
+  margin-left: 20px;
+}
+
+.mr-5 {
+  margin-right: 20px;
+}
+
+.mx-5 {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.my-5 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.m-6 {
+  margin: 24px;
+}
+
+.mt-6 {
+  margin-top: 24px;
+}
+
+.mb-6 {
+  margin-bottom: 24px;
+}
+
+.ml-6 {
+  margin-left: 24px;
+}
+
+.mr-6 {
+  margin-right: 24px;
+}
+
+.mx-6 {
+  margin-left: 24px;
+  margin-right: 24px;
+}
+
+.my-6 {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.m-7 {
+  margin: 28px;
+}
+
+.mt-7 {
+  margin-top: 28px;
+}
+
+.mb-7 {
+  margin-bottom: 28px;
+}
+
+.ml-7 {
+  margin-left: 28px;
+}
+
+.mr-7 {
+  margin-right: 28px;
+}
+
+.mx-7 {
+  margin-left: 28px;
+  margin-right: 28px;
+}
+
+.my-7 {
+  margin-top: 28px;
+  margin-bottom: 28px;
+}
+
+.m-8 {
+  margin: 32px;
+}
+
+.mt-8 {
+  margin-top: 32px;
+}
+
+.mb-8 {
+  margin-bottom: 32px;
+}
+
+.ml-8 {
+  margin-left: 32px;
+}
+
+.mr-8 {
+  margin-right: 32px;
+}
+
+.mx-8 {
+  margin-left: 32px;
+  margin-right: 32px;
+}
+
+.my-8 {
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+.p-0 {
+  padding: 0px;
+}
+
+.pt-0 {
+  padding-top: 0px;
+}
+
+.pb-0 {
+  padding-bottom: 0px;
+}
+
+.pl-0 {
+  padding-left: 0px;
+}
+
+.pr-0 {
+  padding-right: 0px;
+}
+
+.px-0 {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.py-0 {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.p-1 {
+  padding: 4px;
+}
+
+.pt-1 {
+  padding-top: 4px;
+}
+
+.pb-1 {
+  padding-bottom: 4px;
+}
+
+.pl-1 {
+  padding-left: 4px;
+}
+
+.pr-1 {
+  padding-right: 4px;
+}
+
+.px-1 {
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.py-1 {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.p-2, .borde-basico, .container-overworld {
+  padding: 8px;
+}
+
+.pt-2 {
+  padding-top: 8px;
+}
+
+.pb-2 {
+  padding-bottom: 8px;
+}
+
+.pl-2 {
+  padding-left: 8px;
+}
+
+.pr-2 {
+  padding-right: 8px;
+}
+
+.px-2 {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.py-2 {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.p-3, .container, .borde-panel-importante, .borde-oro-redondo, .borde-end-sombras, .container-nether, .container-tnt, .container-end, .container-aldea {
+  padding: 12px;
+}
+
+.pt-3 {
+  padding-top: 12px;
+}
+
+.pb-3 {
+  padding-bottom: 12px;
+}
+
+.pl-3 {
+  padding-left: 12px;
+}
+
+.pr-3 {
+  padding-right: 12px;
+}
+
+.px-3 {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.py-3 {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.p-4, .borde-diamante, .container-oceano, .container-mina, .container-hielo {
+  padding: 16px;
+}
+
+.pt-4 {
+  padding-top: 16px;
+}
+
+.pb-4 {
+  padding-bottom: 16px;
+}
+
+.pl-4 {
+  padding-left: 16px;
+}
+
+.pr-4 {
+  padding-right: 16px;
+}
+
+.px-4 {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.py-4 {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.p-5 {
+  padding: 20px;
+}
+
+.pt-5 {
+  padding-top: 20px;
+}
+
+.pb-5 {
+  padding-bottom: 20px;
+}
+
+.pl-5 {
+  padding-left: 20px;
+}
+
+.pr-5 {
+  padding-right: 20px;
+}
+
+.px-5 {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.py-5 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.p-6 {
+  padding: 24px;
+}
+
+.pt-6 {
+  padding-top: 24px;
+}
+
+.pb-6 {
+  padding-bottom: 24px;
+}
+
+.pl-6 {
+  padding-left: 24px;
+}
+
+.pr-6 {
+  padding-right: 24px;
+}
+
+.px-6 {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.py-6 {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.p-7 {
+  padding: 28px;
+}
+
+.pt-7 {
+  padding-top: 28px;
+}
+
+.pb-7 {
+  padding-bottom: 28px;
+}
+
+.pl-7 {
+  padding-left: 28px;
+}
+
+.pr-7 {
+  padding-right: 28px;
+}
+
+.px-7 {
+  padding-left: 28px;
+  padding-right: 28px;
+}
+
+.py-7 {
+  padding-top: 28px;
+  padding-bottom: 28px;
+}
+
+.p-8 {
+  padding: 32px;
+}
+
+.pt-8 {
+  padding-top: 32px;
+}
+
+.pb-8 {
+  padding-bottom: 32px;
+}
+
+.pl-8 {
+  padding-left: 32px;
+}
+
+.pr-8 {
+  padding-right: 32px;
+}
+
+.px-8 {
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.py-8 {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.rde-s, .borde-basico, .container-overworld {
+  border-radius: 10px;
+}
+
+.rde-tl-s {
+  border-top-left-radius: 10px;
+}
+
+.rde-tl-m {
+  border-top-left-radius: 25px;
+}
+
+.rde-tl-l {
+  border-top-left-radius: 35px;
+}
+
+.rde-tl-xl {
+  border-top-left-radius: 50px;
+}
+
+.rde-tl-xxl {
+  border-top-left-radius: 100px;
+}
+
+.rde-tr-s {
+  border-top-right-radius: 10px;
+}
+
+.rde-tr-m {
+  border-top-right-radius: 25px;
+}
+
+.rde-tr-l {
+  border-top-right-radius: 35px;
+}
+
+.rde-tr-xl {
+  border-top-right-radius: 50px;
+}
+
+.rde-tr-xxl {
+  border-top-right-radius: 100px;
+}
+
+.rde-bl-s {
+  border-bottom-left-radius: 10px;
+}
+
+.rde-bl-m {
+  border-bottom-left-radius: 25px;
+}
+
+.rde-bl-l {
+  border-bottom-left-radius: 35px;
+}
+
+.rde-bl-xl {
+  border-bottom-left-radius: 50px;
+}
+
+.rde-bl-xxl {
+  border-bottom-left-radius: 100px;
+}
+
+.rde-br-s {
+  border-bottom-right-radius: 10px;
+}
+
+.rde-br-m {
+  border-bottom-right-radius: 25px;
+}
+
+.rde-br-l {
+  border-bottom-right-radius: 35px;
+}
+
+.rde-br-xl {
+  border-bottom-right-radius: 50px;
+}
+
+.rde-br-xxl {
+  border-bottom-right-radius: 100px;
+}
+
+.rde-m, .container {
+  border-radius: 25px;
+}
+
+.rde-l, .borde-panel-importante, .container-nether, .container-tnt {
+  border-radius: 35px;
+}
+
+.rde-xl, .borde-diamante, .borde-end-sombras, .container-end, .container-oceano, .container-mina, .container-hielo {
+  border-radius: 50px;
+}
+
+.rde-xxl {
+  border-radius: 100px;
+}
+
+.rde-circle, .borde-oro-redondo, .container-aldea {
+  border-radius: 50%;
+}
+
+.borde-basico, .container-overworld {
+  border: 2px solid #555;
+  font-family: "Press Start 2P";
+  color: #ffffff;
+  background-color: #2d2d2d;
+}
+
+.borde-panel-importante, .container-nether, .container-tnt {
+  border: 3px dashed #E03E3E;
+  font-family: "Chakra Petch";
+  color: #ff5555;
+  background-color: #1e1e1e;
+}
+
+.borde-diamante, .container-oceano, .container-mina, .container-hielo {
+  border: 4px double #41C6EC;
+  font-family: "Open Sans";
+  background-color: #F4F8FB;
+}
+
+.borde-oro-redondo, .container-aldea {
+  border: 2px solid #FCEE4B;
+  font-family: "Press Start 2P";
+  background-color: #F0E68C;
+}
+
+.borde-end-sombras, .container-end {
+  border: 2px groove #1A0A24;
+  font-family: "Press Start 2P";
+  background-color: #E3E39C;
+}
+
+.move-up {
+  transform: translateY(-10px);
+}
+
+.move-down {
+  transform: translateY(10px);
+}
+
+.move-left {
+  transform: translateX(-10px);
+}
+
+.move-right {
+  transform: translateX(10px);
+}
+
+.move-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+@media screen and (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .container {
+    width: 100%;
+  }
+}
+
 body {
   background-image: url(/Imagenes/minecraft-inicio.png);
   background-repeat: no-repeat;
@@ -149,40 +849,22 @@ body {
   background-position: center;
 }
 
-.panel {
-  background-color: #D8AF93;
-  border: 4px solid #7c4c11;
-  padding: 20px;
-  margin-bottom: 30px;
-  border-radius: 10px;
-  box-shadow: 4px 4px rgb(183.6798029557, 131.1280788177, 72.3201970443);
+.otroColor {
+  color: #1EC26B;
 }
 
-.panel h2 {
-  margin-top: 0;
-  color: #3b2e1d;
-}
-
-.descripcion {
+.descripcion, span {
   margin-bottom: 15px;
-  color: #444;
-  font-size: 1rem;
+  color: #E3E39C;
+  font-size: 20px;
+  font-family: "Press Start 2P";
+  text-align: center;
 }
 
-.btn-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 10px;
-}
-
-.codigo {
-  padding: 5px;
-  font-size: 18px;
-  border-left: 4px solid #7c4c11;
-  overflow-x: auto;
-  white-space: pre-wrap;
-  color: #222;
+h2 {
+  font-family: "Press Start 2P";
+  text-align: center;
+  color: #EDEDED;
 }
 
 .btn-sm-mar {
@@ -507,60 +1189,67 @@ body {
   color: hsl(28.7755102041, 31.8181818182%, 100.1960784314%);
 }
 
+.descripcion {
+  margin-bottom: 15px;
+  color: #e7dcdc;
+  font-size: 20px;
+  font-family: "Press Start 2P", cursive;
+  text-align: center;
+}
+
+h2 {
+  font-family: "Press Start 2P", cursive;
+  text-align: center;
+}
+
 .minecraft-form {
-  background-color: #f4f1ee;
-  border: 4px solid #5A3A1A;
-  border-radius: 0.3vh;
-  padding: 2vh;
-  font-family: "monospace";
-  max-width: 500px;
-  margin: auto;
-  box-shadow: 4px 4px 0px #3b3b3b;
+  background-color: #c6a15b;
+  border: 4px solid #5d3a00;
+  padding: 20px;
+  max-width: 400px;
+  margin: 20px auto;
+  font-family: "Press Start 2P", cursive;
+  color: #fff;
+  box-shadow: 0 0 20px #000;
+  border-radius: 8px;
 }
-
-.minecraft-form-label {
-  font-size: 1.8vh;
-  color: #5A3A1A;
-  margin-bottom: 0.5vh;
+.minecraft-form label, .minecraft-form div, .minecraft-form span {
   display: block;
+  margin-bottom: 10px;
+  color: #fff;
 }
-
-.minecraft-form-control {
-  background-color: #dad2c6;
-  border: 2px solid #5A3A1A;
-  border-radius: 0.3vh;
-  padding: 0.8vh;
-  width: 100%;
-  margin-bottom: 1.2vh;
-  font-family: "monospace";
-  font-size: 1.6vh;
-  color: #3a3a3a;
+.minecraft-form input[type=text], .minecraft-form input[type=password], .minecraft-form select {
+  width: 95%;
+  padding: 8px;
+  border: 3px solid #3d2c1c;
+  border-radius: 4px;
+  background-color: #f0e68c;
+  font-family: "Press Start 2P", cursive;
+  margin-bottom: 10px;
 }
-
-.minecraft-form-control:focus {
-  outline: none;
-  border-color: #41C6EC;
-  box-shadow: 0 0 1vh 0.2vh #41C6EC;
+.minecraft-form input[type=text]:disabled, .minecraft-form input[type=password]:disabled, .minecraft-form select:disabled {
+  background-color: #aaa;
+  border-color: #777;
 }
-
-.minecraft-check {
-  display: flex;
-  align-items: center;
-  margin: 1vh 0;
+.minecraft-form input[type=checkbox] {
+  transform: scale(1.5);
+  margin-right: 10px;
 }
-.minecraft-check input {
-  margin-right: 1vh;
-  accent-color: #5A3A1A;
+.minecraft-form button {
+  background-color: #3d8b3d;
+  color: #fff;
+  border: 3px solid #3A7425;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-family: "Press Start 2P", cursive;
+  transition: background-color 0.3s;
 }
-.minecraft-check label {
-  font-family: monospace;
-  font-size: 1.6vh;
-  color: #3a3a3a;
+.minecraft-form button:hover {
+  background-color: #2f6b2f;
 }
-
-.disable {
-  background-color: #dadada;
-  color: #3a3a3a;
+.minecraft-form button:disabled {
+  background-color: #666;
+  cursor: not-allowed;
 }
 
 .alert {
@@ -627,7 +1316,7 @@ body {
   color: rgb(215.8547486034, 194.3463687151, 238.6536312849);
 }
 .alert-enderman::before {
-  content: "👁";
+  content: "👁️​";
   background-color: #A472D9;
 }
 .alert-enderman:hover {
@@ -639,7 +1328,7 @@ body {
   border: 3px solid #8B5A2B;
 }
 .alert-steve::before {
-  content: "⛏";
+  content: "⛏️";
   background-color: #8B5A2B;
 }
 
@@ -648,7 +1337,7 @@ body {
   border: 3px solid #7DC383;
 }
 .alert-aldeano::before {
-  content: "💎";
+  content: "✧";
   background-color: #7DC383;
 }
 
@@ -850,53 +1539,150 @@ body {
 }
 
 .container {
-  width: 80%;
-  margin: 0 auto;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 16px;
+  box-sizing: border-box;
+  position: relative;
+  font-family: "MinecraftFont", sans-serif;
+  color: #3a3a3a;
+  transition: all 0.3s ease;
 }
-@media screen and (max-width: 768px) {
-  .container {
-    width: 90%;
-  }
+.container:hover {
+  transform: translateY(-3px);
+  box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.6);
 }
 @media screen and (max-width: 576px) {
   .container {
     width: 100%;
+    padding: 8px;
   }
 }
-
-.container {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 1rem;
-  box-sizing: border-box;
+@media screen and (min-width: 768px) {
+  .container {
+    width: 90%;
+    padding: 12px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .container {
+    width: 80%;
+    padding: 16px;
+  }
 }
 
 .container-overworld {
   background-color: #5E7C16;
-  border: 5px solid #8B5A2B;
-  box-shadow: 4px 4px 0 #3A5E0E;
-  font-family: "Press Start 2P", cursive;
-  border-radius: 8px;
-  color: white;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.1) 1px, transparent 1px), linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 8px 8px;
+}
+.container-overworld::before {
+  content: "🌿";
+  display: inline-block;
+  margin-right: 10px;
 }
 
 .container-nether {
-  background-color: #6C0000;
-  border: 5px dashed #FF4500;
-  box-shadow: 4px 4px 0 #300000;
-  font-family: "Press Start 2P", cursive;
-  color: #FFEEDD;
-  border-radius: 8px;
+  background-color: #812E24;
+  background-image: radial-gradient(circle, rgba(255, 100, 0, 0.15) 2px, transparent 2px);
+  background-size: 16px 16px;
+}
+.container-nether::before {
+  content: "🔥";
+  display: inline-block;
+  margin-right: 10px;
 }
 
 .container-end {
-  background-color: #2B0033;
-  border: 5px dotted #8A2BE2;
-  box-shadow: 4px 4px 0 #1A001F;
-  font-family: "Press Start 2P", cursive;
-  color: #E0D4FF;
-  border-radius: 8px;
+  background-color: #1A0A24;
+  background-image: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.1) 1px, transparent 1px), radial-gradient(circle at 70% 70%, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+.container-end::before {
+  content: "⭐";
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.container-oceano {
+  background-color: #3D5B94;
+  background-image: linear-gradient(45deg, rgba(85, 85, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(85, 85, 255, 0.2) 50%, rgba(85, 85, 255, 0.2) 75%, transparent 75%, transparent);
+  background-size: 20px 20px;
+  animation: wave 8s linear infinite;
+}
+@keyframes wave {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 40px 40px;
+  }
+}
+.container-oceano::before {
+  content: "🌊";
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.container-mina {
+  background-color: #B3B3B3;
+  background-image: radial-gradient(circle, rgba(65, 198, 236, 0.4) 2px, transparent 2px), radial-gradient(circle, rgba(125, 195, 131, 0.3) 1px, transparent 1px), radial-gradient(circle, rgba(224, 62, 62, 0.2) 1px, transparent 1px);
+  background-size: 30px 30px, 20px 20px, 15px 15px;
+  background-position: 0 0, 10px 10px, 15px 5px;
+}
+.container-mina::before {
+  content: "⛏️";
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.container-aldea {
+  background-color: #835C3B;
+  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.1) 1px, transparent 1px), linear-gradient(0deg, rgba(0, 0, 0, 0.1) 3px, transparent 3px);
+  background-size: 20px 20px, 20px 10px;
+}
+.container-aldea::before {
+  content: "🏠";
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.container-tnt {
+  background-color: #B80000;
+  background-image: linear-gradient(45deg, #E03E3E 25%, #FCEE4B 25%, #FCEE4B 50%, #E03E3E 50%, #E03E3E 75%, #FCEE4B 75%);
+  background-size: 20px 20px;
+  box-shadow: 0 0 20px rgba(224, 62, 62, 0.7);
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.03);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.container-tnt::before {
+  content: "💣";
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.container-hielo {
+  background-color: #F4F8FB;
+  color: #3D5B94;
+  background-image: linear-gradient(135deg, rgba(56, 210, 197, 0.2) 25%, transparent 25%), linear-gradient(225deg, rgba(56, 210, 197, 0.2) 25%, transparent 25%), linear-gradient(315deg, rgba(56, 210, 197, 0.2) 25%, transparent 25%), linear-gradient(45deg, rgba(56, 210, 197, 0.2) 25%, transparent 25%);
+  background-size: 15px 15px;
+  box-shadow: 0 0 15px rgba(56, 210, 197, 0.5);
+}
+.container-hielo::before {
+  content: "❄️";
+  display: inline-block;
+  margin-right: 10px;
 }
 
 .badge {

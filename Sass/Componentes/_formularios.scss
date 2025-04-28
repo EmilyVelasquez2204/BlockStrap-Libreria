@@ -1,12 +1,25 @@
 @use '../Clases_Utilitarias/paleta' as *;
 @use 'botones';
 
+
 $color-fondo: #f4f1ee;
 $color-borde: $marron-madera; // marrón tipo madera
 $color-input: #dad2c6;
 $color-focus: $azul-diamante; // color diamante
 $color-texto: #3a3a3a;
 $radio-pixel: 0.3vh;
+
+.descripcion {
+  margin-bottom: 15px;
+  color: #e7dcdc;
+  font-size: 20px;
+  font-family: 'Press Start 2P', cursive;
+ text-align: center;
+}
+h2{
+  font-family: 'Press Start 2P', cursive;
+  text-align: center;
+}
 
 .minecraft-form{
   background-color: #c6a15b; // color tierra
@@ -24,7 +37,7 @@ $radio-pixel: 0.3vh;
     color: #fff;
   }
   input[type="text"], input[type="password"], select {
-    width: 100%;
+    width: 95%;
     padding: 8px;
     border: 3px solid #3d2c1c;
     border-radius: 4px;
@@ -42,6 +55,7 @@ $radio-pixel: 0.3vh;
     transform: scale(1.5);
     margin-right: 10px;
   }
+  
   button {
     background-color: #3d8b3d;
     color: #fff;
