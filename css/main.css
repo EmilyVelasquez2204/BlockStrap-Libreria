@@ -124,7 +124,7 @@
 .skelet-text {
   font-family: "Press Start 2P";
   font-size: 2rem;
-  color: #1e1e1e; /* Verde Creeper */
+  color: #f4f1ee; /* Verde Creeper */
   text-shadow: 2px 2px 0 #F4F8FB, 20px 20px 7px #5A3A1A; /* sombra negra tipo bloque */
 }
 
@@ -775,7 +775,7 @@
 .borde-basico, .container-overworld {
   border: 2px solid #555;
   font-family: "Press Start 2P";
-  color: #ffffff;
+  color: #fff;
   background-color: #2d2d2d;
 }
 
@@ -783,7 +783,7 @@
   border: 3px dashed #E03E3E;
   font-family: "Chakra Petch";
   color: #ff5555;
-  background-color: #1e1e1e;
+  background-color: #f4f1ee;
 }
 
 .borde-diamante, .container-oceano, .container-mina, .container-hielo {
@@ -842,7 +842,7 @@
 }
 
 body {
-  background-image: url(/Imagenes/minecraft-inicio.png);
+  background-color: #E3E39C;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -1189,17 +1189,26 @@ h2 {
   color: hsl(28.7755102041, 31.8181818182%, 100.1960784314%);
 }
 
+.otroColor {
+  color: #F9C7DC;
+}
+
+span {
+  color: 0.3vh;
+}
+
 .descripcion {
-  margin-bottom: 15px;
-  color: #e7dcdc;
+  margin: 15px;
+  color: #812E24;
   font-size: 20px;
-  font-family: "Press Start 2P", cursive;
+  font-family: "Press Start 2P";
   text-align: center;
 }
 
 h2 {
-  font-family: "Press Start 2P", cursive;
+  font-family: "Press Start 2P";
   text-align: center;
+  color: #E03E3E;
 }
 
 .minecraft-form {
@@ -1210,7 +1219,7 @@ h2 {
   margin: 20px auto;
   font-family: "Press Start 2P", cursive;
   color: #fff;
-  box-shadow: 0 0 20px #000;
+  box-shadow: 0 0 20px #1D1D1D;
   border-radius: 8px;
 }
 .minecraft-form label, .minecraft-form div, .minecraft-form span {
@@ -1236,16 +1245,16 @@ h2 {
   margin-right: 10px;
 }
 .minecraft-form button {
-  background-color: #3d8b3d;
+  background-color: #3A7425;
   color: #fff;
-  border: 3px solid #3A7425;
+  border: 3px solid #2E4E1A;
   padding: 10px 20px;
   cursor: pointer;
   font-family: "Press Start 2P", cursive;
   transition: background-color 0.3s;
 }
 .minecraft-form button:hover {
-  background-color: #2f6b2f;
+  background-color: #7DC383;
 }
 .minecraft-form button:disabled {
   background-color: #666;
@@ -1256,7 +1265,7 @@ h2 {
   padding: 1rem;
   border-radius: 4px;
   font-family: "Press Start 2P", cursive;
-  color: #3a3a3a;
+  color: #fff;
   margin-bottom: 1rem;
   box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.4);
   position: relative;
@@ -1546,7 +1555,7 @@ h2 {
   box-sizing: border-box;
   position: relative;
   font-family: "MinecraftFont", sans-serif;
-  color: #3a3a3a;
+  color: #fff;
   transition: all 0.3s ease;
 }
 .container:hover {
