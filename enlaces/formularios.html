@@ -7,194 +7,325 @@
     <link rel="stylesheet" href="../css/main.css">
 </head>
 <body>   
+    
+        
+    <div class="container">
+      
+        <h2 class="container-nether form-titulo">Formularios</h2>
+        <form action="">
+         
+          <p class="descripcion">Este es el formulario principal en nuestra librería.</p>
+      
+          <div class="minecraft-form">
+            <label class="">Correo Electrónico</label>
+            <input type="text" aria-placeholder="email">
+      
+            <label>Ingresa tu contraseña aqui</label>
+            <input type="password" aria-placeholder="password">
+      
+            <!--CHECKBOX DE RECORDAR CONTRASEÑA-->
+            <div class="minecraft-check">
+              <label class="minecraft-form-label" style="font-size: small;">Recordar contraseña</label>
+              <input type="checkbox" id="check"><br>
+            </div>      
+      
+            <!--BOTON DE ENVIAR FORMULARIO-->
+            <button type="submit" class="btn-sm-axolote">Enviar</button>
+      
+            <!--ALERTA DE EXITO-->
+            <div class="alert-nether" id="alert-nether" style="margin: 10px; font-size: medium;">
+              ¡Se ha enviado correctamente!
+            </div>
+          </div>
+        </form>
+      </div>
+      
+ <!--DESCRIPCIÓN DEL CÓDIGO MOSTRADO EN PANTALLA-->
+
+ <div class="container-nether codigo">
+    Fragmentos de código:
+    <div class="codigo">
+<div class="form-sp">
+      <div>
+        <span>&lt;</span><span>form</span><span> action</span> <span>=</span> <span>" "</span><span>&gt;</span>
+      </div><br>
+  
+      <div>
+        <span>&lt;</span><span>label</span><span>&gt;</span>
+        Correo Electrónico
+        <span>&lt;/</span><span>label</span><span>&gt;</span>
+      </div><br>
+  
+      <div>
+        <span>&lt;</span><span>input</span>
+        <span> type</span> <span>=</span> "text"
+        <span> aria-placeholder</span> <span>=</span> "email"
+        <span>&gt;</span>
+      </div><br>
+  
+      <div>
+        <span>&lt;</span><span>label</span><span>&gt;</span>
+        Ingresa tu contraseña aquí
+        <span>&lt;/</span><span>label</span><span>&gt;</span>
+      </div><br>
+  
+      <div>
+        <span>&lt;</span><span>input</span>
+        <span> type</span> <span>=</span> "password"
+        <span> aria-placeholder</span> <span>=</span> "password"
+        <span>&gt;</span>
+      </div><br>
+  
+      <div>
+        <span>&lt;</span><span>label</span>
+        <span> class</span><span>=</span> <span> "minecraft-form-label"</span>
+        <span> style</span><span>=</span><span>"font-size: small;"</span><span>&gt;</span>Recordar contraseña
+        <span>&lt;/</span><span>label</span><span>&gt;</span>
+      </div><br>
+  
+      <div>
+        <span>&lt;</span><span>input</span>
+        <span> type</span><span>=</span><span>"checkbox"</span>
+        <span> id</span><span>=</span><span>"check"</span><span>&gt;</span>
+      </div><br>
+  
+      <div>
+        <span>&lt;</span><span>button</span>
+        <span> type </span><span>=</span><span>"submit"</span>
+        <span> class</span><span>=</span><span>"btn-sm-gato"</span>
+        <span>&gt;</span>Enviar
+        <span>&lt;/</span><span>button</span><span>&gt;</span>
+      </div><br>
+  
+      <div>
+        <span>&lt;</span><span>div</span>
+        <span> class</span><span>=</span><span>"alert-exito"</span>
+        <span> id</span><span>=</span><span>"alert-exito"</span>
+        <span> style</span><span>=</span><span>"margin: 10px; font-size: medium;"</span>
+        <span>&gt;</span>¡Se ha enviado correctamente!
+        <span>&lt;/</span><span>div</span><span>&gt;</span>
+      </div>
+  
+    </div>
+  </div>
+  </div>
+  
+   
+
+   <!-- FORMULARIO DE COMBOBOX O LISTAS -->
+<div class="container">
+    <form action="">
+  
+      <h2 class="container-nether form-titulo">Combobox o listas</h2>
+      <p class="descripcion">Se puede crear un combobox o lista con múltiples opciones.</p>
+  
+      <div class="minecraft-form">
+        <div>
+          <select  size="1">
+            <option selected>Selecciona una criatura:</option>
+            <option value="1">Creeper</option>
+            <option value="2">Golem</option>
+            <option value="3">Enderman</option>
+            <option value="4">Zombie</option>
+            <option value="5">Esqueleto</option>
+            <option value="6">Araña</option>
+            <option value="7">Bruja</option>
+            <option value="8">Slime</option>
+            <option value="9">Aldeano</option>
+            <option value="10">Blaze</option>
+          </select>
+        </div>
+      </div>
+  
+    </form>
+  </div><br>
+  
+    
+<!--CODIGO A MOSTRAR EN LA PAGINA-->
+<div class="container-nether codigo" >
+    Fragmentos de código:
+<div class="codigo">
+  <div class="form-sp">
+    <div>
+        <span>&lt;</span><span>form</span><span> action</span><span>=</span><span>" "</span><span>&gt;</span>
+      </div><br>
+      
+      <div>
+        <span>&lt;</span><span>select</span><span> size = "1"</span><span>&gt;</span>
+      </div><br>
+      
+      <div>
+        <span>&lt;</span><span>option</span><span> value="1"</span><span>&gt;</span>Creeper<span>&lt;/</span><span>option</span><span>&gt;</span>
+      </div><br>
+      
+      <div>
+        <span>&lt;</span><span>option</span><span> value="2"</span><span>&gt;</span>Golem<span>&lt;/</span><span>option</span><span>&gt;</span>
+      </div><br>
+      
+      <div>
+        <span>&lt;</span><span>option</span><span> value="3"</span><span>&gt;</span>Enderman<span>&lt;/</span><span>option</span><span>&gt;</span>
+      </div><br>
+      
+      <div>
+        <span>&lt;</span><span>option</span><span> value="4"</span><span>&gt;</span>Zombie<span>&lt;/</span><span>option</span><span>&gt;</span>
+      </div><br>
+      
+      <div>
+        <span>&lt;</span><span>option</span><span> value="5"</span><span>&gt;</span>Esqueleto<span>&lt;/</span><span>option</span><span>&gt;</span>
+      </div><br>
+      
+      <div>
+        <span>&lt;/</span><span>select</span><span>&gt;</span>
+      </div><br>
+      
+      <div>
+        <span>&lt;/</span><span>form</span><span>&gt;</span>
+      </div><br>
+    </div>   
+
+</div>
+</div><br>
+
+
+<!--TAMAÑOS DE LOS ELEMENTOS COMBOBOX-->
 
 <form action="" >
-    <div class="container-nether">
-        <div>
-            <h2>Formularios</h2>
-              <p class="descripcion">Este es el formulario más utilizado en nuestra librería.</p>
-        </div>
-    <div class="minecraft-form">
-        
-     <label class="">Correo Electrónico</label>
-     <input type="text" class="" aria-placeholder="email">
-     <div class="">Ingresa tu contraseña aqui</div>
-     <input type="password" class="form-control" aria-placeholder="password">
-
-     <div class="minecraft-check">
-        <br><label class="minecraft-form-label ">Recordar contraseña</label>
-        <input type="checkbox" name="a" id="check"><br>
-        </div>
-    
-      <button type="submit" class="btn-sm-gato">Enviar</button>
-
-      <div class="alert-exito" id="alert-exito" style="margin: 10px;">
-      
-        ¡Se ha enviado correctamente!</div>
-    
-    </div>
-</form>
-
-
-
-<div class="">
-
-    <span><</span>button<span> class</span> = <span>"btn-sm-mar"</span><span>>Mar<</span>/button>
-
-    <span><</span>button<span> class</span> = <span>"btn-sm-arena"</span><span>>Arena<</span>/button>
-
-    <span><</span>button<span> class</span> = <span>"btn-sm-tierra"</span><span>>Tierra<</span>/button>
- 
-    <span><</span>button<span> class</span> = <span>"btn-sm-hoja"</span><span>>Hoja<</span>/button>
- 
-    <span><</span>button<span> class</span> = <span>"btn-sm-TNT"</span><span>>TNT<</span>/button>
- 
-    <span><</span>button<span> class</span> = <span>"btn-sm-oro"</span><span>>Oro<</span>/button>
- 
-    <span><</span>button<span> class</span> = <span>"btn-sm-diamante"</span><span>>Diamante<</span>/button>
-
-    <span><</span>button<span> class</span> = <span>"btn-sm-piedraDelEnd"</span><span>>Piedra del End<</span>/button>
- 
-    <span><</span>button<span> class</span> = <span>"btn-sm-obsidiana"</span><span>>Obsidiana<</span>/button>
- 
-</div>
-    </div>
- 
-
-<form action="">
-<div class="container-nether">
-   <h2>Combobox o listas</h2> 
-
-   <p class="descripcion">Se puede crear un combobox o lista con multiples opciones.</p>
-    <div class="minecraft-form"> 
-        <div class="">
-            <select name="" id="" class=""size="1">
-             <option selected>Selecciona una criatura:</option>
-                <option value="1">Creeper</option>
-                <option value="2">Golem</option>
-                <option value="3">Enderman</option>
-
-            </select>
-        </div>
-    </div>
-</form>
-
-    
-<div class="">
-
-    <span><</span>button<span> class</span> = <span>"btn-sm-mar"</span><span>>Mar<</span>/button>
-
-    <span><</span>button<span> class</span> = <span>"btn-sm-arena"</span><span>>Arena<</span>/button>
-
-    <span><</span>button<span> class</span> = <span>"btn-sm-tierra"</span><span>>Tierra<</span>/button>
- 
-    <span><</span>button<span> class</span> = <span>"btn-sm-hoja"</span><span>>Hoja<</span>/button>
- 
-    <span><</span>button<span> class</span> = <span>"btn-sm-TNT"</span><span>>TNT<</span>/button>
- 
-    <span><</span>button<span> class</span> = <span>"btn-sm-oro"</span><span>>Oro<</span>/button>
- 
-    <span><</span>button<span> class</span> = <span>"btn-sm-diamante"</span><span>>Diamante<</span>/button>
-
-    <span><</span>button<span> class</span> = <span>"btn-sm-piedraDelEnd"</span><span>>Piedra del End<</span>/button>
- 
-    <span><</span>button<span> class</span> = <span>"btn-sm-obsidiana"</span><span>>Obsidiana<</span>/button>
- 
-</div>
-</div>
-
-
-<form action="">
-<div class="container-nether">
-    <h2>Tamaños</h2>
+<div class="container">
+    <h2 class="container-nether form-titulo">Tamaños</h2>
     <p class="descripcion">Existen varios tamaños para los comboBox o listas, utilizando las medidas: small, medium, large y xl</p>
     <div class="minecraft-form">
         
-        <div class="" style="display: flex; flex-direction: column;">
-            <select name="" id="" class="" size="1">
-                <option selected>Tamaño Small</option>
+        <div style="display: flex; flex-direction: column;">
+            <select class="form-Cmb-small" size="1">
+                <option selected >Tamaño Small</option>
             </select>
-            <select name="" id="" class="" size="1">
+            <select class="form-Cmb-medium" size="1">
                 <option selected>Tamaño Medium</option>
             </select>
-            <select name="" id="" class="" size="1">
+            <select class="form-Cmb-large" size="1">
                 <option selected>Tamaño Large</option>
             </select>
-            <select name="" id="" class="" size="1">
+            <select class="form-Cmb-xl" size="1">
                 <option selected>Tamaño XL</option>
             </select>
         </div>
     </div>
+</div>
 </form>
     
-<div class="">
+<!--DESCRIPCION DEL CÓDIGO A MOSTRAR SOBRE EL TAMAÑO DE LOS COMBOBOX-->
+<div class="container-nether codigo"> Fragmentos de código:
 
-    <span><</span>button<span> class</span> = <span>"btn-sm-mar"</span><span>>Mar<</span>/button>
+    <div class="codigo">
+      <div class="form-sp">
+        <div>
+            <span>&lt;</span><span>select</span> <span>class =</span>"form-Cmb-small" <span>size=</span><span>"1"</span><span>&gt;</span>
+          </div><br>
+          <div>
+            <span>&lt;</span><span>option</span> <span>selected</span><span>&gt;</span>Tamaño Small <span>&lt;/</span><span>option</span><span>&gt;</span>
+          </div><br>
+          <div>
+            <span>&lt;/</span><span>select</span><span>&gt;</span>
+          </div><br>
+          
+          <div>
+            <span>&lt;</span><span>select</span> <span>class=</span>"form-Cmb-medium" <span>size=</span><span>"1"</span><span>&gt;</span>
+          </div><br>
+          <div>
+            <span>&lt;</span><span>option</span> <span>selected</span><span>&gt;</span> Tamaño Medium <span>&lt;/</span><span>option</span><span>&gt;</span>
+          </div><br>
+          <div>
+            <span>&lt;/</span><span>select</span><span>&gt;</span>
+          </div><br>
+          
+          <div>
+            <span>&lt;</span><span>select</span> <span>class =</span> "form-Cmb-large" <span>size=</span><span>"1"</span><span>&gt;</span>
+          </div><br>
+          <div>
+            <span>&lt;</span><span>option</span> <span>selected</span><span>&gt;</span> Tamaño Large <span>&lt;/</span><span>option</span><span>&gt;</span>
+          </div><br>
+          <div>
+            <span>&lt;/</span><span>select</span><span>&gt;</span>
+          </div><br>        
 
-    <span><</span>button<span> class</span> = <span>"btn-sm-arena"</span><span>>Arena<</span>/button>
+          <div>
+            <span>&lt;</span><span>select</span> <span>class =</span> "form-Cmb-xl" <span>size=</span><span>"1"</span><span>&gt;</span>
+          </div><br>
+        
+          <div>
+            <span>&lt;</span><span>option</span> <span>selected</span><span>&gt;</span> Tamaño XL <span>&lt;/</span><span>option</span><span>&gt;</span>
+          </div><br>
+          <div>
+            <span>&lt;/</span><span>select</span><span>&gt;</span>
+          </div><br>     
 
-    <span><</span>button<span> class</span> = <span>"btn-sm-tierra"</span><span>>Tierra<</span>/button>
- 
-    <span><</span>button<span> class</span> = <span>"btn-sm-hoja"</span><span>>Hoja<</span>/button>
- 
-    <span><</span>button<span> class</span> = <span>"btn-sm-TNT"</span><span>>TNT<</span>/button>
- 
-    <span><</span>button<span> class</span> = <span>"btn-sm-oro"</span><span>>Oro<</span>/button>
- 
-    <span><</span>button<span> class</span> = <span>"btn-sm-diamante"</span><span>>Diamante<</span>/button>
-
-    <span><</span>button<span> class</span> = <span>"btn-sm-piedraDelEnd"</span><span>>Piedra del End<</span>/button>
- 
-    <span><</span>button<span> class</span> = <span>"btn-sm-obsidiana"</span><span>>Obsidiana<</span>/button>
- 
+    </div>
 </div>
 </div>
+<div class="container">
 
 
 <form action="">
-<div class="container-nether">
-    <h2>Elementos desactivados</h2>
+   
+    <h2 class="container-nether form-titulo">Elementos desactivados</h2>
     <p class="descripcion">Todos los apartados del formulario se pueden desactivar, para que el usuario no pueda seleccionar o presionar algun elemento.</p>
     <div class="minecraft-form">
        
-        <div class="" style="display: flex; flex-direction: column;">
-            <label class="">ComboBox desactivado</label>
-            <select  disabled name="" id="" class="" size="1">
+        <div style="display: flex; flex-direction: column;">
+            <label>ComboBox desactivado</label>
+            <select  disabled  size="1">
                 <option selected>Criaturas:</option>
                 <option value="1">Creeper</option>
                 <option value="2">Golem</option>
                 <option value="3">Enderman</option>
             </select>
-            <label class="">Boton desactivado</label>
-            <button disabled="disabled" class="" >Desactive </button>
-            <label class="" >TextBox Desactivados</label>
-            <input disabled type="text" class="" aria-placeholder="email" >
+            <label>Boton desactivado</label>
+            <button disabled> Desactive </button><br>
+            <label>TextBox Desactivados</label>
+            <input disabled type="text" aria-placeholder="email" >
         </div>
     </div>
 </form>
-
-<div class="">
-
-    <span><</span>button<span> class</span> = <span>"btn-sm-mar"</span><span>>Mar<</span>/button>
-
-    <span><</span>button<span> class</span> = <span>"btn-sm-arena"</span><span>>Arena<</span>/button>
-
-    <span><</span>button<span> class</span> = <span>"btn-sm-tierra"</span><span>>Tierra<</span>/button>
- 
-    <span><</span>button<span> class</span> = <span>"btn-sm-hoja"</span><span>>Hoja<</span>/button>
- 
-    <span><</span>button<span> class</span> = <span>"btn-sm-TNT"</span><span>>TNT<</span>/button>
- 
-    <span><</span>button<span> class</span> = <span>"btn-sm-oro"</span><span>>Oro<</span>/button>
- 
-    <span><</span>button<span> class</span> = <span>"btn-sm-diamante"</span><span>>Diamante<</span>/button>
-
-    <span><</span>button<span> class</span> = <span>"btn-sm-piedraDelEnd"</span><span>>Piedra del End<</span>/button>
- 
-    <span><</span>button<span> class</span> = <span>"btn-sm-obsidiana"</span><span>>Obsidiana<</span>/button>
- 
 </div>
-</div>
+<div class="container-nether codigo">
+    Fragmentos de código:
+    <div class="codigo">
+      <div class="form-sp">
+      <div>
+        <span>&lt;</span><span>label</span><span>&gt;</span> ComboBox desactivado <span>&lt;/</span><span>label</span><span>&gt;</span>
+      </div><br>
+  
+      <div>
+        <span>&lt;</span><span>select</span> <span>disabled </span><span>size</span><span>=</span><span>"1"</span><span>&gt;</span>
+      </div><br>
+  
+      <div>
+        <span>&lt;</span><span>option</span> <span>selected</span><span>&gt;</span> Criaturas:<span>&lt;/</span><span>option</span><span>&gt;</span>
+      </div><br>
+  
+      <div>
+        <span>&lt;</span><span>/select</span><span>&gt;</span>
+      </div><br>
+  
+      <div>
+        <span>&lt;</span><span>label</span><span>&gt;</span> Botón desactivado <span>&lt;/</span><span>label</span><span>&gt;</span>
+      </div><br>
+  
+      <div>
+        <span>&lt;</span><span>button</span> <span>disabled</span><span>&gt;</span>Desactive<span>&lt;/</span><span>button</span><span>&gt;</span>
+      </div><br>
+  
+      <div>
+        <span>&lt;</span><span>label</span><span>&gt;</span> TextBox Desactivados <span>&lt;/</span><span>label</span><span>&gt;</span>
+      </div><br>
+  
+      <div>
+        <span>&lt;</span><span>input</span> <span>disabled</span> <span>type</span><span>=</span><span>"text"</span>
+        <span> aria-placeholder</span><span>=</span><span>"email"</span><span>&gt;</span>
+      </div><br>
+      </div>
+    </div>
+  </div>
 
 </body>
 </html>

@@ -124,7 +124,7 @@
 .skelet-text {
   font-family: "Press Start 2P";
   font-size: 2rem;
-  color: #1e1e1e; /* Verde Creeper */
+  color: #f4f1ee; /* Verde Creeper */
   text-shadow: 2px 2px 0 #F4F8FB, 20px 20px 7px #5A3A1A; /* sombra negra tipo bloque */
 }
 
@@ -775,7 +775,7 @@
 .borde-basico, .container-overworld {
   border: 2px solid #555;
   font-family: "Press Start 2P";
-  color: #ffffff;
+  color: #fff;
   background-color: #2d2d2d;
 }
 
@@ -783,7 +783,7 @@
   border: 3px dashed #E03E3E;
   font-family: "Chakra Petch";
   color: #ff5555;
-  background-color: #1e1e1e;
+  background-color: #f4f1ee;
 }
 
 .borde-diamante, .container-oceano, .container-mina, .container-hielo {
@@ -842,29 +842,37 @@
 }
 
 body {
-  background-image: url(/Imagenes/minecraft-inicio.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
+  background-color: #E3E39C;
 }
 
-.otroColor {
-  color: #1EC26B;
+.botones h2 {
+  font-family: "Press Start 2P";
+  text-align: center;
+  color: #3A7425;
 }
 
-.descripcion, span {
+.botones span {
+  margin: 5px;
+  font-size: 18px;
+  font-family: "Press Start 2P";
+  text-align: start;
+  color: #F0E68C;
+}
+
+.codigo {
+  margin: 5px;
+  font-size: 18px;
+  font-family: "Press Start 2P";
+  text-align: start;
+  color: #F0E68C;
+}
+
+.descripcion {
   margin-bottom: 15px;
-  color: #E3E39C;
+  color: #1EC26B;
   font-size: 20px;
   font-family: "Press Start 2P";
   text-align: center;
-}
-
-h2 {
-  font-family: "Press Start 2P";
-  text-align: center;
-  color: #EDEDED;
 }
 
 .btn-sm-mar {
@@ -1189,17 +1197,37 @@ h2 {
   color: white;
 }
 
-.descripcion {
-  margin-bottom: 15px;
-  color: #e7dcdc;
-  font-size: 20px;
-  font-family: "Press Start 2P", cursive;
-  text-align: center;
+.form-sp span {
+  margin: 5px;
+  font-size: 18px;
+  font-family: "Press Start 2P";
+  text-align: start;
+  color: #F0E68C;
 }
 
-h2 {
-  font-family: "Press Start 2P", cursive;
+.codigo {
+  margin: 5px;
+  font-size: 18px;
+  font-family: "Press Start 2P";
+  text-align: start;
+  color: #77BFA3;
+}
+
+.descripcion {
+  margin: 15px;
+  font-size: 20px;
+  font-family: "Press Start 2P";
+  text-align: start;
+  color: #B80000;
+}
+
+.form-titulo {
+  font-family: "Press Start 2P";
   text-align: center;
+  font-size: 18px;
+  color: #E03E3E;
+  margin: 0;
+  padding: 5px;
 }
 
 .minecraft-form {
@@ -1210,7 +1238,7 @@ h2 {
   margin: 20px auto;
   font-family: "Press Start 2P", cursive;
   color: #fff;
-  box-shadow: 0 0 20px #000;
+  box-shadow: 0 0 20px #1D1D1D;
   border-radius: 8px;
 }
 .minecraft-form label, .minecraft-form div, .minecraft-form span {
@@ -1218,7 +1246,7 @@ h2 {
   margin-bottom: 10px;
   color: #fff;
 }
-.minecraft-form input[type=text], .minecraft-form input[type=password], .minecraft-form select {
+.minecraft-form input[type=text], .minecraft-form input[type=password] {
   width: 95%;
   padding: 8px;
   border: 3px solid #3d2c1c;
@@ -1227,7 +1255,19 @@ h2 {
   font-family: "Press Start 2P", cursive;
   margin-bottom: 10px;
 }
-.minecraft-form input[type=text]:disabled, .minecraft-form input[type=password]:disabled, .minecraft-form select:disabled {
+.minecraft-form input[type=text]:disabled, .minecraft-form input[type=password]:disabled {
+  background-color: #aaa;
+  border-color: #777;
+}
+.minecraft-form select {
+  padding: 8px;
+  border: 3px solid #3d2c1c;
+  border-radius: 4px;
+  background-color: #f0e68c;
+  font-family: "Press Start 2P", cursive;
+  margin-bottom: 10px;
+}
+.minecraft-form select:disabled {
   background-color: #aaa;
   border-color: #777;
 }
@@ -1236,27 +1276,52 @@ h2 {
   margin-right: 10px;
 }
 .minecraft-form button {
-  background-color: #3d8b3d;
+  background-color: #E03E3E;
   color: #fff;
-  border: 3px solid #3A7425;
+  border: 3px solid #B80000;
   padding: 10px 20px;
   cursor: pointer;
   font-family: "Press Start 2P", cursive;
   transition: background-color 0.3s;
 }
 .minecraft-form button:hover {
-  background-color: #2f6b2f;
+  background-color: #F9C7DC;
 }
 .minecraft-form button:disabled {
   background-color: #666;
   cursor: not-allowed;
 }
 
+.minecraft-radio {
+  display: flex;
+  flex-direction: column;
+}
+.minecraft-radio input[type=radio] {
+  accent-color: #5A3A1A;
+  transform: scale(1.2);
+}
+
+.form-Cmb-small {
+  width: 200px;
+}
+
+.form-Cmb-medium {
+  width: 250px;
+}
+
+.form-Cmb-large {
+  width: 300px;
+}
+
+.form-Cmb-xl {
+  width: 350px;
+}
+
 .alert {
   padding: 1rem;
   border-radius: 4px;
   font-family: "Press Start 2P", cursive;
-  color: #3a3a3a;
+  color: #fff;
   margin-bottom: 1rem;
   box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.4);
   position: relative;
@@ -1546,7 +1611,7 @@ h2 {
   box-sizing: border-box;
   position: relative;
   font-family: "MinecraftFont", sans-serif;
-  color: #3a3a3a;
+  color: #fff;
   transition: all 0.3s ease;
 }
 .container:hover {

@@ -1,53 +1,84 @@
 @use '../Clases_Utilitarias/paleta' as *;
-@use 'botones';
 
 
-$color-fondo: #f4f1ee;
-$color-borde: $marron-madera; // marrón tipo madera
-$color-input: #dad2c6;
-$color-focus: $azul-diamante; // color diamante
-$color-texto: #3a3a3a;
+
 $radio-pixel: 0.3vh;
 
-.descripcion {
-  margin-bottom: 15px;
-  color: #e7dcdc;
-  font-size: 20px;
-  font-family: 'Press Start 2P', cursive;
- text-align: center;
+.form-sp span{
+  margin: 5px;
+  font-size: 18px;
+  font-family: 'Press Start 2P';
+  text-align: start;
+ color: $arena-clara;
 }
-h2{
-  font-family: 'Press Start 2P', cursive;
-  text-align: center;
+.codigo{
+  margin: 5px;
+  font-size: 18px;
+  font-family: 'Press Start 2P';
+  text-align: start;
+ color: $turquesa-grisaceo;
+}
+.descripcion {
+  margin: 15px;
+  font-size: 20px;
+  font-family: 'Press Start 2P';
+  text-align: start;
+color: $rojo-intenso;
 }
 
+.form-titulo{
+  font-family: 'Press Start 2P';
+  text-align: center;
+  font-size: 18px;
+  color: $rojo-explosivo;
+  margin: 0;
+  padding: 5px;
+}
+
+
 .minecraft-form{
-  background-color: #c6a15b; // color tierra
-  border: 4px solid #5d3a00;
+  background-color: $color-tierra; 
+  border: 4px solid $sombra-oscura-marron; // cambiar
   padding: 20px;
   max-width: 400px;
   margin: 20px auto;
   font-family: 'Press Start 2P', cursive;
-  color: #fff;
-  box-shadow: 0 0 20px #000;
+  color: $color-texto;
+  box-shadow: 0 0 20px $gris-carbon;
   border-radius: 8px;
+  
   label, div, span {
     display: block;
     margin-bottom: 10px;
-    color: #fff;
+    color:$color-texto;
   }
-  input[type="text"], input[type="password"], select {
+  input[type="text"], input[type="password"]{
     width: 95%;
     padding: 8px;
-    border: 3px solid #3d2c1c;
+    border: 3px solid $marron-oscuro;
     border-radius: 4px;
-    background-color: #f0e68c; // amarillo tipo arena
+    background-color: $amarillo-arena; // amarillo tipo arena
     font-family: 'Press Start 2P', cursive;
     margin-bottom: 10px;
 
     &:disabled {
-      background-color: #aaa;
-      border-color: #777;
+      background-color: $gris-claro;
+      border-color: $gris-denso;
+
+    }
+  }
+
+  select {
+    padding: 8px;
+    border: 3px solid $marron-oscuro;
+    border-radius: 4px;
+    background-color: $amarillo-arena;
+    font-family: 'Press Start 2P', cursive;
+    margin-bottom: 10px;
+  
+    &:disabled {
+      background-color: $gris-claro;
+      border-color: $gris-denso;
     }
   }
 
@@ -57,16 +88,16 @@ h2{
   }
   
   button {
-    background-color: #3d8b3d;
-    color: #fff;
-    border: 3px solid $verde-hoja;
+    background-color: $rojo-explosivo;
+    color: $color-texto;
+    border: 3px solid $rojo-intenso;
     padding: 10px 20px;
     cursor: pointer;
     font-family: 'Press Start 2P', cursive;
     transition: background-color 0.3s;
 
     &:hover {
-      background-color: #2f6b2f;
+      background-color: $rosa-ajolote;
     }
 
     &:disabled {
@@ -74,4 +105,35 @@ h2{
       cursor: not-allowed;
     }
   }
+}
+
+.minecraft-radio {
+  display: flex;
+  flex-direction: column;
+
+
+
+  input[type="radio"] {
+    accent-color: $marron-madera; 
+    transform: scale(1.2); 
+  }
+
+}
+
+
+$sizes: (
+  small: 200px,
+  medium: 250px,
+  large: 300px,
+  xl: 350px
+);
+
+@mixin formSizeCmb($size, $nombre) {
+  .form-Cmb-#{$nombre} {
+    width: $size;
+  }
+}
+
+@each $nombre, $valor in $sizes {
+  @include formSizeCmb($valor, $nombre);
 }
