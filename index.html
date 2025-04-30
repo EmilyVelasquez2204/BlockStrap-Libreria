@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/main.css">
-    <title>BlockStrap</title>
+    <title>BLocksTRAP</title>
+    <link rel="icon" href="Imagenes/favicon.ico" type="image">
+    <link rel="stylesheet" href="css/main.css"> <!-- El CSS compilado desde Sass -->
 </head>
 <body>
+
 <!--Script para poder ver mi navbar en otras pagina-->
 <div id="navs"></div>
 <script>
-    fetch('enlaces/navs.html')
+    fetch('enlaces/header.html')
     .then(res => res.text())
     .then(data => {
         document.getElementById('navs').innerHTML = data;
@@ -18,11 +20,32 @@
     
 </script>
 <!--Fin del Script-->
-  
-  <!-- Pie de página -->
-  <footer>
-    &copy; 2025 Library Minecraft World - Todos los derechos reservados
-  </footer>
-</body>
+    
+    <!-- Sección principal -->
+    <div class="hero">
+        <div class="floating-blocks">
+            <div class="block" style="background-color: #7fb238;"></div>
+            <div class="block" style="background-color: #866043;"></div>
+            <div class="block" style="background-color: #727272;"></div>
+            <div class="block" style="background-color: #dbd3a0;"></div>
+        </div>
+        
+        <div class="hero-content">
+            <h1 class="title">LIBRARY<br>BLOCKSTRAP</h1>
+            <div class="description">
+               <P>Sumérgete en el fascinante mundo de bloques de Minecraft con nuestra librería de HTML y CSS. 
+                Inspirada en la estética única y pixelada de este icónico juego, nuestra librería ofrece 
+                elementos cuidadosamente diseñados que te transportarán al mundo cúbico de Minecraft.</P>
+            </div>
+            <a href="#" class="minecraft-btn">EXPLORAR AHORA</a>
+        </div>
+        
+        <div class="minecraft-character"></div>
+    </div>
+    
+    <!-- Pie de página -->
+    <footer>
+        &copy; 2025 Library Minecraft World - Todos los derechos reservados
+    </footer>
 </body>
 </html>
