@@ -1,14 +1,13 @@
 @use '../sass/Clases_Utilitarias/paleta' as *;
 @use '../sass/Clases_Utilitarias/fuente' as *;
 
-body{
-   background-image: url('/Imagenes/minecraft-inicio.png');
-   background-repeat: no-repeat;
-   background-size: cover;
-   background-attachment: fixed;
-   background-position: center;
+body {
+  background: linear-gradient(rgba(60, 109, 55, 0.671), rgba(78, 212, 45, 0.123)), url('/Imagenes/minecraft-inicio.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
 }
-
 h1, h2, h3 {
     margin: 0;
     text-transform: uppercase;

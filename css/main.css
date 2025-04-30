@@ -1905,4 +1905,24 @@ footer {
   background-color: #FF6A00;
 }
 
+.bg-image-nether {
+  background-image: linear-gradient(rgba(165, 80, 46, 0.671), rgba(78, 212, 45, 0.123)), url("/Imagenes/wallpaper_dungeons_flames_nether_2560x1440.png");
+}
+
+.bg-image-cuevas {
+  background-image: linear-gradient(rgba(63, 128, 145, 0.671), rgba(78, 212, 45, 0.123)), url("/Imagenes/wallpaper_minecraft_caves_cliffs(part2)_2560x1440.png");
+}
+
+.bg-image-index {
+  background-image: linear-gradient(rgba(188, 170, 26, 0.671), rgba(78, 212, 45, 0.123)), url("/Imagenes/wallpaper_minecraft_Modular_A_2560x1440.png");
+}
+
+.bg-image-steve-alex {
+  background-image: linear-gradient(rgba(150, 192, 209, 0.671), rgba(80, 108, 146, 0.123)), url("/Imagenes/minecraft-image-steve-alex.jpg");
+}
+
+.bg-image-abejas {
+  background-image: linear-gradient(rgba(188, 192, 82, 0.671), rgba(120, 167, 39, 0.123)), url("/Imagenes/abejas-minecraft.jpg");
+}
+
 /*# sourceMappingURL=main.css.map */
