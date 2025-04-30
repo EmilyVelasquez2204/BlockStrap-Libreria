@@ -1,7 +1,8 @@
 @use '../Clases_Utilitarias/paleta' as *;
 @use 'sass:math'; 
 @use 'sass:color';
-@use '../Clases_Utilitarias/fuente';
+@use '../Clases_Utilitarias/fuente' as *;
+
 
 $xs:60px;
 $small: 110px;
@@ -10,56 +11,46 @@ $large: 180px;
 $xl:220px;
 
 body{
-  background-image: url(/Imagenes/minecraft-inicio.png);
+background-color: $beige-palido;
   // font-family: 'Courier New', monospace;
   // padding: 20px;
   
 
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
+ 
+  //background-size: cover;
+  //background-attachment: fixed;
+  //background-position: center;
   
 
 }
-.panel {
-  background-color: $naranja-oxido;
-  border: 4px solid #7c4c11;
-  padding: 20px;
-  margin-bottom: 30px;
-  border-radius: 10px;
-  box-shadow: 4px 4px color.adjust(#c69c6d, $lightness: -10%);
+.botones h2{
+  font-family: 'Press Start 2P';
+  text-align: center;
+ color: $verde-hoja;
 }
 
-.panel h2 {
-  margin-top: 0;
-  color: #3b2e1d;
+.botones span{
+  margin: 5px;
+  font-size: 18px;
+  font-family: 'Press Start 2P';
+  text-align: start;
+ color: $arena-clara;
 }
-
+.codigo{
+  margin: 5px;
+  font-size: 18px;
+  font-family: 'Press Start 2P';
+  text-align: start;
+ color: $arena-clara;
+}
 .descripcion {
   margin-bottom: 15px;
-  color: #444;
-  font-size: 1rem;
+  color: $verde-brillante;
+  font-size: 20px;
+  font-family: 'Press Start 2P';
+ text-align: center;
 }
 
-.btn-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 10px;
-}
-
-.codigo {
-
-  padding: 5px;
-  font-size: 18px;
-  border-left: 4px solid #7c4c11;
-  
-  overflow-x: auto;
-  white-space: pre-wrap;
-  color: #222;
-
-}
 
 @mixin boton-minecraft($nombre, $size, $color-claro, $color) {
   
