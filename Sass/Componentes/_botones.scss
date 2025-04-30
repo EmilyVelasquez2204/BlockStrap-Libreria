@@ -16,31 +16,40 @@ background-color: $beige-palido;
   // padding: 20px;
   
 
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
+ 
+  //background-size: cover;
+  //background-attachment: fixed;
+  //background-position: center;
   
 
 }
-
-.otroColor{
-  color: $verde-brillante; //verde brillante y verde menta
+.botones h2{
+  font-family: 'Press Start 2P';
+  text-align: center;
+ color: $verde-hoja;
 }
-.descripcion, span {
+
+.botones span{
+  margin: 5px;
+  font-size: 18px;
+  font-family: 'Press Start 2P';
+  text-align: start;
+ color: $arena-clara;
+}
+.codigo{
+  margin: 5px;
+  font-size: 18px;
+  font-family: 'Press Start 2P';
+  text-align: start;
+ color: $arena-clara;
+}
+.descripcion {
   margin-bottom: 15px;
-  color: $beige-palido;
+  color: $verde-brillante;
   font-size: 20px;
   font-family: 'Press Start 2P';
  text-align: center;
 }
-h2{
-  font-family: 'Press Start 2P';
-  text-align: center;
-  color: $palido-fantasma;
-}
-
-
 
 
 @mixin boton-minecraft($nombre, $size, $color-claro, $color) {
