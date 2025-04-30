@@ -941,24 +941,20 @@ footer {
   }
 }
 
-body {
-  background-color: #E3E39C;
-}
-
-.botones h2 {
-  font-family: "Press Start 2P";
+/*.botones h2{
+  font-family: 'Press Start 2P';
   text-align: center;
-  color: #3A7425;
-}
-
-.botones span {
+ color: $verde-hoja;
+}*/
+/*
+.botones span{
   margin: 5px;
   font-size: 18px;
-  font-family: "Press Start 2P";
+  font-family: 'Press Start 2P';
   text-align: start;
-  color: #F0E68C;
+ color: $arena-clara;
 }
-
+ */
 .codigo {
   margin: 5px;
   font-size: 18px;
@@ -1297,14 +1293,14 @@ body {
   color: hsl(28.7755102041, 31.8181818182%, 100.1960784314%);
 }
 
-.form-sp span {
+/*
+.form-sp span{
   margin: 5px;
   font-size: 18px;
-  font-family: "Press Start 2P";
+  font-family: 'Press Start 2P';
   text-align: start;
-  color: #F0E68C;
-}
-
+ color: $arena-clara;
+}*/
 .codigo {
   margin: 5px;
   font-size: 18px;
@@ -1321,15 +1317,16 @@ body {
   color: #B80000;
 }
 
-.form-titulo {
-  font-family: "Press Start 2P";
+/*
+.form-titulo{
+  font-family: 'Press Start 2P';
   text-align: center;
   font-size: 18px;
-  color: #E03E3E;
+  color: $rojo-explosivo;
   margin: 0;
   padding: 5px;
 }
-
+*/
 .minecraft-form {
   background-color: #c6a15b;
   border: 4px solid #5d3a00;
