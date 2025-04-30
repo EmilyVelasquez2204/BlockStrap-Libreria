@@ -1,10 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Press+Start+2P&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 /* Importar fuente de Minecraft */
-@font-face {
-  font-family: "MinecraftFont";
-  src: url("/assets/fonts/minecraft.woff2") format("woff2");
-}
 .sf-1 {
   font-size: 1vh;
 }
@@ -105,58 +101,10 @@
   text-align: end;
 }
 
-h1, h2, h3 {
-  font-family: "Press Start 2P";
-  margin: 0;
-  text-transform: uppercase;
-  text-shadow: 1px 1px 0 rgb(88, 46.5, 127.5), 2px 2px 0 rgb(88, 46.5, 127.5);
-  color: #F4F8FB;
-}
-
-h4, h5, h6, p {
-  font-family: "Chakra Petch";
-  margin: 0;
-  text-transform: uppercase;
-  color: #F4F8FB;
-}
-
-h1 {
-  font-size: 32px;
-  color: #FCEE4B;
-}
-
-h2 {
-  font-size: 28px;
-  color: #41C6EC;
-}
-
-h3 {
-  font-size: 24px;
-  color: #5E7C16;
-}
-
-h4 {
-  font-size: 20px;
-  color: #B80000;
-}
-
-h5 {
-  font-size: 16px;
-  color: #38D2C5;
-}
-
-h6 {
-  font-size: 14px;
-  color: #B3B3B3;
-}
-
 .creeper-shadow, .container-overworld, .borde-basico, .borde-panel-importante, .borde-end-sombras, .container-nether, .container-tnt, .container-end {
-  background-color: #0f0;
-  color: #B3F26E;
-  padding: 0.5rem 1rem;
-  border: 2px solid #000;
+  border: 1px solid #000;
   font-family: "Press Start 2P";
-  box-shadow: 4px 4px 0 #050;
+  box-shadow: 4px 2px 0 #050;
 }
 
 .creeper-text {
