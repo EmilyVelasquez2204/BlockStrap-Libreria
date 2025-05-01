@@ -7,9 +7,9 @@
 @use '../Clases_Utilitarias/redondear_elementos' as *;
 @use '../Clases_Utilitarias/sombras' as *;
 @use '../Clases_Utilitarias/mixins' as *;
-@use 'filas' as *;
-@use 'columnas' as *;
-@use 'filas-columnas' as *;
+@use '../Clases_Utilitarias/filas' as *;
+@use '../Clases_Utilitarias/columnas' as *;
+@use '../Clases_Utilitarias/filas-columnas' as *;
 
 // Container base para grid
 .grid-container {
