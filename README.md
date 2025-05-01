@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="/BlockStrap-Libreria/Imagenes/logo2.png" />
+  <img src="Imagenes/logo2.png" />
 </p>
 
 <h1 align="center"> DOCUMENTACION - ONE PIECE THE WORST GENERATION </h1>
