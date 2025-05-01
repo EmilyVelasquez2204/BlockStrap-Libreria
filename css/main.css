@@ -320,7 +320,7 @@ a {
 }
 
 .shadow-cristal {
-  box-shadow: 4px 4px 0 #A472D9, 8px 8px 0 rgb(88, 46.5, 127.5);
+  box-shadow: 4px 4px 0 #A472D9, 8px 8px 0 #582f80;
 }
 
 .shadow-oscura {
@@ -347,7 +347,7 @@ a {
 }
 
 .text-shadow-end {
-  text-shadow: 1px 1px 0 #1A0A24, 3px 3px 0 rgb(88, 46.5, 127.5);
+  text-shadow: 1px 1px 0 #1A0A24, 3px 3px 0 #582f80;
   color: #414040;
 }
 
@@ -1979,6 +1979,262 @@ footer {
   box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
 }
 
+/*---------------------ESTILOS NAVS RESPONSIVOS--------------------------*/
+.navbar {
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+.navbar li {
+  position: relative;
+}
+.navbar a {
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.navbar-stone {
+  background-color: #686868;
+  border: 4px solid #4A4A4A;
+  padding: 0;
+  transition: all 0.3s ease;
+}
+.navbar-stone ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+.navbar-stone li {
+  flex: 1;
+  min-width: 120px;
+  border-right: 2px solid #4A4A4A;
+  border-bottom: 2px solid #4A4A4A;
+  position: relative;
+}
+.navbar-stone li:last-child {
+  border-right: none;
+}
+.navbar-stone a {
+  font-family: "MinecraftFont", sans-serif;
+  color: #F4F8FB;
+  position: relative;
+  background: linear-gradient(to bottom, #8B8B8B, #686868);
+  text-shadow: 1px 1px 0 #383838;
+  text-transform: uppercase;
+}
+.navbar-stone a:hover {
+  background: linear-gradient(to bottom, #9c9c9c, #7a7a7a);
+  text-shadow: 1px 1px 0 #000;
+}
+.navbar-stone a:active {
+  background: linear-gradient(to bottom, #5a5a5a, #4a4a4a);
+  text-shadow: 1px 1px 0 #000;
+}
+.navbar-stone a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.navbar-wood {
+  background: linear-gradient(to bottom, #5A3A1A, #3A240D);
+  border: 4px solid #2C1B0A;
+  padding: 0;
+  transition: all 0.3s ease;
+}
+.navbar-wood ul {
+  display: flex;
+  justify-content: space-between;
+}
+.navbar-wood li {
+  flex: 1;
+  position: relative;
+  border-right: 3px solid #2C1B0A;
+}
+.navbar-wood li:last-child {
+  border-right: none;
+}
+.navbar-wood a {
+  font-family: "Press Start 2P";
+  color: #F0E68C;
+  background: repeating-linear-gradient(90deg, rgba(90, 58, 26, 0.9), rgba(90, 58, 26, 0.9) 10px, rgba(70, 45, 20, 0.9) 10px, rgba(70, 45, 20, 0.9) 20px);
+  border-bottom: 3px solid #2C1B0A;
+  text-transform: uppercase;
+}
+.navbar-wood a:hover {
+  background: repeating-linear-gradient(90deg, rgba(120, 78, 36, 0.9), rgba(120, 78, 36, 0.9) 10px, rgba(100, 65, 30, 0.9) 10px, rgba(100, 65, 30, 0.9) 20px);
+  color: white;
+}
+.navbar-wood a:active {
+  background: repeating-linear-gradient(90deg, rgba(70, 38, 16, 0.9), rgba(70, 38, 16, 0.9) 10px, rgba(50, 25, 10, 0.9) 10px, rgba(50, 25, 10, 0.9) 20px);
+}
+
+.navbar-nether {
+  background: linear-gradient(to bottom, #812E24, #4d1c15);
+  border: 4px solid #3A1611;
+  padding: 4px;
+  box-shadow: 0 0 10px rgba(255, 106, 0, 0.3);
+  transition: all 0.3s ease;
+}
+.navbar-nether ul {
+  display: flex;
+  background: rgba(26, 10, 36, 0.6);
+  border: 2px solid #1A0A24;
+}
+.navbar-nether li {
+  flex: 1;
+  position: relative;
+}
+.navbar-nether a {
+  font-family: "Chakra Petch";
+  font-weight: bold;
+  color: #FF6A00;
+  background: linear-gradient(to bottom, rgba(129, 46, 36, 0.8), rgba(77, 28, 21, 0.8));
+  position: relative;
+  text-transform: uppercase;
+  overflow: hidden;
+  border-right: 1px solid rgba(255, 106, 0, 0.3);
+}
+.navbar-nether a:hover {
+  background: linear-gradient(to bottom, rgba(189, 66, 46, 0.8), rgba(129, 46, 36, 0.8));
+  color: #F8C03A;
+  text-shadow: 0 0 5px #FF6A00, 0 0 10px #FF6A00;
+}
+.navbar-nether a:active {
+  background: linear-gradient(to bottom, rgba(99, 36, 26, 0.8), rgba(77, 28, 21, 0.8));
+}
+.navbar-nether a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #FF6A00, transparent);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+.navbar-nether a:hover::after {
+  transform: scaleX(1);
+}
+.navbar-nether li:last-child a {
+  border-right: none;
+}
+
+@media screen and (max-width: 0px) {
+  .navbar ul {
+    flex-direction: column;
+  }
+  .navbar-stone li, .navbar-wood li, .navbar-nether li {
+    border-right: none;
+    border-bottom: 2px solid;
+  }
+  .navbar-stone li {
+    border-bottom-color: #4A4A4A;
+  }
+  .navbar-wood li {
+    border-bottom-color: #2C1B0A;
+  }
+  .navbar-nether li a {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 106, 0, 0.3);
+  }
+  .navbar-nether li:last-child a {
+    border-bottom: none;
+  }
+}
+@media screen and (max-width: 576px) {
+  .navbar-stone a {
+    padding: 10px 5px;
+    font-size: 14px;
+  }
+  .navbar-wood a {
+    padding: 10px 5px;
+    font-size: 10px;
+  }
+  .navbar-nether a {
+    padding: 10px 5px;
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .navbar-stone a {
+    padding: 12px 8px;
+    font-size: 14px;
+  }
+  .navbar-wood a {
+    padding: 12px 8px;
+    font-size: 10px;
+  }
+  .navbar-nether a {
+    padding: 12px 8px;
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .navbar-stone a {
+    padding: 14px 8px;
+    font-size: 15px;
+  }
+  .navbar-wood a {
+    padding: 12px 5px;
+    font-size: 11px;
+  }
+  .navbar-nether a {
+    padding: 14px 8px;
+    font-size: 15px;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .navbar-stone a {
+    padding: 15px 10px;
+    font-size: 16px;
+  }
+  .navbar-wood a {
+    padding: 12px 5px;
+    font-size: 12px;
+  }
+  .navbar-nether a {
+    padding: 15px 10px;
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .navbar-stone a {
+    padding: 15px 10px;
+    font-size: 16px;
+  }
+  .navbar-wood a {
+    padding: 14px 10px;
+    font-size: 14px;
+  }
+  .navbar-nether a {
+    padding: 15px 10px;
+    font-size: 16px;
+  }
+}
+@media screen and (orientation: portrait) and (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column;
+  }
+}
+@media screen and (orientation: landscape) and (max-width: 768px) {
+  .navbar-wood a {
+    font-size: 9px;
+    padding: 10px 2px;
+  }
+}
 .principal {
   background-image: url("BlockStrap-Libreria/Imagenes/minecraft-inicio.png");
 }
