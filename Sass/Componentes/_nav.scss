@@ -2,194 +2,384 @@
 @use '../Clases_Utilitarias/fuente' as *; //trae todas las variables
 @use '../Clases_Utilitarias/paleta' as *;
 
-// $ds-flex: flex;
-// $ds-iblock: inline-block;
-// $al-i: center;
-// $jc: space-between; //justify-content
+/*---------------------ESTILOS NAVS RESPONSIVOS--------------------------*/
 
-// //paddings
-// $p: 8px; //cuatro lados
-// $pt:30px; //arriba
-// $pl:5px; //izquierda
-// $pr:5px; //derecha
-// $pd:0px 20px; // arriba-abajo izquierda-derecha
-// //colores
-// $menu-colort:$arena-clara;
+// Breakpoints definidos
+$puntos-de-interrupcion: (
+  xs: 0px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
 
-// $centrado: 0 auto;
-// $wm:100%;
-// $h:auto;
-// $tama: 8vh;
-// $mgr:16px;
-// $list-n:none;
-// $mgl:75px;
-// $pd:18px 0;
-// $f: left; //float
-// $C-c: rgb(65, 198, 236);
-// $ft:'Open Sans'; //tipo de fuente
-// $t-a:center; //alineacion del texto
+// Mixin para media queries con ancho mínimo (desde)
+@mixin breakpoints_min($parametro){
+  @media screen and (min-width: map-get($puntos-de-interrupcion, $parametro)) {
+    @content;
+  }
+}
 
-// //clases
-// .fondo-menu{
-//     width: 100%;
-//     height: auto;
-//     background-color: $color-fondo;
-//     color: #ccc;
-// }
+// Mixin para media queries con ancho máximo (hasta)
+@mixin breakpoints_max($parametro){
+  @media screen and (max-width: map-get($puntos-de-interrupcion, $parametro)) {
+    @content;
+  }
+}
 
-// .navbar{
-//     text-align: $t-a;
-// }
+// Mixin para rango entre dos breakpoints
+@mixin breakpoints_between($min, $max) {
+  @media screen and (min-width: map-get($puntos-de-interrupcion, $min)) and (max-width: map-get($puntos-de-interrupcion, $max)) {
+    @content;
+  }
+}
 
-// .img{
-//     width: $tama;
-//     padding: $p;
-//     float: $f;
-// }
+// Mixin para orientación específica
+@mixin orientation($direction) {
+  @media screen and (orientation: $direction) {
+    @content;
+  }
+}
 
-// .etiqueta{
-//     list-style: $list-n;
-//     padding: $pd;
-//     display:$ds-iblock;
-//     padding: $pd;
-//     margin-right: $mgr;
-//     // font-size: $size-2;
-//     // font-family: $ft;
-//     transition: transform .2s ease-in;
+// Estilos comunes para todas las navbars
+.nav {
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  li {
+    position: relative;
+  }
+  
+  a {
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+}
 
-// }
-
-// .tx-none{
-//     text-decoration: none;
-//     color: black;
+// Navbar 1: Estilo Bloques de Piedra
+.navbar-stone {
+  background-color: #686868;
+  border: 4px solid #4A4A4A;
+  padding: 0;
+  transition: all 0.3s ease;
+  
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  li {
+    flex: 1;
+    min-width: 120px;
+    border-right: 2px solid #4A4A4A;
+    border-bottom: 2px solid #4A4A4A;
+    position: relative;
     
-// }
+    &:last-child {
+      border-right: none;
+    }
+  }
+  
+  a {
+    font-family: 'MinecraftFont', sans-serif;
+    color: $blanco-azulado;
+    position: relative;
+    background: linear-gradient(to bottom, #8B8B8B, #686868);
+    text-shadow: 1px 1px 0 #383838;
+    text-transform: uppercase; //mayuscula
+    
+    &:hover {
+      background: linear-gradient(to bottom, #9c9c9c, #7a7a7a);
+      text-shadow: 1px 1px 0 #000;
+    }
+    
+    &:active {
+      background: linear-gradient(to bottom, #5a5a5a, #4a4a4a);
+      text-shadow: 1px 1px 0 #000;
+    }
+    
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+  }
+}
 
-// .etiqueta:hover{
-//     color: $verde-hoja;
-//     border: 1px solid $azul-profundo;
-//     padding: 10px;
-//     margin: 3px solid $blanco-azulado;
-//     // background-color:$verde-hoja;
-//     // transform:translate(5px);
+// Navbar 2: Estilo Madera
+.navbar-wood {
+  background: linear-gradient(to bottom, $marron-madera, #3A240D);
+  border: 4px solid #2C1B0A;
+  padding: 0;
+  transition: all 0.3s ease;
+  
+  ul {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  li {
+    flex: 1;
+    position: relative;
+    border-right: 3px solid #2C1B0A;
+    
+    &:last-child {
+      border-right: none;
+    }
+  }
+  
+  a {
+    font-family: $font-minecraft1;
+    color: $arena-clara;
+    background: repeating-linear-gradient(
+      90deg,
+      rgba(90, 58, 26, 0.9),
+      rgba(90, 58, 26, 0.9) 10px,
+      rgba(70, 45, 20, 0.9) 10px,
+      rgba(70, 45, 20, 0.9) 20px
+    );
+    border-bottom: 3px solid #2C1B0A;
+    text-transform: uppercase;
+    
+    &:hover {
+      background: repeating-linear-gradient(
+        90deg,
+        rgba(120, 78, 36, 0.9),
+        rgba(120, 78, 36, 0.9) 10px,
+        rgba(100, 65, 30, 0.9) 10px,
+        rgba(100, 65, 30, 0.9) 20px
+      );
+      color: white;
+    }
+    
+    &:active {
+      background: repeating-linear-gradient(
+        90deg,
+        rgba(70, 38, 16, 0.9),
+        rgba(70, 38, 16, 0.9) 10px,
+        rgba(50, 25, 10, 0.9) 10px,
+        rgba(50, 25, 10, 0.9) 20px
+      );
+    }
+  }
+}
 
-// }
+// Navbar 3: Estilo Nether
+.navbar-nether {
+  background: linear-gradient(to bottom, $rojo-oscuro, #4d1c15);
+  border: 4px solid #3A1611;
+  padding: 4px;
+  box-shadow: 0 0 10px rgba(255, 106, 0, 0.3);
+  transition: all 0.3s ease;
+  
+  ul {
+    display: flex;
+    background: rgba(26, 10, 36, 0.6);
+    border: 2px solid $purpura-oscuro;
+  }
+  
+  li {
+    flex: 1;
+    position: relative;
+  }
+  
+  a {
+    font-family: $font-minecraft2;
+    font-weight: bold;
+    color: $naranja-lava;
+    background: linear-gradient(to bottom, rgba(129, 46, 36, 0.8), rgba(77, 28, 21, 0.8));
+    position: relative;
+    text-transform: uppercase;
+    overflow: hidden;
+    border-right: 1px solid rgba(255, 106, 0, 0.3);
+    
+    &:hover {
+      background: linear-gradient(to bottom, rgba(189, 66, 46, 0.8), rgba(129, 46, 36, 0.8));
+      color: $amarillo-fuego;
+      text-shadow: 0 0 5px $naranja-lava, 0 0 10px $naranja-lava;
+    }
+    
+    &:active {
+      background: linear-gradient(to bottom, rgba(99, 36, 26, 0.8), rgba(77, 28, 21, 0.8));
+    }
+    
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(to right, transparent, $naranja-lava, transparent);
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+    
+    &:hover::after {
+      transform: scaleX(1);
+    }
+  }
+  
+  li:last-child a {
+    border-right: none;
+  }
+}
 
-// .color{
-//     color: $menu-colort
-// }
+// Aplicación de breakpoints
 
-// .barra-vertical{
-//     background-color: ligthen($naranja-lava, 30) ;
-//     width: 19.7%;
-//     height: 95%;
-//     margin-top: 9vh;
-//     overflow-y:auto ;
-// }
+// xs - móviles pequeños
+@include breakpoints_max(xs) {
+  .navbar ul {
+    flex-direction: column;
+  }
+  
+  .navbar-stone li, .navbar-wood li, .navbar-nether li {
+    border-right: none;
+    border-bottom: 2px solid;
+  }
+  
+  .navbar-stone li {
+    border-bottom-color: #4A4A4A;
+  }
+  
+  .navbar-wood li {
+    border-bottom-color: #2C1B0A;
+  }
+  
+  .navbar-nether li a {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 106, 0, 0.3);
+  }
+  
+  .navbar-nether li:last-child a {
+    border-bottom: none;
+  }
+}
 
-// .link-s{
-//     display: block;
-//     text-decoration: none;
-//     text-align: justify;
-//     padding: $mgr;
-//     color: black;
-// }
+// sm - móviles (hasta 576px)
+@include breakpoints_max(sm) {
+  .navbar-stone a {
+    padding: 10px 5px;
+    font-size: 14px;
+  }
+  
+  .navbar-wood a {
+    padding: 10px 5px;
+    font-size: 10px;
+  }
+  
+  .navbar-nether a {
+    padding: 10px 5px;
+    font-size: 14px;
+  }
+}
 
-// .link-s:hover{
-//     background-color: $verde-hoja;
-// }
+// md - tabletas (576px - 768px)
+@include breakpoints_between(sm, md) {
+  .navbar-stone a {
+    padding: 12px 8px;
+    font-size: 14px;
+  }
+  
+  .navbar-wood a {
+    padding: 12px 8px;
+    font-size: 10px;
+  }
+  
+  .navbar-nether a {
+    padding: 12px 8px;
+    font-size: 14px;
+  }
+}
 
-// .fj{
-//     position: fixed;
-// }
+// lg - pequeños ordenadores (768px - 992px)
+@include breakpoints_between(md, lg) {
+  .navbar-stone a {
+    padding: 14px 8px;
+    font-size: 15px;
+  }
+  
+  .navbar-wood a {
+    padding: 12px 5px;
+    font-size: 11px;
+  }
+  
+  .navbar-nether a {
+    padding: 14px 8px;
+    font-size: 15px;
+  }
+}
 
-// .fondo-menu-craft{
-//     width: 100%;
-//     height: 9vh;
-//     background-color: $gris-carbon;
-// }
+// xl - pantallas grandes (992px - 1200px)
+@include breakpoints_between(lg, xl) {
+  .navbar-stone a {
+    padding: 15px 10px;
+    font-size: 16px;
+  }
+  
+  .navbar-wood a {
+    padding: 12px 5px;
+    font-size: 12px;
+  }
+  
+  .navbar-nether a {
+    padding: 15px 10px;
+    font-size: 16px;
+  }
+}
 
-// .navbar-3{
-//     text-align: $t-a;
-// }
+// xxl - pantallas muy grandes (1200px en adelante)
+@include breakpoints_min(xl) {
+  .navbar-stone a {
+    padding: 15px 10px;
+    font-size: 16px;
+  }
+  
+  .navbar-wood a {
+    padding: 14px 10px;
+    font-size: 14px;
+  }
+  
+  .navbar-nether a {
+    padding: 15px 10px;
+    font-size: 16px;
+  }
+}
 
-// .etiqueta-2{
-//     list-style: $list-n;
-//     padding: $pd;
-//     display: $ds-iblock;
-//     margin-right: $mgr;
-//     font-size: $size-2;
-//     font-family: $ft;
-//     transition: transform .5s ease-in;
-// }
+// Orientación específica para dispositivos móviles
+@include orientation(portrait) {
+  @include breakpoints_max(md) {
+    .navbar ul {
+      flex-direction: column;
+    }
+  }
+}
 
-// .etiqueta-2:hover{
-//     color: #f8f0f0;
-//     background-color: $azul-profundo ;
-//     transform: translateX(20px);
-// }
+@include orientation(landscape) {
+  @include breakpoints_max(md) {
+    .navbar-wood a {
+      font-size: 9px;
+      padding: 10px 2px;
+    }
+  }
+}
 
-// //mixins
-// @mixin laptop{
-//     @media screen and (max-height: 860px){
-//         @content;
-//     }
-//     @media screen and (max-width: 1490px){
-//         @content;
-//     }
-// }
 
-// @include laptop(){
-//     $pd1: 10px;
-
-//     .barra-vertical{
-//         background-color: lighten($beige-palido, 30);
-//         width: 19.7%;
-//         height: 95%;
-//         margin-top: 9vh;
-//         overflow: auto;
-//     }
-//     .link-s{
-//         display: block;
-//         text-decoration: none;
-//         text-align: justify;
-//         padding: $pd1;
-//         color: #ccc; 
-//     }
-
-// }
-
-// .opc{
-//     width: 100%;
-//     height: auto;
-//     display: flex;
-// }
-
-// .navbar-2{
-//     width: 20%;
-//     background-color: $purpura-oscuro;
-//     text-align: center;
-// }
-
-// .link-{
-//     text-decoration: none;
-//     color: black;
-//     font-size: 18px;
-//     letter-spacing: 2px;
-//     display: list-item;
-//     padding: 20px;
-//     border-top: 1 px solid red;
-//     border-bottom: 1px solid burlywood;
-//     text-align: center;
-// }
-// .link-:hover{
-//     background-color: $naranja-oxido;
-// }
-
-// // .barra-vertical{
-// //     background-color: ;
-
-// // }
 
 
 //------------------------CAMBIOS NESTOR---------------------
