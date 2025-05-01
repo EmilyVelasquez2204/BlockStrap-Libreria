@@ -192,6 +192,60 @@ $t-a:center; //alineacion del texto
 // }
 
 
+//------------------------CAMBIOS NESTOR---------------------
+
+.principal{
+    background-image: url('BlockStrap-Libreria/Imagenes/minecraft-inicio.png');
+}
+
+.header {
+    font-family: $font-minecraft1;
+    color: $blanco-azulado;
+  
+  
+    .navbar {
+      background: $gris-carbon;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 2rem;
+      flex-wrap: wrap;
+  
+      .logo {
+        display: flex;
+        align-items: center;
+  
+        img {
+          width: 32px;
+          margin-right: 0.5rem;
+        }
+  
+        span {
+          font-size: 1.5rem;
+          font-weight: bold;
+        }
+      }
+  
+      .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 1.5rem;
+  
+        li a {
+          color: white;
+          text-decoration: none;
+          font-weight: 500;
+  
+       &:hover {
+            color: #00ff8c;
+        }
+        }
+    }
+    }
+}
+
+
+
 
 
 
