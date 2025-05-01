@@ -60,7 +60,7 @@ Necesitas tener instalado en tu maquina los siguientes componentes:
   
 ## Desarrolladores
 
-- Emily Azucena Velásquez Flores - VF22006 - [Emily Vel[asquez]](https://github.com/EmilyVelasquez2204)
+- Emily Azucena Velásquez Flores - VF22006 - [Emily Velasquez](https://github.com/EmilyVelasquez2204)
 - Nestor Emmanuel Mendoza Benitez - MB21010 - [Nestor Mendoza](https://github.com/blackghossst)
 - Dayna Rebeca Moreno Santiago - MS21017 - [Dayna Moreno](https://github.com/Rebecamo)
 - Madelyn Johana Martinez Romero - MR20119 - [Madelyn Romero](https://github.com/Mady06-es)
