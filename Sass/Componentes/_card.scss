@@ -467,4 +467,37 @@ $circle: 50%;
     }
   }
   
+  /*container para los codigos*/
+  .container-code {
+    background: #080808;
+    width: 100%;               
+    margin-left: auto;         
+    margin-right: auto;
+    padding: 4 * $pixel-size;  // Usando la variable de padding_margenes
+    box-sizing: border-box;    
+    position: relative;
+    @extend .rde-s;            // Borde redondeado medio de redondear_elementos
+    @extend .p-3;              // Padding de padding_margenes
+    @extend .m-7;              // Margin de padding_margenes
+    font-family: $font-minecraft2; // Fuente de fuente.scss
+    color: $color-texto;       // Color de texto de paleta
+    
+    
+    // Media queries usando los breakpoints
+    @include breakpoints_max('sm') {
+      width: 100%;
+      padding: 2 * $pixel-size;
+    }
+    
+    @include breakpoints_min('md') {
+      width: 90%;
+      padding: 3 * $pixel-size;
+    }
+    
+    @include breakpoints_min('lg') {
+      width: 80%;
+      padding: 4 * $pixel-size;
+    }
+  }
+  
   
