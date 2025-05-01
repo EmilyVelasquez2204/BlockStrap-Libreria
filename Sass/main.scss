@@ -9,6 +9,14 @@
 @use 'Clases_Utilitarias/redondear_elementos';
 @use 'Clases_Utilitarias/Documentacion';
 @use 'Clases_Utilitarias/movimientos';
+@use 'Clases_Utilitarias/filas';
+@use 'Clases_Utilitarias/columnas';
+@use 'Clases_Utilitarias/filas-columnas';
+@use 'Clases_Utilitarias/mixins';
+@use 'Clases_Utilitarias/grids';
+@use 'Clases_Utilitarias/flexs';
+
+
 //importando clases de Componentes
 @use 'Componentes/botones' ;
 @use 'Componentes/formularios';
@@ -17,6 +25,8 @@
 @use 'Componentes/container';
 @use 'Componentes/badges';
 @use 'Componentes/card';
+@use 'Componentes/grid-container';
+@use 'Componentes/flex-container';
 
 
 
