@@ -282,10 +282,49 @@ a {
   color: #F0E68C;
 }
 
+.sombras {
+  padding: 1rem;
+  background-color: #eee;
+  border-radius: 1rem;
+  padding: 2rem;
+}
+
 .creeper-shadow, .card-2, .card-6, .container-overworld, .borde-basico, .borde-panel-importante, .borde-end-sombras, .container-nether, .container-tnt, .container-end {
+  padding: 10px;
   border: 1px solid #000;
-  font-family: "Press Start 2P";
   box-shadow: 4px 2px 0 #050;
+}
+
+.shadow-naturaleza {
+  box-shadow: 4px 4px 0 #3A7425, 8px 8px 0 #2E4E1A;
+}
+
+.shadow-madera {
+  box-shadow: 4px 4px 0 #5A3A1A, 8px 8px 0 #835C3B;
+}
+
+.shadow-diamante {
+  box-shadow: 4px 4px 0 #41C6EC, 8px 8px 0 #38D2C5;
+}
+
+.shadow-nether {
+  box-shadow: 4px 4px 0 #E03E3E, 8px 8px 0 #FF6A00;
+}
+
+.shadow-fantasma {
+  box-shadow: 4px 4px 0 #414040, 8px 8px 0 #EDEDED;
+}
+
+.shadow-gel {
+  box-shadow: 4px 4px 0 #B3F26E, 8px 8px 0 #5FC22E;
+}
+
+.shadow-cristal {
+  box-shadow: 4px 4px 0 #A472D9, 8px 8px 0 #582f80;
+}
+
+.shadow-oscura {
+  box-shadow: 4px 4px 0 #1D1D1D, 8px 8px 0 #5d3a00;
 }
 
 .creeper-text {
@@ -300,6 +339,46 @@ a {
   font-size: 2rem;
   color: #1e1e1e; /* Verde Creeper */
   text-shadow: 2px 2px 0 #F4F8FB, 20px 20px 7px #5A3A1A; /* sombra negra tipo bloque */
+}
+
+.text-shadow-neon {
+  text-shadow: 1px 1px 0 #5FC22E, 2px 2px 0 #2E4E1A;
+  color: #EDEDED;
+}
+
+.text-shadow-end {
+  text-shadow: 1px 1px 0 #1A0A24, 3px 3px 0 #582f80;
+  color: #414040;
+}
+
+.text-shadow-gel {
+  text-shadow: 2px 2px 0 #B3F26E, 4px 4px 0 #2E4E1A;
+  color: #aaa;
+}
+
+.text-shadow-oro {
+  text-shadow: 1px 1px 0 #FCEE4B, 3px 3px 0 #835C3B;
+  color: #777;
+}
+
+.text-shadow-mar {
+  text-shadow: 1px 1px 0 #5555FF, 3px 3px 0 #3D5B94;
+  color: #F4F8FB;
+}
+
+.text-shadow-fantasma {
+  text-shadow: 2px 2px 0 #414040, 5px 5px 10px #EDEDED;
+  color: #1D1D1D;
+}
+
+.text-shadow-fuego {
+  text-shadow: 2px 2px 0 #F8C03A, 4px 4px 0 #E03E3E;
+  color: #B3B3B3;
+}
+
+.text-shadow-cristal {
+  text-shadow: 2px 2px 0 #A472D9, 3px 3px 5px #414040;
+  color: #fff;
 }
 
 .hero {
