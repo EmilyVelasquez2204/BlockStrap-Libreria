@@ -1,0 +1,43 @@
+
+
+// Puntos de interrupción para móviles, tabletas y PC
+$breakpoint-mobile: 576px;
+$breakpoint-tablet: 768px;
+$breakpoint-pc: 992px;
+
+$puntos-de-interrupcion: (
+  xs: 0px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+
+// Mixin para media queries con ancho mínimo (desde)
+@mixin breakpoints_min($parametro){
+  @media screen and (min-width: map-get($puntos-de-interrupcion, $parametro)) {
+    @content;
+  }
+}
+
+// Mixin para media queries con ancho máximo (hasta)
+@mixin breakpoints_max($parametro){
+  @media screen and (max-width: map-get($puntos-de-interrupcion, $parametro)) {
+    @content;
+  }
+}
+
+// Mixin para rango entre dos breakpoints
+@mixin breakpoints_between($min, $max) {
+  @media screen and (min-width: map-get($puntos-de-interrupcion, $min)) and (max-width: map-get($puntos-de-interrupcion, $max)) {
+    @content;
+  }
+}
+
+// Mixin para orientación específica
+@mixin orientation($direction) {
+  @media screen and (orientation: $direction) {
+    @content;
+  }
+}

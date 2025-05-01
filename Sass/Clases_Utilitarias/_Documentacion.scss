@@ -1,0 +1,104 @@
+@use "../Clases_Utilitarias/fuente" as *;
+@use "../Clases_Utilitarias/paleta" as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $verde-hoja;
+    padding: 10px 20px;
+    flex-wrap: wrap;
+
+    .logo img {
+      height: 50px;
+    }
+  
+    .top-nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: $amarillo-oro;
+      font-weight: bold;
+    }
+  
+    .top-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+  }
+  
+  .layout {
+    display: flex;
+    flex: 1;
+    min-height: calc(100vh - 120px); // header + footer
+  }
+  
+  .sidebar {
+    width: 250px;
+    background-color: $verde-hoja;  
+    padding: 20px;
+    flex-shrink: 0;
+  
+    ul {
+      list-style: none;
+      padding: 0;
+  
+      li {
+        margin-bottom: 8px;
+      }
+  
+      a {
+        
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  
+  main {
+
+
+
+    p {
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+  }
+  
+  footer {
+    background-color: $verde-hoja;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.9em;
+    margin-top: auto;
+  }
+  
+  /* Responsividad */
+  @media (max-width: 768px) {
+    .layout {
+      flex-direction: column;
+    }
+  
+    .sidebar {
+      width: 100%;
+    }
+  
+    .top-nav {
+      justify-content: center;
+      margin-top: 10px;
+    }
+  
+    header {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  

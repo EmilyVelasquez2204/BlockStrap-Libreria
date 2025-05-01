@@ -1,7 +1,22 @@
 @use 'Clases_Utilitarias/paleta';
+@use 'Clases_Utilitarias/sombras';
+@use 'Componentes/index';
+@use 'Clases_Utilitarias/bordes';
+@use 'Clases_Utilitarias/breakpoints';
+@use 'Clases_Utilitarias/fuente';
+@use 'Clases_Utilitarias/padding_margenes';
+@use 'fondos';
+@use 'Clases_Utilitarias/redondear_elementos';
+@use 'Clases_Utilitarias/Documentacion';
+@use 'Clases_Utilitarias/movimientos';
+//importando clases de Componentes
 @use 'Componentes/botones' ;
 @use 'Componentes/formularios';
 @use 'Componentes/alertas';
 @use 'Componentes/nav';
 @use 'Componentes/container';
+@use 'Componentes/badges';
+@use 'Componentes/card';
+
+
 

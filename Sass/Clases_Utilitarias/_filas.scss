@@ -1,0 +1,79 @@
+
+
+@use '../Clases_Utilitarias/breakpoints' as *;
+@use '../Clases_Utilitarias/padding_margenes' as *;
+@use '../Clases_Utilitarias/mixins' as *;
+
+// Clases para filas
+.fila {
+  display: grid;
+  gap: $grid-gap;
+  width: 100%;
+  
+  @include breakpoints_max(sm) {
+    gap: $grid-gap-mobile;
+  }
+}
+
+// Clases para altura de filas
+@for $i from 1 through 12 {
+  .fila-h-#{$i} {
+    grid-template-rows: repeat($i, 1fr);
+  }
+}
+
+// Grid rows con altura específica
+.fila-auto {
+  grid-auto-rows: auto;
+}
+
+.fila-min-content {
+  grid-auto-rows: min-content;
+}
+
+.fila-max-content {
+  grid-auto-rows: max-content;
+}
+
+// Filas con altura fija en píxeles (estilo Minecraft)
+@for $i from 1 through 8 {
+  .fila-px-#{$i} {
+    grid-auto-rows: #{$i * 64}px;
+  }
+}
+
+// Alineación de filas
+.filas-start {
+  align-content: start;
+}
+
+.filas-center {
+  align-content: center;
+}
+
+.filas-end {
+  align-content: end;
+}
+
+.filas-stretch {
+  align-content: stretch;
+}
+
+.filas-space-between {
+  align-content: space-between;
+}
+
+.filas-space-around {
+  align-content: space-around;
+}
+
+.filas-space-evenly {
+  align-content: space-evenly;
+}
+
+// Espaciado entre filas
+@for $i from 0 through 8 {
+  .filas-gap-#{$i} {
+    row-gap: $i * $pixel-size;
+  }
+}

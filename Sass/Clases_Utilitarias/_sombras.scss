@@ -1,0 +1,132 @@
+@use '../Clases_Utilitarias/paleta' as *;
+@use 'sass:color';
+@use '../Clases_Utilitarias/fuente' as *;
+
+.sombras {
+  padding: 1rem;
+  background-color: #eee;
+  border-radius: 1rem;
+  padding: 2rem;
+}
+
+.creeper-shadow {
+    padding: 10px;
+    border: 1px solid #000;
+    box-shadow: 4px 2px 0 #050;
+  }
+
+// Sombra basada en vegetación
+.shadow-naturaleza {
+  box-shadow: 4px 4px 0 $verde-hoja, 8px 8px 0 $verde-oscuro;
+}
+
+// Sombra tipo tierra/madera
+.shadow-madera {
+  box-shadow: 4px 4px 0 $marron-madera, 8px 8px 0 $marron-tierra;
+}
+
+// Sombra tipo diamante/brillante
+.shadow-diamante {
+  box-shadow: 4px 4px 0 $azul-diamante, 8px 8px 0 $turquesa-brillante;
+}
+
+// Sombra tipo Nether/fuego
+.shadow-nether {
+  box-shadow: 4px 4px 0 $rojo-explosivo, 8px 8px 0 $naranja-lava;
+}
+
+// Sombra tipo fantasma/gélido
+.shadow-fantasma {
+  box-shadow: 4px 4px 0 $gris-fantasma, 8px 8px 0 $palido-fantasma;
+}
+
+// Sombra tipo criatura/gel
+.shadow-gel {
+  box-shadow: 4px 4px 0 $verde-gel, 8px 8px 0 $verde-neon;
+}
+
+// Sombra tipo cristal/purpura mágico
+.shadow-cristal {
+  box-shadow: 4px 4px 0 $purpura-cristal, 8px 8px 0 $negro-purpura;
+}
+
+// Sombra estilo bloque oscuro
+.shadow-oscura {
+  box-shadow: 4px 4px 0 $gris-carbon, 8px 8px 0 $sombra-oscura-marron;
+}
+
+//------------------Sombras en texto---------------
+  .creeper-text {
+    font-family: $font-minecraft1;
+    font-size: 2rem;
+    color: null; /* Verde Creeper */
+    text-shadow: 
+      2px 2px 0 #050, /* sombra verde oscuro */
+      4px 4px 0 #000; /* sombra negra tipo bloque */
+  }
+
+  .skelet-text {
+    font-family: $font-minecraft1;
+    font-size: 2rem;
+    color: $color-fondo; /* Verde Creeper */
+    text-shadow: 
+      2px 2px 0 $blanco-azulado, /* sombra verde oscuro */
+      20px 20px 7px $marron-madera; /* sombra negra tipo bloque */
+  }
+
+  .text-shadow-neon {
+    text-shadow:
+      1px 1px 0 $verde-neon,
+      2px 2px 0 $verde-oscuro;
+    color: $palido-fantasma;
+  }
+  
+  .text-shadow-end {
+    text-shadow:
+      1px 1px 0 $purpura-oscuro,
+      3px 3px 0 $negro-purpura;
+    color: $gris-fantasma;
+  }
+  
+  .text-shadow-gel {
+    text-shadow:
+      2px 2px 0 $verde-gel,
+      4px 4px 0 $verde-oscuro;
+    color: $gris-claro;
+  }
+  
+  .text-shadow-oro {
+    text-shadow:
+      1px 1px 0 $amarillo-oro,
+      3px 3px 0 $marron-tierra;
+    color: $gris-denso;
+  }
+  
+  .text-shadow-mar {
+    text-shadow:
+      1px 1px 0 $azul-mar,
+      3px 3px 0 $azul-profundo;
+    color: $blanco-azulado;
+  }
+  
+  .text-shadow-fantasma {
+    text-shadow:
+      2px 2px 0 $gris-fantasma,
+      5px 5px 10px $palido-fantasma;
+    color: $gris-carbon;
+  }
+  
+  .text-shadow-fuego {
+    text-shadow:
+      2px 2px 0 $amarillo-fuego,
+      4px 4px 0 $rojo-explosivo;
+    color: $gris-lobo;
+  }
+  
+  .text-shadow-cristal {
+    text-shadow:
+      2px 2px 0 $purpura-cristal,
+      3px 3px 5px $gris-fantasma;
+    color: $color-texto;
+  }
+  
