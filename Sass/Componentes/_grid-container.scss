@@ -1,0 +1,135 @@
+// _grid-container.scss
+// Define los contenedores grid y sus variantes
+
+@use '../Clases_Utilitarias/breakpoints' as *;
+@use '../Clases_Utilitarias/padding_margenes' as *;
+@use '../Clases_Utilitarias/paleta' as *;
+@use '../Clases_Utilitarias/redondear_elementos' as *;
+@use '../Clases_Utilitarias/sombras' as *;
+@use '../Clases_Utilitarias/mixins' as *;
+@use 'filas' as *;
+@use 'columnas' as *;
+@use 'filas-columnas' as *;
+
+// Container base para grid
+.grid-container {
+  @include container-base;
+  display: grid;
+  gap: $grid-gap;
+  
+  @include breakpoints_max(sm) {
+    gap: $grid-gap-mobile;
+  }
+}
+
+// Container con borde estilo Minecraft
+.grid-container-bordered {
+  @extend .grid-container;
+  border: 2px solid $color-borde;
+  @extend .p-2;
+  @extend .rde-m;
+  background-color: $color-panel;
+}
+
+// Grid container con tema de diamante
+.grid-container-diamante {
+  @extend .grid-container;
+  border: 4px double $azul-diamante;
+  @extend .p-4;
+  @extend .rde-xl;
+  background-color: $blanco-azulado;
+  @extend .creeper-shadow;
+}
+
+// Grid container con tema de tierra
+.grid-container-tierra {
+  @extend .grid-container;
+  border: 3px solid $marron-tierra;
+  @extend .p-3;
+  @extend .rde-l;
+  background-color: $arena-clara;
+}
+
+// Grid container con tema end
+.grid-container-end {
+  @extend .grid-container;
+  border: 2px groove $purpura-oscuro;
+  @extend .p-3;
+  @extend .rde-xl;
+  @extend .creeper-shadow;
+  background-color: $beige-palido;
+}
+
+// Grid container para una barra de navegación
+.grid-navbar {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: $grid-gap;
+  align-items: center;
+  padding: 8px $grid-gap;
+  background-color: $color-panel;
+  border-bottom: 2px solid $color-borde;
+  
+  @include breakpoints_max(sm) {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    text-align: center;
+  }
+}
+
+// Grid container para tarjetas
+.grid-cards {
+  @include auto-fit-grid(200px, $grid-gap);
+  
+  > * {
+    @extend .rde-m;
+    @extend .p-2;
+    background-color: $color-panel;
+    border: 1px solid $color-borde;
+  }
+}
+
+// Grid container para un diseño de pie de página
+.grid-footer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: $grid-gap;
+  padding: 24px 0;
+  background-color: $color-panel;
+  border-top: 2px solid $color-borde;
+  
+  @include breakpoints_max(md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  @include breakpoints_max(sm) {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Grid container con áreas nombradas
+.grid-areas-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "header header header"
+    "side main main"
+    "footer footer footer";
+  gap: $grid-gap;
+  min-height: 100vh;
+  
+  .header { grid-area: header; }
+  .sidebar { grid-area: side; }
+  .main { grid-area: main; }
+  .footer { grid-area: footer; }
+  
+  @include breakpoints_max(md) {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "side"
+      "main"
+      "footer";
+  }
+}

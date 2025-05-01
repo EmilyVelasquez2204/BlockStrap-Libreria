@@ -1,0 +1,138 @@
+// _filas-columnas.scss
+// Combinaciones y utilitarios para filas y columnas
+
+@use '../Clases_Utilitarias/breakpoints' as *;
+@use '../Clases_Utilitarias/padding_margenes' as *;
+@use '../Clases_Utilitarias/redondear_elementos' as *;
+@use '../Clases_Utilitarias/mixins' as *;
+@use 'filas' as *;
+@use 'columnas' as *;
+
+// Layouts de cuadrícula comunes
+.grid-2x2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: $grid-gap;
+  
+  @include breakpoints_max(sm) {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+  }
+}
+
+.grid-3x3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: $grid-gap;
+  
+  @include breakpoints_max(md) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, auto);
+  }
+  
+  @include breakpoints_max(sm) {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(9, auto);
+  }
+}
+
+// Layout tipo dashboard
+.dashboard-layout {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto 1fr 1fr auto;
+  grid-template-areas: 
+    "header header header header"
+    "sidebar content content content"
+    "sidebar content content content"
+    "footer footer footer footer";
+  gap: $grid-gap;
+  height: 100vh;
+  
+  @include breakpoints_max(md) {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas: 
+      "header"
+      "sidebar"
+      "content"
+      "footer";
+  }
+  
+  .header-area { grid-area: header; }
+  .sidebar-area { grid-area: sidebar; }
+  .content-area { grid-area: content; }
+  .footer-area { grid-area: footer; }
+}
+
+// Layout tipo hero con bloques laterales
+.hero-with-sidebar {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: 
+    "top top top"
+    "left center right"
+    "bottom bottom bottom";
+  gap: $grid-gap;
+  
+  @include breakpoints_max(md) {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas: 
+      "top"
+      "center"
+      "left"
+      "right"
+      "bottom";
+  }
+  
+  .top-area { grid-area: top; }
+  .left-area { grid-area: left; }
+  .center-area { grid-area: center; }
+  .right-area { grid-area: right; }
+  .bottom-area { grid-area: bottom; }
+}
+
+// Mixin para crear un grid minecraft-like 
+.minecraft-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(64px, 1fr));
+  grid-auto-rows: 64px;
+  gap: 4px;
+  
+  > * {
+    @extend .rde-s;
+  }
+}
+
+// Utilidades para posicionamiento de elementos dentro de la cuadrícula
+.grid-item-centered {
+  align-self: center;
+  justify-self: center;
+}
+
+.grid-item-top {
+  align-self: start;
+}
+
+.grid-item-bottom {
+  align-self: end;
+}
+
+.grid-item-left {
+  justify-self: start;
+}
+
+.grid-item-right {
+  justify-self: end;
+}
+
+// Espacio general entre elementos de la cuadrícula
+@for $i from 0 through 8 {
+  .grid-gap-#{$i} {
+    gap: $i * $pixel-size;
+  }
+}

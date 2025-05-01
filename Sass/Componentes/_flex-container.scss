@@ -1,0 +1,193 @@
+// _flex-container.scss
+// Define los contenedores flex y sus variantes
+
+@use '../Clases_Utilitarias/breakpoints' as *;
+@use '../Clases_Utilitarias/padding_margenes' as *;
+@use '../Clases_Utilitarias/paleta' as *;
+@use '../Clases_Utilitarias/redondear_elementos' as *;
+@use '../Clases_Utilitarias/sombras' as *;
+@use '../Clases_Utilitarias/mixins' as *;
+
+// Container base para flex
+.flex-container {
+  @include container-base;
+  display: flex;
+  flex-wrap: wrap;
+  gap: $grid-gap;
+  
+  @include breakpoints_max(sm) {
+    gap: $grid-gap-mobile;
+  }
+}
+
+// Flex container con borde estilo Minecraft
+.flex-container-bordered {
+  @extend .flex-container;
+  border: 2px solid $color-borde;
+  @extend .p-2;
+  @extend .rde-m;
+  background-color: $color-panel;
+}
+
+// Flex container con tema de oro
+.flex-container-oro {
+  @extend .flex-container;
+  border: 2px solid $amarillo-oro;
+  @extend .p-3;
+  @extend .rde-circle;
+  background-color: $arena-clara;
+}
+
+// Flex container con diferentes direcciones
+.flex-row {
+  @include flex-layout(row, flex-start, center, wrap);
+  gap: $grid-gap;
+}
+
+.flex-row-reverse {
+  @include flex-layout(row-reverse, flex-start, center, wrap);
+  gap: $grid-gap;
+}
+
+.flex-column {
+  @include flex-layout(column, flex-start, stretch, nowrap);
+  gap: $grid-gap;
+}
+
+.flex-column-reverse {
+  @include flex-layout(column-reverse, flex-start, stretch, nowrap);
+  gap: $grid-gap;
+}
+
+// Flex container con diferentes alineaciones
+.flex-center {
+  @include center-content;
+  gap: $grid-gap;
+}
+
+.flex-between {
+  @include space-between;
+  gap: $grid-gap;
+}
+
+.flex-around {
+  @include flex-layout(row, space-around, center, wrap);
+  gap: $grid-gap;
+}
+
+.flex-evenly {
+  @include flex-layout(row, space-evenly, center, wrap);
+  gap: $grid-gap;
+}
+
+// Flex container para navbar
+.flex-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px $grid-gap;
+  background-color: $color-panel;
+  border-bottom: 2px solid $color-borde;
+  
+  @include breakpoints_max(sm) {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+  
+  .nav-brand {
+    flex-shrink: 0;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 16px;
+    
+    @include breakpoints_max(sm) {
+      flex-direction: column;
+      gap: 8px;
+    }
+  }
+  
+  .nav-actions {
+    display: flex;
+    gap: 8px;
+  }
+}
+
+// Flex container para tarjetas
+.flex-cards {
+  @extend .flex-container;
+  
+  > * {
+    flex: 1 1 200px;
+    @extend .rde-m;
+    @extend .p-2;
+    background-color: $color-panel;
+    border: 1px solid $color-borde;
+    max-width: 100%;
+  }
+}
+
+// Flex container para un diseño de pie de página
+.flex-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $grid-gap;
+  padding: 24px 0;
+  background-color: $color-panel;
+  border-top: 2px solid $color-borde;
+  
+  > * {
+    flex: 1 1 200px;
+  }
+}
+
+// Clases para elementos flex
+.flex-grow-1 {
+  flex-grow: 1;
+}
+
+.flex-grow-0 {
+  flex-grow: 0;
+}
+
+.flex-shrink-1 {
+  flex-shrink: 1;
+}
+
+.flex-shrink-0 {
+  flex-shrink: 0;
+}
+
+.flex-basis-auto {
+  flex-basis: auto;
+}
+
+.flex-basis-0 {
+  flex-basis: 0;
+}
+
+.flex-basis-100 {
+  flex-basis: 100%;
+}
+
+// Clases para layout de elementos específicos
+.flex-item-centered {
+  align-self: center;
+}
+
+.flex-item-top {
+  align-self: flex-start;
+}
+
+.flex-item-bottom {
+  align-self: flex-end;
+}
+
+// Crea clases para diferentes proporciones de flex
+@for $i from 1 through 12 {
+  .flex-#{$i} {
+    flex: $i;
+  }
+}
