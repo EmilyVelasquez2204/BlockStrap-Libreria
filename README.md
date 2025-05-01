@@ -2,7 +2,7 @@
   <img src="Imagenes/logo2.png" />
 </p>
 
-<h1 align="center"> DOCUMENTACION - ONE PIECE THE WORST GENERATION </h1>
+<h1 align="center"> DOCUMENTACION - blockStrap-libreria </h1>
 
 DOCUMENTACION - BlockStrap
 
