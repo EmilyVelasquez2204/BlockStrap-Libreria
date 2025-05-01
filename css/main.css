@@ -502,7 +502,7 @@ footer {
   margin-bottom: 24px;
 }
 
-.m-7 {
+.m-7, .container-code {
   margin: 28px;
 }
 
@@ -652,7 +652,7 @@ footer {
   padding-bottom: 8px;
 }
 
-.p-3, .card, .card-1, .card-2, .card-3, .card-content-3, .card-4, .card-5, .card-6, .card-6 .card-overlay, .container, .borde-panel-importante, .borde-oro-redondo, .borde-end-sombras, .container-nether, .container-tnt, .container-end, .container-aldea {
+.p-3, .card, .card-1, .card-2, .card-3, .card-content-3, .card-4, .card-5, .card-6, .card-6 .card-overlay, .container-code, .container, .borde-panel-importante, .borde-oro-redondo, .borde-end-sombras, .container-nether, .container-tnt, .container-end, .container-aldea {
   padding: 12px;
 }
 
@@ -832,7 +832,7 @@ footer {
   padding-bottom: 32px;
 }
 
-.rde-s, .borde-basico, .container-overworld {
+.rde-s, .borde-basico, .container-code, .container-overworld {
   border-radius: 10px;
 }
 
@@ -1039,6 +1039,14 @@ footer {
 
 .bg-image-abejas {
   background-image: linear-gradient(rgba(188, 192, 82, 0.671), rgba(120, 167, 39, 0.123)), url("/Imagenes/abejas-minecraft.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.bg-image-black-grey {
+  background-image: linear-gradient(rgba(56, 56, 52, 0.671), rgba(159, 160, 157, 0.123)), url("/Imagenes/depositphotos_375492582-stock-photo-black-abstract-background-backdrop-grey.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -2239,6 +2247,37 @@ footer {
 }
 .card-6:hover .card-overlay {
   opacity: 1;
+}
+
+/*container para los codigos*/
+.container-code {
+  background: #080808;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 16px;
+  box-sizing: border-box;
+  position: relative;
+  font-family: "Chakra Petch";
+  color: #fff;
+}
+@media screen and (max-width: 576px) {
+  .container-code {
+    width: 100%;
+    padding: 8px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container-code {
+    width: 90%;
+    padding: 12px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .container-code {
+    width: 80%;
+    padding: 16px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
