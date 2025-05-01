@@ -282,10 +282,49 @@ a {
   color: #F0E68C;
 }
 
+.sombras {
+  padding: 1rem;
+  background-color: #eee;
+  border-radius: 1rem;
+  padding: 2rem;
+}
+
 .creeper-shadow, .card-2, .card-6, .container-overworld, .borde-basico, .borde-panel-importante, .borde-end-sombras, .container-nether, .container-tnt, .container-end {
+  padding: 10px;
   border: 1px solid #000;
-  font-family: "Press Start 2P";
   box-shadow: 4px 2px 0 #050;
+}
+
+.shadow-naturaleza {
+  box-shadow: 4px 4px 0 #3A7425, 8px 8px 0 #2E4E1A;
+}
+
+.shadow-madera {
+  box-shadow: 4px 4px 0 #5A3A1A, 8px 8px 0 #835C3B;
+}
+
+.shadow-diamante {
+  box-shadow: 4px 4px 0 #41C6EC, 8px 8px 0 #38D2C5;
+}
+
+.shadow-nether {
+  box-shadow: 4px 4px 0 #E03E3E, 8px 8px 0 #FF6A00;
+}
+
+.shadow-fantasma {
+  box-shadow: 4px 4px 0 #414040, 8px 8px 0 #EDEDED;
+}
+
+.shadow-gel {
+  box-shadow: 4px 4px 0 #B3F26E, 8px 8px 0 #5FC22E;
+}
+
+.shadow-cristal {
+  box-shadow: 4px 4px 0 #A472D9, 8px 8px 0 #582f80;
+}
+
+.shadow-oscura {
+  box-shadow: 4px 4px 0 #1D1D1D, 8px 8px 0 #5d3a00;
 }
 
 .creeper-text {
@@ -300,6 +339,46 @@ a {
   font-size: 2rem;
   color: #1e1e1e; /* Verde Creeper */
   text-shadow: 2px 2px 0 #F4F8FB, 20px 20px 7px #5A3A1A; /* sombra negra tipo bloque */
+}
+
+.text-shadow-neon {
+  text-shadow: 1px 1px 0 #5FC22E, 2px 2px 0 #2E4E1A;
+  color: #EDEDED;
+}
+
+.text-shadow-end {
+  text-shadow: 1px 1px 0 #1A0A24, 3px 3px 0 #582f80;
+  color: #414040;
+}
+
+.text-shadow-gel {
+  text-shadow: 2px 2px 0 #B3F26E, 4px 4px 0 #2E4E1A;
+  color: #aaa;
+}
+
+.text-shadow-oro {
+  text-shadow: 1px 1px 0 #FCEE4B, 3px 3px 0 #835C3B;
+  color: #777;
+}
+
+.text-shadow-mar {
+  text-shadow: 1px 1px 0 #5555FF, 3px 3px 0 #3D5B94;
+  color: #F4F8FB;
+}
+
+.text-shadow-fantasma {
+  text-shadow: 2px 2px 0 #414040, 5px 5px 10px #EDEDED;
+  color: #1D1D1D;
+}
+
+.text-shadow-fuego {
+  text-shadow: 2px 2px 0 #F8C03A, 4px 4px 0 #E03E3E;
+  color: #B3B3B3;
+}
+
+.text-shadow-cristal {
+  text-shadow: 2px 2px 0 #A472D9, 3px 3px 5px #414040;
+  color: #fff;
 }
 
 .hero {
@@ -1175,10 +1254,6 @@ header .top-nav {
   text-decoration: underline;
 }
 
-main {
-  flex: 1;
-  padding: 30px;
-}
 main p {
   margin-bottom: 10px;
   line-height: 1.6;
@@ -1694,6 +1769,214 @@ footer {
 
 .form-Cmb-xl {
   width: 350px;
+}
+
+.alert {
+  padding: 1rem;
+  border-radius: 4px;
+  font-family: "Press Start 2P";
+  color: #fff;
+  margin-bottom: 1rem;
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.4);
+  position: relative;
+  transition: all 0.2s ease;
+}
+.alert:hover {
+  transform: translateY(-2px);
+  box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.5);
+}
+.alert::before {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  line-height: 24px;
+  margin-right: 10px;
+  border-radius: 3px;
+}
+@media screen and (max-width: 576px) {
+  .alert {
+    font-size: 0.9rem;
+    padding: 0.7rem;
+    padding: 8px;
+  }
+  .alert::before {
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+    margin-right: 6px;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 992px) {
+  .alert {
+    margin: 12px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .alert {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .alert {
+    margin: 16px;
+    font-size: 1.17rem;
+  }
+}
+
+.alert-creeper {
+  background-color: #2E4E1A;
+  border: 3px solid #5E7C16;
+  border-radius: 2px;
+}
+.alert-creeper::before {
+  content: "💥";
+  background-color: #5E7C16;
+}
+.alert-creeper:hover {
+  box-shadow: 0 0 10px rgba(94, 124, 22, 0.7);
+  transform: translateY(-5px);
+}
+
+.alert-zombie {
+  background-color: #4B5632;
+  border: 3px solid #2f361f;
+  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.1) 25%, transparent 25%, transparent 50%, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.1) 75%, transparent 75%, transparent);
+  background-size: 8px 8px;
+}
+.alert-zombie::before {
+  content: "🧟";
+  background-color: #2f361f;
+}
+
+.alert-skeleton {
+  background-color: #B3B3B3;
+  color: #111;
+  border: 3px solid gray;
+}
+.alert-skeleton::before {
+  content: "🏹";
+  background-color: gray;
+  color: black;
+}
+
+.alert-enderman {
+  background-color: #1A0A24;
+  border: 3px solid #A472D9;
+  color: #d8c2ef;
+  box-shadow: 0 0 8px #1A0A24;
+}
+.alert-enderman::before {
+  content: "👁️";
+  background-color: #A472D9;
+}
+.alert-enderman:hover {
+  box-shadow: 0 0 10px #A472D9;
+}
+
+.alert-steve {
+  background-color: #3D5B94;
+  border: 3px solid #8B5A2B;
+  border-style: solid;
+}
+.alert-steve::before {
+  content: "⛏️";
+  background-color: #8B5A2B;
+}
+
+.alert-aldeano {
+  background-color: #835C3B;
+  border: 3px solid #7DC383;
+  text-align: center;
+}
+.alert-aldeano::before {
+  content: "✧";
+  background-color: #7DC383;
+}
+
+.alert-redstone {
+  background-color: #B80000;
+  border: 3px solid #E03E3E;
+  color: #FCEE4B;
+}
+.alert-redstone::before {
+  content: "⚡";
+  background-color: #E03E3E;
+}
+.alert-redstone:hover {
+  box-shadow: 0 0 10px #E03E3E;
+  transform: translateX(5px);
+}
+
+.alert-agua {
+  background-color: #3D5B94;
+  border: 3px solid #5555FF;
+  border-radius: 4px;
+  background-image: linear-gradient(45deg, rgba(85, 85, 255, 0.3) 25%, transparent 25%, transparent 50%, rgba(85, 85, 255, 0.3) 50%, rgba(85, 85, 255, 0.3) 75%, transparent 75%, transparent);
+  background-size: 20px 20px;
+}
+.alert-agua::before {
+  content: "🌊";
+  background-color: #5555FF;
+}
+
+.alert-nether {
+  background-color: #812E24;
+  border: 3px solid #FF6A00;
+  color: #FCEE4B;
+  font-size: 1.17rem;
+}
+.alert-nether::before {
+  content: "🔥";
+  background-color: #FF6A00;
+}
+
+.alert-exito {
+  background-color: #1291b5;
+  border: 3px solid #41C6EC;
+  border-style: dashed;
+  text-align: center;
+}
+.alert-exito::before {
+  content: "💎";
+  background-color: #41C6EC;
+}
+.alert-exito:hover {
+  box-shadow: 0 0 10px #41C6EC;
+  border-radius: 8px;
+}
+
+.alert-link-button {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  background-color: #1EC26B;
+  color: #fff;
+  border: 2px solid #148046;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 18px;
+  transition: all 0.2s ease;
+}
+.alert-link-button::after {
+  content: "→";
+}
+.alert-link-button:hover {
+  background-color: #33e084;
+  transform: translateY(-50%) scale(1.1);
+}
+.alert-link-button:active {
+  transform: translateY(-50%) scale(0.95);
+  box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
 }
 
 .principal {
