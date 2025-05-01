@@ -2,9 +2,9 @@
   <img src="Imagenes/logo2.png" />
 </p>
 
-<h1 align="center"> BlockStrap-libreria </h1>
+<h1 align="center"> DOCUMENTACION - BlockStrap</h1>
 
-DOCUMENTACION - BlockStrap
+
 
 
 ## Tabla de contenido 
