@@ -105,51 +105,6 @@
   text-align: end;
 }
 
-
-h1, h2, h3 {
-  font-family: "Press Start 2P";
-  margin: 0;
-  text-transform: uppercase;
-  text-shadow: 1px 1px 0 #582f80, 2px 2px 0 #582f80;
-  color: #F4F8FB;
-}
-
-h4, h5, h6, p {
-  font-family: "Chakra Petch";
-  margin: 0;
-  text-transform: uppercase;
-  color: #F4F8FB;
-}
-
-h1 {
-  font-size: 32px;
-  color: #FCEE4B;
-}
-
-h2 {
-  font-size: 28px;
-  color: #41C6EC;
-}
-
-h3 {
-  font-size: 24px;
-  color: #5E7C16;
-}
-
-h4 {
-  font-size: 20px;
-  color: #B80000;
-}
-
-h5 {
-  font-size: 16px;
-  color: #38D2C5;
-}
-
-h6 {
-  font-size: 14px;
-  color: #B3B3B3;
-}
 .creeper-shadow, .card-2, .card-6, .container-overworld, .borde-basico, .borde-panel-importante, .borde-end-sombras, .container-nether, .container-tnt, .container-end {
   border: 1px solid #000;
   font-family: "Press Start 2P";
@@ -502,7 +457,7 @@ footer {
   margin-bottom: 24px;
 }
 
-.m-7 {
+.m-7, .container-code {
   margin: 28px;
 }
 
@@ -652,7 +607,7 @@ footer {
   padding-bottom: 8px;
 }
 
-.p-3, .card, .card-1, .card-2, .card-3, .card-content-3, .card-4, .card-5, .card-6, .card-6 .card-overlay, .container, .borde-panel-importante, .borde-oro-redondo, .borde-end-sombras, .container-nether, .container-tnt, .container-end, .container-aldea {
+.p-3, .card, .card-1, .card-2, .card-3, .card-content-3, .card-4, .card-5, .card-6, .card-6 .card-overlay, .container-code, .container, .borde-panel-importante, .borde-oro-redondo, .borde-end-sombras, .container-nether, .container-tnt, .container-end, .container-aldea {
   padding: 12px;
 }
 
@@ -832,7 +787,7 @@ footer {
   padding-bottom: 32px;
 }
 
-.rde-s, .borde-basico, .container-overworld {
+.rde-s, .borde-basico, .container-code, .container-overworld {
   border-radius: 10px;
 }
 
@@ -1039,6 +994,14 @@ footer {
 
 .bg-image-abejas {
   background-image: linear-gradient(rgba(188, 192, 82, 0.671), rgba(120, 167, 39, 0.123)), url("/Imagenes/abejas-minecraft.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.bg-image-black-grey {
+  background-image: linear-gradient(rgba(56, 56, 52, 0.671), rgba(159, 160, 157, 0.123)), url("/Imagenes/depositphotos_375492582-stock-photo-black-abstract-background-backdrop-grey.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -2143,6 +2106,7 @@ footer {
   color: #fff;
   display: -webkit-box;
   -webkit-line-clamp: 3;
+  line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
   font-family: "Chakra Petch";
@@ -2239,6 +2203,37 @@ footer {
 }
 .card-6:hover .card-overlay {
   opacity: 1;
+}
+
+/*container para los codigos*/
+.container-code {
+  background: #080808;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 16px;
+  box-sizing: border-box;
+  position: relative;
+  font-family: "Chakra Petch";
+  color: #fff;
+}
+@media screen and (max-width: 576px) {
+  .container-code {
+    width: 100%;
+    padding: 8px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container-code {
+    width: 90%;
+    padding: 12px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .container-code {
+    width: 80%;
+    padding: 16px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
