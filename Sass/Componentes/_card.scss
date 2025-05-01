@@ -1,0 +1,470 @@
+@use '../Clases_Utilitarias/paleta' as *;
+@use '../Clases_Utilitarias/fuente' as *;
+@use '../Clases_Utilitarias/sombras' as *;
+@use '../Clases_Utilitarias/bordes' as *;
+@use '../Clases_Utilitarias/breakpoints' as *;
+@use '../Clases_Utilitarias/movimiento' as *;
+@use '../Clases_Utilitarias/padding_margenes' as *;
+//@use '../Clases_Utilitarias/redondear_elementos' as *;
+
+//variables
+$borde-suave: 1px solid rgba(0,0,0,0.125);
+$sombra-suave: 0 2px 5px rgba(0,0,0,0.1);
+$sombra-card: 0px 7px 10px rgba(0,0,0,0.5);
+$transicion-suave: all 0.3s ease;
+$transicion: 0.5s ease-in-out;
+$transformacion: translateY(20px);
+$m-auto: auto;
+$fondo: #fff;
+
+$small: 4px;
+$medium: 8px;
+$large: 16px;
+$xlarge: 32px;
+$circle: 50%;
+
+.cards-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+    background-color: #222;
+    @extend .p-4; //usando padding de utilidades
+}
+
+// Clase base para todas las cards
+.card {
+   // background-color: $turquesa-brillante;
+    border: $borde-suave;
+    border-radius: $medium;
+    box-shadow: $sombra-suave;
+    @extend .p-3;
+    font-family: $font-minecraft2;
+    transition: $transicion-suave;
+    width: 100%;
+    margin: $m-auto;
+    position: relative;
+    overflow: hidden;
+    
+    // Breakpoints comunes para todas las cards
+    @include breakpoints_max('sm') { // se aplica el cambio al llegar a <=576px
+        padding: $pixel-size * 1;
+        background-color: $verde-hoja;
+        font-size: 0.9rem;
+        box-shadow: none;
+        border-radius: $small;
+    }
+    
+    @include breakpoints_min('md') { // >=768px
+        max-width: 350px;
+        padding: $pixel-size * 2;
+    }
+    
+    @include breakpoints_min('lg') {
+        max-width: 400px;
+        box-shadow: $sombra-card;
+    }
+    
+    @include breakpoints_max('xl') {
+        max-width: 500px;
+        padding: $pixel-size * 3;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    }
+    
+    &:hover {
+        @extend .move-up; // utilizando utilidad movimiento
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+    
+    // Elementos comunes para la card original
+    .card-body {
+        background-color: $beige-palido;
+        border: $borde-suave;
+        border-radius: $medium;
+        box-shadow: $sombra-suave;
+        @extend .p-1;
+        font-family: $font-minecraft2;
+        transition: $transicion-suave;
+        height: 100%;
+    }
+    
+    .card-titulo {
+        @extend .sf-3;
+        @extend .gf;
+        @extend .mb-2;
+        color: $color-texto;
+        font-family: $font-minecraft1;
+        @extend .ta-center;
+    }
+    
+    .card-p {
+        @extend .sf-2;
+        color: $color-texto;
+        @extend .ta-justify;
+    }
+    
+    .img {
+        width: 400px;
+        height: auto;
+        margin: $m-auto;
+        display: block;
+    }
+}
+
+// Card Style 1 - Existente con hover overlay
+.card-1 {
+    @extend .card; // Hereda propiedades base
+    width: 280px;
+    height: 360px;
+    padding: 2rem 1rem;
+    background: $fondo;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    box-shadow: $sombra-card;
+    transition: 0.5s ease-in-out;
+    @extend .mb-3; // Margen inferior desde utilidades
+    @extend .move-center; // Centrando elementos internos
+    
+    &:hover {
+        transform: $transformacion;
+        @extend .move-down; // Efecto al hacer hover
+        
+        .card-info {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+    }
+    
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to bottom, rgba($azul-mar, 0.5), rgba($blanco-azulado, 0.2));
+        z-index: 2;
+        transition: 0.5s all;
+        opacity: 0;
+    }
+    
+    &:hover::before {
+        opacity: 1;
+    }
+}
+
+.card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.card-info {
+    position: relative;
+    z-index: 3;
+    color: $fondo;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.5s all;
+    @extend .p-2; // Padding desde utilidades
+    
+    .card-titulo1 {
+        margin: 0;
+        font-family: $font-minecraft1;
+        @extend .sf-3; // Tamaño de fuente desde utilidades
+        @extend .color-font-diamante; // Color de fuente desde utilidades
+    }
+    
+    .card-p2 {
+        letter-spacing: 1px;
+        font-size: 15px;
+        @extend .mt-2;
+        @extend .mb-5;
+        font-family: $font-minecraft2;
+        @extend .ta-justify; // Alineación de texto desde utilidades
+    }
+}
+
+// Card Style 2 - Gradient Card
+.card-2 {
+    @extend .card; // Hereda propiedades base
+    width: 280px;
+    height: 360px;
+    padding: 2rem 1rem;
+    background: $fondo;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    box-shadow: $sombra-card;
+    transition: $transicion;
+    overflow: hidden;
+    border-radius: $medium;
+    @extend .mb-3; // Margen inferior desde utilidades
+    @extend .creeper-shadow; // Sombra estilo creeper desde utilidades
+    
+    &:hover {
+        transform: translateY(-10px) rotate(2deg);
+        
+        .card-info-2 {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+    }
+    
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to bottom, rgba($rojo-explosivo, 0.7), rgba($amarillo-oro, 0.3));
+        z-index: 2;
+        transition: 0.5s all;
+        opacity: 0;
+    }
+    
+    &:hover::before {
+        opacity: 1;
+    }
+}
+
+.card-info-2 {
+    position: relative;
+    z-index: 3;
+    color: $fondo;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 0.6s all;
+    @extend .p-2; // Padding desde utilidades
+    
+    .card-titulo2 {
+        margin: 0;
+        font-family: $font-minecraft1;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+        @extend .sf-3; // Tamaño de fuente desde utilidades
+        @extend .color-font-oro; // Color de fuente desde utilidades
+    }
+    
+    .card-p2 {
+        letter-spacing: 1px;
+        font-size: 15px;
+        @extend .mt-2;
+        @extend .mb-5;
+        font-family: $font-minecraft2;
+        @extend .ta-justify; // Alineación de texto desde utilidades
+    }
+}
+
+// Card Style 3 - Bordered Card
+.card-3 {
+    @extend .card; // Hereda propiedades base
+    width: 300px;
+    height: 380px;
+    padding: 0;
+    background: $fondo;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    box-shadow: $sombra-suave;
+    transition: $transicion;
+    border: 4px solid $turquesa-brillante;
+    overflow: hidden;
+    @extend .mb-3; // Margen inferior desde utilidades
+    @extend .borde-diamante; // Borde estilo diamante desde utilidades
+    
+    &:hover {
+        transform: scale(1.03);
+        box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+        
+        .card-img-container {
+            height: 50%;
+        }
+        
+        .card-content-3 {
+            height: 50%;
+        }
+    }
+}
+
+.card-img-container {
+    width: 100%;
+    height: 65%;
+    overflow: hidden;
+    transition: $transicion;
+    position: relative;
+    
+    .card-img-3 {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.card-content-3 {
+    padding: 1.5rem;
+    height: 35%;
+    transition: $transicion;
+    background-color: $beige-palido;
+    @extend .p-3; // Padding desde utilidades
+    
+    .card-titulo3 {
+        @extend .sf-3;
+        margin: 0 0 10px 0;
+        color: $azul-profundo;
+        font-family: $font-minecraft1;
+        @extend .color-font-mar; // Color de fuente desde utilidades
+    }
+    
+    .card-p3 {
+        @extend .sf-2;
+        color: $color-texto;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        font-family: $font-minecraft2;
+        @extend .ta-justify; // Alineación de texto desde utilidades
+    }
+}
+
+
+.card-4 {
+    @extend .card;
+    width: 300px;
+    height: 380px;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+    @extend .mb-3;
+    @extend .p-3;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  
+    .card-titulo4 {
+      @extend .sf-3;
+      font-family: $font-minecraft1;
+      @extend .color-font-diamante;
+      @extend .ta-center;
+      margin-bottom: 1rem;
+    }
+  
+    .card-p4 {
+      @extend .sf-2;
+      font-family: $font-minecraft2;
+      color: $color-texto;
+      @extend .ta-justify;
+    }
+}
+
+  
+  .card-5 {
+    @extend .card;
+    width: 320px;
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    @extend .mb-3;
+    @extend .borde-diamante;
+  
+    .card-img-5 {
+      width: 200px;
+      height: 100%;
+      object-fit: cover;
+    }
+  
+    .card-content-5 {
+      width: 60%;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-color: transparent;
+  
+      .card-titulo5 {
+        @extend .sf-3;
+        font-family: $font-minecraft1;
+        @extend .color-font-obsidiana;
+        margin-bottom: 0.5rem;
+      }
+  
+      .card-p5 {
+        @extend .sf-2;
+        font-family: $font-minecraft2;
+        color: $color-texto;
+        @extend .ta-justify;
+      }
+    }
+  }
+
+
+  .card-6 {
+    @extend .card;
+    width: 300px;
+    height: 380px;
+    position: relative;
+    overflow: hidden;
+    @extend .mb-3;
+    @extend .creeper-shadow;
+  
+    .card-img-6 {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+  
+    .card-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.65);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      padding: 1rem;
+      @extend .p-3;
+  
+      .card-titulo6 {
+        @extend .sf-3;
+        font-family: $font-minecraft1;
+        color: $fondo;
+        text-align: center;
+        margin-bottom: 0.5rem;
+      }
+  
+      .card-p6 {
+        @extend .sf-2;
+        font-family: $font-minecraft2;
+        color: $fondo;
+        @extend .ta-justify;
+      }
+    }
+  
+    &:hover {
+      .card-img-6 {
+        transform: scale(1.1);
+      }
+  
+      .card-overlay {
+        opacity: 1;
+      }
+    }
+  }
+  
+  
