@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="Imagenes/logo2.png" width="500px"/>
+  <img src="Imagenes/logo2.png" width="250px"/>
 </p>
 
 <h1 align="center"> DOCUMENTACION - BlockStrap</h1>
