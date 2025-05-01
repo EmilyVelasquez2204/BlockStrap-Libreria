@@ -52,6 +52,11 @@ $size-5: 5vh;
 @include colorfuente('piedraDelEnd',$beige-palido);
 @include colorfuente('obsidiana',$purpura-oscuro);
 
+//agregados
+@include colorfuente('gris-carbon',$gris-carbon );
+@include colorfuente('gris-fantasma',$gris-fantasma );
+@include colorfuente('color-fondo',$color-fondo );
+@include colorfuente('naranja-lava',$naranja-lava );
 
 
 $font-minecraft1: "Press Start 2P";
@@ -101,3 +106,57 @@ $font-minecraft3: "Open Sans";
     text-align: end;
 }
 
+
+body {
+    background: linear-gradient(rgba(60, 109, 55, 0.671), rgba(78, 212, 45, 0.123)), url('/Imagenes/minecraft-inicio.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+  }
+  h1, h2, h3 {
+  
+      font-family: $font-minecraft1;
+      margin: 0;
+      text-transform: uppercase;
+      text-shadow:
+        1px 1px 0 $negro-purpura,
+        2px 2px 0 $negro-purpura;
+      color: $blanco-azulado;
+      text-align: center;
+  
+    }
+    
+    h4, h5, h6 {
+      font-family: $font-minecraft2;
+      margin: 0;
+      text-transform: uppercase;
+      text-align: center;
+      color: $blanco-azulado;
+    }
+    p {
+      font-family: $font-minecraft2;
+      margin: 0;
+      text-transform: uppercase;
+      text-align: center;
+      font-size: 22px;
+      color: $blanco-azulado;
+
+    }
+    span{
+      margin: 5px;
+      font-size: 18px;
+      font-family: 'Press Start 2P';
+      text-align: start;
+     color: $arena-clara;
+    }
+  
+  
+    
+    h1 { font-size: 40px; color: $amarillo-oro; }
+    h2 { font-size: 36px; color: $azul-diamante; }
+    h3 { font-size: 24px; color: $verde-pasto; }
+    h4 { font-size: 20px; color: $rojo-intenso; }
+    h5 { font-size: 16px; color: $turquesa-brillante; }
+    h6 { font-size: 14px; color: $gris-lobo; }
+  

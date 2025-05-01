@@ -1,4 +1,64 @@
 @import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Press+Start+2P&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+.cf-pasto {
+  background-color: #5E7C16;
+}
+
+.cf-tierra {
+  background-color: #835C3B;
+}
+
+.cf-neon {
+  background-color: #5FC22E;
+}
+
+.cf-madera {
+  background-color: #5A3A1A;
+}
+
+.cf-azul-pofundo {
+  background-color: #3D5B94;
+}
+
+.cf-azul-mar {
+  background-color: #5555FF;
+}
+
+.cf-gel {
+  background-color: #B3F26E;
+}
+
+.cf-negro-purpura {
+  background-color: rgb(88, 46.5, 127.5);
+}
+
+.cf-diamante {
+  background-color: #41C6EC;
+}
+
+.cf-fantasma {
+  background-color: #EDEDED;
+}
+
+.cf-fuego {
+  background-color: #F8C03A;
+}
+
+.cf-turquesa-grisaceo {
+  background-color: #77BFA3;
+}
+
+.cf-purpura-cristal {
+  background-color: #A472D9;
+}
+
+.cf-verde-menta {
+  background-color: #7DC383;
+}
+
+.cf-turquesa-brillante {
+  background-color: #38D2C5;
+}
+
 /* Importar fuente de Minecraft */
 @font-face {
   font-family: "MinecraftFont";
@@ -64,6 +124,22 @@
   color: #1A0A24;
 }
 
+.color-font-gris-carbon {
+  color: #1D1D1D;
+}
+
+.color-font-gris-fantasma {
+  color: #414040;
+}
+
+.color-font-color-fondo {
+  color: #1e1e1e;
+}
+
+.color-font-naranja-lava {
+  color: #FF6A00;
+}
+
 .ttxt-Minecraft {
   font-family: "MinecraftFont", sans-serif;
 }
@@ -113,6 +189,7 @@ body {
 }
 
 h1, h2, h3 {
+  font-family: "Press Start 2P";
   margin: 0;
   text-transform: uppercase;
   text-shadow: 1px 1px 0 rgb(88, 46.5, 127.5), 2px 2px 0 rgb(88, 46.5, 127.5);
