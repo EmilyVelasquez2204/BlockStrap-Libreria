@@ -108,7 +108,7 @@ $pixel-size: 4px; // Tamaño base para padding y márgenes
 .alert-zombie {
   background-color: $verde-lodoso;
   border: $border-width solid darken($verde-lodoso, 10%);
-  box-shadow: $creeper-shadow; // creeper-shadow
+   // creeper-shadow
 
   &::before {
     content: "🧟"; // Ícono de zombie
@@ -134,7 +134,7 @@ $pixel-size: 4px; // Tamaño base para padding y márgenes
   background-color: $gris-lobo;
   color: #111; // Texto oscuro
   border: $border-width solid darken($gris-lobo, 20%);
-  font-family: $skelet-text; // skelet-text
+   // skelet-text
 
   &::before {
     content: "🏹"; // Ícono de arco
