@@ -1,25 +1,54 @@
 $pixel-size: 4px;
 
-// Márgenes
-@for $i from 0 through 8 {
-  .m-#{$i}  { margin: $i * $pixel-size; }
-  .mt-#{$i} { margin-top: $i * $pixel-size; }
-  .mb-#{$i} { margin-bottom: $i * $pixel-size; }
-  .ml-#{$i} { margin-left: $i * $pixel-size; }
-  .mr-#{$i} { margin-right: $i * $pixel-size; }
-  .mx-#{$i} { margin-left: $i * $pixel-size; margin-right: $i * $pixel-size; }
-  .my-#{$i} { margin-top: $i * $pixel-size; margin-bottom: $i * $pixel-size; }
+// --- MIXINS DE MÁRGENES ---
+@mixin m($i)   { margin: $i * $pixel-size; }
+@mixin mt($i)  { margin-top: $i * $pixel-size; }
+@mixin mb($i)  { margin-bottom: $i * $pixel-size; }
+@mixin ml($i)  { margin-left: $i * $pixel-size; }
+@mixin mr($i)  { margin-right: $i * $pixel-size; }
+@mixin mx($i)  {
+  margin-left: $i * $pixel-size;
+  margin-right: $i * $pixel-size;
+}
+@mixin my($i)  {
+  margin-top: $i * $pixel-size;
+  margin-bottom: $i * $pixel-size;
 }
 
-// Paddings
-@for $i from 0 through 8 {
-  .p-#{$i}  { padding: $i * $pixel-size; }
-  .pt-#{$i} { padding-top: $i * $pixel-size; }
-  .pb-#{$i} { padding-bottom: $i * $pixel-size; }
-  .pl-#{$i} { padding-left: $i * $pixel-size; }
-  .pr-#{$i} { padding-right: $i * $pixel-size; }
-  .px-#{$i} { padding-left: $i * $pixel-size; padding-right: $i * $pixel-size;}
-  .py-#{$i} { padding-top: $i * $pixel-size; padding-bottom: $i * $pixel-size;}
+// --- MIXINS DE PADDINGS ---
+@mixin p($i)   { padding: $i * $pixel-size; }
+@mixin pt($i)  { padding-top: $i * $pixel-size; }
+@mixin pb($i)  { padding-bottom: $i * $pixel-size; }
+@mixin pl($i)  { padding-left: $i * $pixel-size; }
+@mixin pr($i)  { padding-right: $i * $pixel-size; }
+@mixin px($i)  {
+  padding-left: $i * $pixel-size;
+  padding-right: $i * $pixel-size;
+}
+@mixin py($i)  {
+  padding-top: $i * $pixel-size;
+  padding-bottom: $i * $pixel-size;
+}
+
+// --- USO OPCIONAL DE CLASES (si no quieres usar @include) ---
+@mixin generar-utilidades {
+  @for $i from 0 through 8 {
+    .m-#{$i}  { @include m($i); }
+    .mt-#{$i} { @include mt($i); }
+    .mb-#{$i} { @include mb($i); }
+    .ml-#{$i} { @include ml($i); }
+    .mr-#{$i} { @include mr($i); }
+    .mx-#{$i} { @include mx($i); }
+    .my-#{$i} { @include my($i); }
+
+    .p-#{$i}  { @include p($i); }
+    .pt-#{$i} { @include pt($i); }
+    .pb-#{$i} { @include pb($i); }
+    .pl-#{$i} { @include pl($i); }
+    .pr-#{$i} { @include pr($i); }
+    .px-#{$i} { @include px($i); }
+    .py-#{$i} { @include py($i); }
+  }
 }
 
 
