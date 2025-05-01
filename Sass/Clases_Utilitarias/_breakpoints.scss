@@ -1,9 +1,11 @@
-// Breakpoints para Mobile, tablets y PC
+
+
+// Puntos de interrupción para móviles, tabletas y PC
 $breakpoint-mobile: 576px;
 $breakpoint-tablet: 768px;
 $breakpoint-pc: 992px;
 
-$breakpoints: (
+$puntos-de-interrupcion: (
   xs: 0px,
   sm: 576px,
   md: 768px,
@@ -12,28 +14,30 @@ $breakpoints: (
   xxl: 1400px
 );
 
+// Mixin para media queries con ancho mínimo (desde)
 @mixin breakpoints_min($parametro){
-  @media screen and (min-width: map-get($breakpoints,$parametro)) {
-      @content;
+  @media screen and (min-width: map-get($puntos-de-interrupcion, $parametro)) {
+    @content;
   }
 }
+
+// Mixin para media queries con ancho máximo (hasta)
 @mixin breakpoints_max($parametro){
-  @media screen and (max-width: map-get($breakpoints,$parametro)) {
-      @content;
+  @media screen and (max-width: map-get($puntos-de-interrupcion, $parametro)) {
+    @content;
   }
 }
 
-.container {
-  width: 80%; 
-  margin: 0 auto;
-
-  // Media query para pantalla de tablet
-  @media screen and (max-width: $breakpoint-tablet) {
-    width: 90%;
+// Mixin para rango entre dos breakpoints
+@mixin breakpoints_between($min, $max) {
+  @media screen and (min-width: map-get($puntos-de-interrupcion, $min)) and (max-width: map-get($puntos-de-interrupcion, $max)) {
+    @content;
   }
+}
 
-  // Media query para pantalla de móvil
-  @media screen and (max-width: $breakpoint-mobile) {
-    width: 100%; 
+// Mixin para orientación específica
+@mixin orientation($direction) {
+  @media screen and (orientation: $direction) {
+    @content;
   }
 }
