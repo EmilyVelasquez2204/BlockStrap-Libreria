@@ -14,6 +14,7 @@
 $border-width: 3px; // Grosor del borde de las alertas
 $alert-padding: 1rem; // Espaciado interior (padding) de la alerta
 $shadow-default: 3px 3px 0 rgba(0, 0, 0, 0.4); // Sombra predeterminada tipo pixel
+$pixel-size: 4px; // Tamaño de píxel para paddings y márgenes
 
 // Mixin para aplicar efectos compartidos entre todas las alertas
 @mixin alert-effects {
@@ -55,7 +56,7 @@ $shadow-default: 3px 3px 0 rgba(0, 0, 0, 0.4); // Sombra predeterminada tipo pix
   @include breakpoints_max(sm) {
     font-size: 0.9rem;
     padding: 0.7rem;
-    @extend .p-2;
+    padding: 2 * $pixel-size; // p-2 directo en lugar de @extend
     
     &::before {
       width: 18px;
@@ -67,19 +68,20 @@ $shadow-default: 3px 3px 0 rgba(0, 0, 0, 0.4); // Sombra predeterminada tipo pix
   
   // Para tablets
   @include breakpoints_between(sm, lg) {
-    @extend .m-3;
-    @extend .p-3;
+    margin: 3 * $pixel-size; // m-3 directo en lugar de @extend
   }
   
   // Para pantallas medianas
   @include breakpoints_min(md) {
-    @extend .py-3;
-    @extend .px-4;
+    padding-top: 3 * $pixel-size; // py-3 (parte superior) directo
+    padding-bottom: 3 * $pixel-size; // py-3 (parte inferior) directo
+    padding-left: 4 * $pixel-size; // px-4 (parte izquierda) directo
+    padding-right: 4 * $pixel-size; // px-4 (parte derecha) directo
   }
   
   // Para pantallas grandes
   @include breakpoints_min(xl) {
-    @extend .m-4;
+    margin: 4 * $pixel-size; // m-4 directo en lugar de @extend
     @extend .sf-3;
   }
 }
@@ -255,8 +257,8 @@ $shadow-default: 3px 3px 0 rgba(0, 0, 0, 0.4); // Sombra predeterminada tipo pix
   }
 }
 
- // Elemento de enlace dentro de la alerta
- .alert-link-button {
+// Elemento de enlace dentro de la alerta
+.alert-link-button {
   position: absolute;
   right: 15px;
   top: 50%;
@@ -288,3 +290,4 @@ $shadow-default: 3px 3px 0 rgba(0, 0, 0, 0.4); // Sombra predeterminada tipo pix
     box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
   }
 }
+
