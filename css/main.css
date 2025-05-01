@@ -1696,6 +1696,216 @@ footer {
   width: 350px;
 }
 
+.alert {
+  padding: 1rem;
+  border-radius: 4px;
+  font-family: "Press Start 2P";
+  color: #fff;
+  margin-bottom: 1rem;
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.4);
+  position: relative;
+  transition: all 0.2s ease;
+}
+.alert:hover {
+  transform: translateY(-2px);
+  box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.5);
+}
+.alert::before {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  line-height: 24px;
+  margin-right: 10px;
+  border-radius: 3px;
+}
+@media screen and (max-width: 576px) {
+  .alert {
+    font-size: 0.9rem;
+    padding: 0.7rem;
+    padding: 8px;
+  }
+  .alert::before {
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+    margin-right: 6px;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 992px) {
+  .alert {
+    margin: 12px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .alert {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .alert {
+    margin: 16px;
+    font-size: 1.17rem;
+  }
+}
+
+.alert-creeper {
+  background-color: #2E4E1A;
+  border: 3px solid #5E7C16;
+  border-radius: 2px;
+}
+.alert-creeper::before {
+  content: "💥";
+  background-color: #5E7C16;
+}
+.alert-creeper:hover {
+  box-shadow: 0 0 10px rgba(94, 124, 22, 0.7);
+  transform: translateY(-5px);
+}
+
+.alert-zombie {
+  background-color: #4B5632;
+  border: 3px solid rgb(46.875, 53.75, 31.25);
+  box-shadow: 4px 4px 0 rgba(46, 78, 26, 0.6);
+  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.1) 25%, transparent 25%, transparent 50%, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.1) 75%, transparent 75%, transparent);
+  background-size: 8px 8px;
+}
+.alert-zombie::before {
+  content: "🧟";
+  background-color: rgb(46.875, 53.75, 31.25);
+}
+
+.alert-skeleton {
+  background-color: #B3B3B3;
+  color: #111;
+  border: 3px solid gray;
+  font-family: "Courier New", monospace;
+}
+.alert-skeleton::before {
+  content: "🏹";
+  background-color: gray;
+  color: black;
+}
+
+.alert-enderman {
+  background-color: #1A0A24;
+  border: 3px solid #A472D9;
+  color: rgb(215.8547486034, 194.3463687151, 238.6536312849);
+  box-shadow: 0 0 8px #1A0A24;
+}
+.alert-enderman::before {
+  content: "👁️";
+  background-color: #A472D9;
+}
+.alert-enderman:hover {
+  box-shadow: 0 0 10px #A472D9;
+}
+
+.alert-steve {
+  background-color: #3D5B94;
+  border: 3px solid #8B5A2B;
+  border-style: solid;
+}
+.alert-steve::before {
+  content: "⛏️";
+  background-color: #8B5A2B;
+}
+
+.alert-aldeano {
+  background-color: #835C3B;
+  border: 3px solid #7DC383;
+  text-align: center;
+}
+.alert-aldeano::before {
+  content: "✧";
+  background-color: #7DC383;
+}
+
+.alert-redstone {
+  background-color: #B80000;
+  border: 3px solid #E03E3E;
+  color: #FCEE4B;
+}
+.alert-redstone::before {
+  content: "⚡";
+  background-color: #E03E3E;
+}
+.alert-redstone:hover {
+  box-shadow: 0 0 10px #E03E3E;
+  transform: translateX(5px);
+}
+
+.alert-agua {
+  background-color: #3D5B94;
+  border: 3px solid #5555FF;
+  border-radius: 4px;
+  background-image: linear-gradient(45deg, rgba(85, 85, 255, 0.3) 25%, transparent 25%, transparent 50%, rgba(85, 85, 255, 0.3) 50%, rgba(85, 85, 255, 0.3) 75%, transparent 75%, transparent);
+  background-size: 20px 20px;
+}
+.alert-agua::before {
+  content: "🌊";
+  background-color: #5555FF;
+}
+
+.alert-nether {
+  background-color: #812E24;
+  border: 3px solid #FF6A00;
+  color: #FCEE4B;
+  font-size: 1.17rem;
+}
+.alert-nether::before {
+  content: "🔥";
+  background-color: #FF6A00;
+}
+
+.alert-exito {
+  background-color: rgb(18.0909090909, 144.7272727273, 180.9090909091);
+  border: 3px solid #41C6EC;
+  border-style: dashed;
+  text-align: center;
+}
+.alert-exito::before {
+  content: "💎";
+  background-color: #41C6EC;
+}
+.alert-exito:hover {
+  box-shadow: 0 0 10px #41C6EC;
+  border-radius: 8px;
+}
+
+.alert-link-button {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  background-color: #1EC26B;
+  color: #fff;
+  border: 2px solid rgb(19.7544642857, 127.7455357143, 70.4575892857);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 18px;
+  transition: all 0.2s ease;
+}
+.alert-link-button::after {
+  content: "→";
+}
+.alert-link-button:hover {
+  background-color: rgb(51.4732142857, 223.5267857143, 132.2544642857);
+  transform: translateY(-50%) scale(1.1);
+}
+.alert-link-button:active {
+  transform: translateY(-50%) scale(0.95);
+  box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
+}
+
 .principal {
   background-image: url("BlockStrap-Libreria/Imagenes/minecraft-inicio.png");
 }
