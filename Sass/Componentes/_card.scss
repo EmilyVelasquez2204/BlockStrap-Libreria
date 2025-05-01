@@ -24,12 +24,12 @@ $xlarge: 32px;
 $circle: 50%;
 
 .cards-container{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 24px;
-    justify-content: center;
-    background-color: #222;
-    @extend .p-4; //usando padding de utilidades
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  background-color: #222;
+  @extend .p-4; //usando padding de utilidades
 }
 
 // Clase base para todas las cards
@@ -327,6 +327,7 @@ $circle: 50%;
         color: $color-texto;
         display: -webkit-box;
         -webkit-line-clamp: 3;
+        line-clamp: 3;
         -webkit-box-orient: vertical;
         overflow: hidden;
         font-family: $font-minecraft2;
@@ -499,5 +500,6 @@ $circle: 50%;
       padding: 4 * $pixel-size;
     }
   }
+
   
   
