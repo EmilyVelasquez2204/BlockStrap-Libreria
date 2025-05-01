@@ -105,6 +105,7 @@
   text-align: end;
 }
 
+
 h1, h2, h3 {
   font-family: "Press Start 2P";
   margin: 0;
@@ -149,7 +150,6 @@ h6 {
   font-size: 14px;
   color: #B3B3B3;
 }
-
 .creeper-shadow, .card-2, .card-6, .container-overworld, .borde-basico, .borde-panel-importante, .borde-end-sombras, .container-nether, .container-tnt, .container-end {
   border: 1px solid #000;
   font-family: "Press Start 2P";
