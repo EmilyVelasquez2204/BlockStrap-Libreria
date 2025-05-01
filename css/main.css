@@ -29,7 +29,7 @@
 }
 
 .cf-negro-purpura {
-  background-color: rgb(88, 46.5, 127.5);
+  background-color: #582f80;
 }
 
 .cf-diamante {
@@ -197,7 +197,9 @@ h1, h2, h3 {
   font-family: "Press Start 2P";
   margin: 0;
   text-transform: uppercase;
-  text-shadow: 1px 1px 0 rgb(88, 46.5, 127.5), 2px 2px 0 rgb(88, 46.5, 127.5);
+
+  text-shadow: 1px 1px 0 #582f80, 2px 2px 0 #582f80;
+
   color: #F4F8FB;
   text-align: center;
 }
@@ -215,7 +217,9 @@ p {
   margin: 0;
   text-transform: uppercase;
   text-align: center;
+
   font-size: 22px;
+
   color: #F4F8FB;
 }
 
@@ -227,13 +231,26 @@ span {
   color: #F0E68C;
 }
 
+
+a {
+  margin: 5px;
+  font-size: 15px;
+  font-family: "Press Start 2P";
+  text-align: start;
+  color: #F0E68C;
+}
+
+
 h1 {
   font-size: 40px;
+
   color: #FCEE4B;
 }
 
 h2 {
-  font-size: 36px;
+
+  font-size: 28px;
+
   color: #41C6EC;
 }
 
@@ -257,6 +274,12 @@ h6 {
   color: #B3B3B3;
 }
 
+
+a {
+  font-size: 14px;
+  color: #F0E68C;
+}
+
 .creeper-shadow, .card-2, .card-6, .container-overworld, .borde-basico, .borde-panel-importante, .borde-end-sombras, .container-nether, .container-tnt, .container-end {
   border: 1px solid #000;
   font-family: "Press Start 2P";
@@ -277,41 +300,13 @@ h6 {
   text-shadow: 2px 2px 0 #F4F8FB, 20px 20px 7px #5A3A1A; /* sombra negra tipo bloque */
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-.header {
-  background-color: #5E7C16;
-  padding: 12px 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 4px solid #3A7425;
-}
-.header .navigation {
-  display: flex;
-  justify-content: center;
-  flex-grow: 1;
-}
-.header .navigation a {
-  color: #ffffff;
-  text-decoration: none;
-  margin: 0 10px;
-  font-size: 1.3rem;
-  padding: 8px 16px;
-  background-color: rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-}
-
 .hero {
-  position: relative;
-  height: 600px;
-  display: flex;
-  align-items: center;
-  background: url("/Imagenes/wallpaper_minecraft_Modular_A_2560x1440.png") center/cover;
+  background-image: url("/BlockStrap-Libreria/Imagenes/wallpaper_minecraft_Modular_A_2560x1440.png  ");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  width: 100%;
 }
 .hero .floating-blocks {
   position: absolute;
@@ -1145,6 +1140,95 @@ footer {
   background-position: center;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #3A7425;
+  padding: 10px 20px;
+  flex-wrap: wrap;
+}
+header .logo img {
+  height: 50px;
+}
+header .top-nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #FCEE4B;
+  font-weight: bold;
+}
+header .top-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.layout {
+  display: flex;
+  flex: 1;
+  min-height: calc(100vh - 120px);
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #3A7425;
+  padding: 20px;
+  flex-shrink: 0;
+}
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+.sidebar ul li {
+  margin-bottom: 8px;
+}
+.sidebar ul a {
+  text-decoration: none;
+}
+.sidebar ul a:hover {
+  text-decoration: underline;
+}
+
+main {
+  flex: 1;
+  padding: 30px;
+}
+main p {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+footer {
+  background-color: #3A7425;
+  text-align: center;
+  padding: 10px;
+  font-size: 0.9em;
+  margin-top: auto;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .layout {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+  }
+  .top-nav {
+    justify-content: center;
+    margin-top: 10px;
+  }
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 /*.botones h2{
   font-family: 'Press Start 2P';
   text-align: center;
@@ -2286,7 +2370,7 @@ footer {
 }
 .card-5 .card-content-5 .card-p5 {
   font-family: "Chakra Petch";
-  color: #fff;
+  color: #080808;
 }
 
 .card-6 {

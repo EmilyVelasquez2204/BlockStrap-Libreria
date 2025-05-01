@@ -1,46 +1,14 @@
 @use '../Clases_Utilitarias/paleta' as *;
 @use '../Clases_Utilitarias/fuente' as *;
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-.header {
-  background-color: $verde-pasto;
-  padding: 12px 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 4px solid $verde-hoja;
-
-
-
-  .navigation {
-    display: flex;
-    justify-content: center;
-    flex-grow: 1;
-
-    a {
-      color: #ffffff;
-      text-decoration: none;
-      margin: 0 10px;
-      font-size: 1.3rem;
-      padding: 8px 16px;
-      background-color: rgba(0, 0, 0, 0.2);
-      border-radius: 4px;
-    }
-  }
-
-}
 
 .hero {
-  position: relative;
-  height: 600px;
-  display: flex;
-  align-items: center;
-  background: url('/Imagenes/wallpaper_minecraft_Modular_A_2560x1440.png') center/cover;
+  background-image: url('/BlockStrap-Libreria/Imagenes/wallpaper_minecraft_Modular_A_2560x1440.png  '); // Reemplaza con la ruta de tu imagen
+  background-repeat: no-repeat;
+  background-size: cover; // Cubre todo el contenedor manteniendo la proporción
+  background-position: center; // Centra la imagen en el contenedor
+  min-height: 100vh; // Asegura que el contenedor tenga al menos la altura del viewport
+  width: 100%; // Ocupa todo el ancho del contenedor padre
 
   .floating-blocks {
     position: absolute;

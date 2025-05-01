@@ -402,7 +402,8 @@ $circle: 50%;
       .card-p5 {
         @extend .sf-2;
         font-family: $font-minecraft2;
-        color: $color-texto;
+        //color: $color-texto;
+        color: #080808;
         @extend .ta-justify;
       }
     }
