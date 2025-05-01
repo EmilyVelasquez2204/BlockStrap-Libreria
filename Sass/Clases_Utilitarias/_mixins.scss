@@ -1,0 +1,75 @@
+
+// Archivo base para funciones y mixins de layout reutilizables
+
+@use '../Clases_Utilitarias/breakpoints' as *;
+
+// Configuración de grid
+$grid-columns: 12;
+$grid-gap: 16px;
+$grid-gap-mobile: 8px;
+
+// Mixins para crear layouts rápidamente
+@mixin container-base {
+  width: 80%;
+  margin: 0 auto;
+  padding: 0 $grid-gap;
+  
+  @include breakpoints_max(md) {
+    width: 90%;
+    padding: 0 $grid-gap-mobile;
+  }
+  
+  @include breakpoints_max(sm) {
+    width: 100%;
+    padding: 0 $grid-gap-mobile;
+  }
+}
+
+// Mixin para definir áreas de grid
+@mixin grid-areas($areas...) {
+  grid-template-areas: $areas;
+}
+
+// Mixin para crear un grid responsive
+@mixin responsive-grid($columns: 1, $gap: $grid-gap) {
+  display: grid;
+  grid-template-columns: repeat($columns, 1fr);
+  gap: $gap;
+  
+  @include breakpoints_max(md) {
+    grid-template-columns: repeat(min($columns, 2), 1fr);
+  }
+  
+  @include breakpoints_max(sm) {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Mixin para flex layouts comunes
+@mixin flex-layout($direction: row, $justify: flex-start, $align: stretch, $wrap: nowrap) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  flex-wrap: $wrap;
+}
+
+// Mixin para centrar elementos (tanto horizontal como verticalmente)
+@mixin center-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Mixin para espacio entre elementos flexibles
+@mixin space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+// Mixin para auto-fit grid (útil para galerías, tarjetas, etc.)
+@mixin auto-fit-grid($min-size: 250px, $gap: $grid-gap) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax($min-size, 1fr));
+  gap: $gap;
+}
