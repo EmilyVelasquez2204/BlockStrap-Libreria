@@ -1,5 +1,12 @@
 // Importamos la paleta de colores personalizados desde un archivo SCSS externo
 @use '../Clases_Utilitarias/paleta' as *;
+@use '../Clases_Utilitarias/fuente' as *;
+@use '../Clases_Utilitarias/sombras' as *;
+@use '../Clases_Utilitarias/padding_margenes' as *;
+@use '../Clases_Utilitarias/redondear_elementos' as *;
+@use '../Clases_Utilitarias/bordes' as *;
+@use '../Clases_Utilitarias/movimientos' as *;
+@use '../Clases_Utilitarias/breakpoints' as *;
 
 // ======= ALERTAS ESTILO MINECRAFT =======
 
@@ -34,7 +41,7 @@ $shadow-default: 3px 3px 0 rgba(0, 0, 0, 0.4); // Sombra predeterminada tipo pix
 .alert {
   padding: $alert-padding;
   border-radius: 4px;
-  font-family: 'Press Start 2P', cursive; // Fuente pixelada
+  font-family: $font-minecraft1; // Usamos la fuente desde el módulo de fuentes
   color: $color-texto; // Color de texto desde la paleta
   margin-bottom: 1rem;
   box-shadow: $shadow-default;
@@ -42,12 +49,47 @@ $shadow-default: 3px 3px 0 rgba(0, 0, 0, 0.4); // Sombra predeterminada tipo pix
 
   // Aplicamos el mixin con efectos comunes
   @include alert-effects;
+  
+  // Reglas de adaptabilidad para diferentes pantallas (heredadas por todas las alertas)
+  // Para móviles pequeños
+  @include breakpoints_max(sm) {
+    font-size: 0.9rem;
+    padding: 0.7rem;
+    @extend .p-2;
+    
+    &::before {
+      width: 18px;
+      height: 18px;
+      line-height: 18px;
+      margin-right: 6px;
+    }
+  }
+  
+  // Para tablets
+  @include breakpoints_between(sm, lg) {
+    @extend .m-3;
+    @extend .p-3;
+  }
+  
+  // Para pantallas medianas
+  @include breakpoints_min(md) {
+    @extend .py-3;
+    @extend .px-4;
+  }
+  
+  // Para pantallas grandes
+  @include breakpoints_min(xl) {
+    @extend .m-4;
+    @extend .p-4;
+    @extend .sf-3;
+  }
 }
 
 // Alerta tipo Creeper (verde explosivo)
 .alert-creeper {
   background-color: $verde-oscuro;
   border: $border-width solid $verde-pasto;
+  @extend .rde-s; // Bordes redondeados pequeños
 
   &::before {
     content: "💥"; // Ícono de explosión
@@ -57,6 +99,7 @@ $shadow-default: 3px 3px 0 rgba(0, 0, 0, 0.4); // Sombra predeterminada tipo pix
   &:hover {
     // Sombra verdosa al pasar el mouse
     box-shadow: 0 0 10px rgba($verde-pasto, 0.7);
+    @extend .move-up; // Aplicamos movimiento hacia arriba
   }
 }
 
@@ -64,6 +107,7 @@ $shadow-default: 3px 3px 0 rgba(0, 0, 0, 0.4); // Sombra predeterminada tipo pix
 .alert-zombie {
   background-color: $verde-lodoso;
   border: $border-width solid darken($verde-lodoso, 10%);
+  @extend .creeper-shadow; // Aplicamos sombra estilo creeper
 
   &::before {
     content: "🧟"; // Ícono de zombie
@@ -89,6 +133,7 @@ $shadow-default: 3px 3px 0 rgba(0, 0, 0, 0.4); // Sombra predeterminada tipo pix
   background-color: $gris-lobo;
   color: #111; // Texto oscuro
   border: $border-width solid darken($gris-lobo, 20%);
+  @extend .skelet-text; // Aplicamos estilo de texto esqueleto
 
   &::before {
     content: "🏹"; // Ícono de arco
@@ -102,9 +147,10 @@ $shadow-default: 3px 3px 0 rgba(0, 0, 0, 0.4); // Sombra predeterminada tipo pix
   background-color: $purpura-oscuro;
   border: $border-width solid $purpura-cristal;
   color: lighten($purpura-cristal, 20%); // Texto más claro
+  @extend .borde-end-sombras; // Usamos el borde del end con sombras
 
   &::before {
-    content: "👁️​"; // Ícono de ojo
+    content: "👁️"; // Ícono de ojo
     background-color: $purpura-cristal;
   }
 
@@ -117,6 +163,7 @@ $shadow-default: 3px 3px 0 rgba(0, 0, 0, 0.4); // Sombra predeterminada tipo pix
 .alert-steve {
   background-color: $azul-profundo;
   border: $border-width solid $marron-caballo;
+  @extend .borde-basico; // Aplicamos el borde básico
 
   &::before {
     content: "⛏️"; // Ícono de pico
@@ -128,6 +175,7 @@ $shadow-default: 3px 3px 0 rgba(0, 0, 0, 0.4); // Sombra predeterminada tipo pix
 .alert-aldeano {
   background-color: $marron-tierra;
   border: $border-width solid $verde-menta;
+  @extend .ta-center; // Centramos el texto
 
   &::before {
     content: "✧"; // Ícono de esmeralda
@@ -139,6 +187,7 @@ $shadow-default: 3px 3px 0 rgba(0, 0, 0, 0.4); // Sombra predeterminada tipo pix
 .alert-redstone {
   background-color: $rojo-intenso;
   border: $border-width solid $rojo-explosivo;
+  @extend .color-font-TNT; // Usamos el color de fuente TNT
 
   &::before {
     content: "⚡"; // Ícono de energía
@@ -147,6 +196,7 @@ $shadow-default: 3px 3px 0 rgba(0, 0, 0, 0.4); // Sombra predeterminada tipo pix
 
   &:hover {
     box-shadow: 0 0 10px $rojo-explosivo;
+    @extend .move-right; // Se mueve a la derecha en hover
   }
 }
 
@@ -154,6 +204,7 @@ $shadow-default: 3px 3px 0 rgba(0, 0, 0, 0.4); // Sombra predeterminada tipo pix
 .alert-agua {
   background-color: $azul-profundo;
   border: $border-width solid $azul-mar;
+  @extend .rde-m; // Bordes redondeados medianos
 
   &::before {
     content: "🌊"; // Ícono de ola
@@ -179,6 +230,7 @@ $shadow-default: 3px 3px 0 rgba(0, 0, 0, 0.4); // Sombra predeterminada tipo pix
   background-color: $rojo-oscuro;
   border: $border-width solid $naranja-lava;
   color: $amarillo-oro;
+  @extend .sf-3; // Tamaño de fuente 3
 
   &::before {
     content: "🔥"; // Ícono de fuego
@@ -190,6 +242,8 @@ $shadow-default: 3px 3px 0 rgba(0, 0, 0, 0.4); // Sombra predeterminada tipo pix
 .alert-exito {
   background-color: darken($azul-diamante, 20%);
   border: $border-width solid $azul-diamante;
+  @extend .borde-diamante; // Aplicamos el borde de diamante
+  @extend .move-center; // Centramos el contenido
 
   &::before {
     content: "💎"; // Ícono de diamante
@@ -198,5 +252,7 @@ $shadow-default: 3px 3px 0 rgba(0, 0, 0, 0.4); // Sombra predeterminada tipo pix
 
   &:hover {
     box-shadow: 0 0 10px $azul-diamante;
+    @extend .rde-l; // Bordes redondeados grandes en hover
   }
 }
+
