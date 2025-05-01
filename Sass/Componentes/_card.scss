@@ -5,7 +5,7 @@
 @use '../Clases_Utilitarias/breakpoints' as *;
 @use '../Clases_Utilitarias/movimiento' as *;
 @use '../Clases_Utilitarias/padding_margenes' as *;
-//@use '../Clases_Utilitarias/redondear_elementos' as *;
+
 
 //variables
 $borde-suave: 1px solid rgba(0,0,0,0.125);
@@ -24,12 +24,12 @@ $xlarge: 32px;
 $circle: 50%;
 
 .cards-container{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 24px;
-    justify-content: center;
-    background-color: #222;
-    @extend .p-4; //usando padding de utilidades
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  background-color: #222;
+  @extend .p-4; //usando padding de utilidades
 }
 
 // Clase base para todas las cards
@@ -327,6 +327,7 @@ $circle: 50%;
         color: $color-texto;
         display: -webkit-box;
         -webkit-line-clamp: 3;
+        line-clamp: 3;
         -webkit-box-orient: vertical;
         overflow: hidden;
         font-family: $font-minecraft2;
@@ -466,5 +467,39 @@ $circle: 50%;
       }
     }
   }
+  
+  /*container para los codigos*/
+  .container-code {
+    background: #080808;
+    width: 100%;               
+    margin-left: auto;         
+    margin-right: auto;
+    padding: 4 * $pixel-size;  // Usando la variable de padding_margenes
+    box-sizing: border-box;    
+    position: relative;
+    @extend .rde-s;            // Borde redondeado medio de redondear_elementos
+    @extend .p-3;              // Padding de padding_margenes
+    @extend .m-7;              // Margin de padding_margenes
+    font-family: $font-minecraft2; // Fuente de fuente.scss
+    color: $color-texto;       // Color de texto de paleta
+    
+    
+    // Media queries usando los breakpoints
+    @include breakpoints_max('sm') {
+      width: 100%;
+      padding: 2 * $pixel-size;
+    }
+    
+    @include breakpoints_min('md') {
+      width: 90%;
+      padding: 3 * $pixel-size;
+    }
+    
+    @include breakpoints_min('lg') {
+      width: 80%;
+      padding: 4 * $pixel-size;
+    }
+  }
+
   
   
