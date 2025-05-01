@@ -29,7 +29,7 @@
 }
 
 .cf-negro-purpura {
-  background-color: #582f80;
+  background-color: rgb(88, 46.5, 127.5);
 }
 
 .cf-diamante {
@@ -197,9 +197,7 @@ h1, h2, h3 {
   font-family: "Press Start 2P";
   margin: 0;
   text-transform: uppercase;
-
-  text-shadow: 1px 1px 0 #582f80, 2px 2px 0 #582f80;
-
+  text-shadow: 1px 1px 0 rgb(88, 46.5, 127.5), 2px 2px 0 rgb(88, 46.5, 127.5);
   color: #F4F8FB;
   text-align: center;
 }
@@ -217,9 +215,9 @@ p {
   margin: 0;
   text-transform: uppercase;
   text-align: center;
-
+  font-size: large;
+  color: #F4F8FB;
   font-size: 22px;
-
   color: #F4F8FB;
 }
 
@@ -231,7 +229,6 @@ span {
   color: #F0E68C;
 }
 
-
 a {
   margin: 5px;
   font-size: 15px;
@@ -240,17 +237,23 @@ a {
   color: #F0E68C;
 }
 
-
 h1 {
-  font-size: 40px;
-
+  font-size: 32px;
   color: #FCEE4B;
 }
 
 h2 {
-
   font-size: 28px;
+  color: #41C6EC;
+}
 
+h1 {
+  font-size: 40px;
+  color: #FCEE4B;
+}
+
+h2 {
+  font-size: 36px;
   color: #41C6EC;
 }
 
@@ -273,7 +276,6 @@ h6 {
   font-size: 14px;
   color: #B3B3B3;
 }
-
 
 a {
   font-size: 14px;
@@ -1070,28 +1072,6 @@ footer {
   background-color: #E3E39C;
 }
 
-.move-up, .card:hover, .card-1:hover, .card-2:hover, .card-3:hover, .card-4:hover, .card-5:hover, .card-6:hover {
-  transform: translateY(-10px);
-}
-
-.move-down, .card-1:hover {
-  transform: translateY(10px);
-}
-
-.move-left {
-  transform: translateX(-10px);
-}
-
-.move-right {
-  transform: translateX(10px);
-}
-
-.move-center, .card-1 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .bg-image-nether {
   background-image: linear-gradient(rgba(165, 80, 46, 0.671), rgba(78, 212, 45, 0.123)), url("/Imagenes/wallpaper_dungeons_flames_nether_2560x1440.png");
   background-repeat: no-repeat;
@@ -1133,7 +1113,7 @@ footer {
 }
 
 .bg-image-black-grey {
-  background-image: linear-gradient(rgba(56, 56, 52, 0.671), rgba(159, 160, 157, 0.123)), url("/Imagenes/depositphotos_375492582-stock-photo-black-abstract-background-backdrop-grey.webp");
+  background-image: linear-gradient(rgba(56, 56, 52, 0.671), rgba(159, 160, 157, 0.123)), url("/Imagenes/depositphotos_456788898-stock-illustration-pixel-background-concept-games-background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -1692,140 +1672,6 @@ footer {
 
 .form-Cmb-xl {
   width: 350px;
-}
-
-.alert {
-  padding: 1rem;
-  border-radius: 4px;
-  font-family: "Press Start 2P", cursive;
-  color: #fff;
-  margin-bottom: 1rem;
-  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.4);
-  position: relative;
-  transition: all 0.2s ease;
-}
-.alert:hover {
-  transform: translateY(-2px);
-  box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.5);
-}
-.alert::before {
-  display: inline-block;
-  width: 24px;
-  height: 24px;
-  text-align: center;
-  line-height: 24px;
-  margin-right: 10px;
-  border-radius: 3px;
-}
-
-.alert-creeper {
-  background-color: #2E4E1A;
-  border: 3px solid #5E7C16;
-}
-.alert-creeper::before {
-  content: "💥";
-  background-color: #5E7C16;
-}
-.alert-creeper:hover {
-  box-shadow: 0 0 10px rgba(94, 124, 22, 0.7);
-}
-
-.alert-zombie {
-  background-color: #4B5632;
-  border: 3px solid rgb(46.875, 53.75, 31.25);
-  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.1) 25%, transparent 25%, transparent 50%, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.1) 75%, transparent 75%, transparent);
-  background-size: 8px 8px;
-}
-.alert-zombie::before {
-  content: "🧟";
-  background-color: rgb(46.875, 53.75, 31.25);
-}
-
-.alert-skeleton {
-  background-color: #B3B3B3;
-  color: #111;
-  border: 3px solid gray;
-}
-.alert-skeleton::before {
-  content: "🏹";
-  background-color: gray;
-  color: black;
-}
-
-.alert-enderman {
-  background-color: #1A0A24;
-  border: 3px solid #A472D9;
-  color: rgb(215.8547486034, 194.3463687151, 238.6536312849);
-}
-.alert-enderman::before {
-  content: "👁️​";
-  background-color: #A472D9;
-}
-.alert-enderman:hover {
-  box-shadow: 0 0 10px #A472D9;
-}
-
-.alert-steve {
-  background-color: #3D5B94;
-  border: 3px solid #8B5A2B;
-}
-.alert-steve::before {
-  content: "⛏️";
-  background-color: #8B5A2B;
-}
-
-.alert-aldeano {
-  background-color: #835C3B;
-  border: 3px solid #7DC383;
-}
-.alert-aldeano::before {
-  content: "✧";
-  background-color: #7DC383;
-}
-
-.alert-redstone {
-  background-color: #B80000;
-  border: 3px solid #E03E3E;
-}
-.alert-redstone::before {
-  content: "⚡";
-  background-color: #E03E3E;
-}
-.alert-redstone:hover {
-  box-shadow: 0 0 10px #E03E3E;
-}
-
-.alert-agua {
-  background-color: #3D5B94;
-  border: 3px solid #5555FF;
-  background-image: linear-gradient(45deg, rgba(85, 85, 255, 0.3) 25%, transparent 25%, transparent 50%, rgba(85, 85, 255, 0.3) 50%, rgba(85, 85, 255, 0.3) 75%, transparent 75%, transparent);
-  background-size: 20px 20px;
-}
-.alert-agua::before {
-  content: "🌊";
-  background-color: #5555FF;
-}
-
-.alert-nether {
-  background-color: #812E24;
-  border: 3px solid #FF6A00;
-  color: #FCEE4B;
-}
-.alert-nether::before {
-  content: "🔥";
-  background-color: #FF6A00;
-}
-
-.alert-exito {
-  background-color: rgb(18.0909090909, 144.7272727273, 180.9090909091);
-  border: 3px solid #41C6EC;
-}
-.alert-exito::before {
-  content: "💎";
-  background-color: #41C6EC;
-}
-.alert-exito:hover {
-  box-shadow: 0 0 10px #41C6EC;
 }
 
 .principal {
