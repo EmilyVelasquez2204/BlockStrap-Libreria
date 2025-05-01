@@ -52,6 +52,11 @@ $size-5: 5vh;
 @include colorfuente('piedraDelEnd',$beige-palido);
 @include colorfuente('obsidiana',$purpura-oscuro);
 
+//agregados
+@include colorfuente('gris-carbon',$gris-carbon );
+@include colorfuente('gris-fantasma',$gris-fantasma );
+@include colorfuente('color-fondo',$color-fondo );
+@include colorfuente('naranja-lava',$naranja-lava );
 
 
 $font-minecraft1: "Press Start 2P";
@@ -117,6 +122,7 @@ body {
         2px 2px 0 $negro-purpura;
       color: $blanco-azulado;
       text-align: center;
+
     }
     
     h4, h5, h6 {
@@ -131,8 +137,13 @@ body {
       margin: 0;
       text-transform: uppercase;
       text-align: center;
+
       font-size: large;
       color: $blanco-azulado;
+
+      font-size: 22px;
+      color: $blanco-azulado;
+
     }
     span{
       margin: 5px;
@@ -142,6 +153,7 @@ body {
      color: $arena-clara;
     }
   
+
 a{
         margin: 5px;
         font-size: 15px;
@@ -152,10 +164,17 @@ a{
     
     h1 { font-size: 32px; color: $amarillo-oro; }
     h2 { font-size: 28px; color: $azul-diamante; }
+
+  
+    
+    h1 { font-size: 40px; color: $amarillo-oro; }
+    h2 { font-size: 36px; color: $azul-diamante; }
+
     h3 { font-size: 24px; color: $verde-pasto; }
     h4 { font-size: 20px; color: $rojo-intenso; }
     h5 { font-size: 16px; color: $turquesa-brillante; }
     h6 { font-size: 14px; color: $gris-lobo; }
+
     a { font-size: 14px; color: $arena-clara; }
-  
+
   
