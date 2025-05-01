@@ -52,6 +52,11 @@ $size-5: 5vh;
 @include colorfuente('piedraDelEnd',$beige-palido);
 @include colorfuente('obsidiana',$purpura-oscuro);
 
+//agregados
+@include colorfuente('gris-carbon',$gris-carbon );
+@include colorfuente('gris-fantasma',$gris-fantasma );
+@include colorfuente('color-fondo',$color-fondo );
+@include colorfuente('naranja-lava',$naranja-lava );
 
 
 $font-minecraft1: "Press Start 2P";

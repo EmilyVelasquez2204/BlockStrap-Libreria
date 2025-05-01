@@ -28,7 +28,7 @@
 }
 
 .cf-negro-purpura {
-  background-color: rgb(88, 46.5, 127.5);
+  background-color: #582f80;
 }
 
 .cf-diamante {
@@ -192,7 +192,7 @@ h1, h2, h3 {
   font-family: "Press Start 2P";
   margin: 0;
   text-transform: uppercase;
-  text-shadow: 1px 1px 0 rgb(88, 46.5, 127.5), 2px 2px 0 rgb(88, 46.5, 127.5);
+  text-shadow: 1px 1px 0 #582f80, 2px 2px 0 #582f80;
   color: #F4F8FB;
   text-align: center;
 }
@@ -250,6 +250,4 @@ h5 {
 h6 {
   font-size: 14px;
   color: #B3B3B3;
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
