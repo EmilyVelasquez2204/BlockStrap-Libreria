@@ -5,21 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BLocksTRAP</title>
     <link rel="icon" href="Imagenes/favicon.ico" type="image">
-    <link rel="stylesheet" href="css/main.css"> <!-- El CSS compilado desde Sass -->
+    <link rel="stylesheet" href="./css/main.css"> <!-- El CSS compilado desde Sass -->
 </head>
 <body >
 
-<!--Script para poder ver mi navbar en otras pagina-->
-<div id="navs"></div>
-<script>
-    fetch('enlaces/header.html')
-    .then(res => res.text())
-    .then(data => {
-        document.getElementById('navs').innerHTML = data;
-    });
-    
-</script>
-<!--Fin del Script-->
+    <header>
+        <div class="logo">
+        </div>
+        <nav class="top-nav creeper-text">
+          <a href="index.html">INICIO</a>
+          <a href="enlaces/Documentacion.html">DOCUMENTACION</a>
+          <a href="https://github.com" target="_blank">GITHUB</a>
+        </nav>
+      </header>
     
     <!-- Sección principal -->
     <div class="hero">
@@ -33,11 +31,11 @@
         <div class="hero-content">
             <h1 class="title">LIBRARY<br>BLOCKSTRAP</h1>
             <div class="description">
-               <P>Sumérgete en el fascinante mundo de bloques de Minecraft con nuestra librería de HTML y CSS. 
+               <P style="font-size: 40px;">Sumérgete en el fascinante mundo de bloques de Minecraft con nuestra librería de HTML y CSS. 
                 Inspirada en la estética única y pixelada de este icónico juego, nuestra librería ofrece 
                 elementos cuidadosamente diseñados que te transportarán al mundo cúbico de Minecraft.</P>
             </div>
-            <a href="#" class="minecraft-btn">EXPLORAR AHORA</a>
+
         </div>
         
         <div class="minecraft-character"></div>

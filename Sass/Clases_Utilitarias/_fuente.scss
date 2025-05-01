@@ -106,7 +106,6 @@ $font-minecraft3: "Open Sans";
     text-align: end;
 }
 
-
 body {
     background: linear-gradient(rgba(60, 109, 55, 0.671), rgba(78, 212, 45, 0.123)), url('/Imagenes/minecraft-inicio.png');
     background-repeat: no-repeat;
@@ -115,7 +114,6 @@ body {
     background-position: center;
   }
   h1, h2, h3 {
-  
       font-family: $font-minecraft1;
       margin: 0;
       text-transform: uppercase;
@@ -124,7 +122,7 @@ body {
         2px 2px 0 $negro-purpura;
       color: $blanco-azulado;
       text-align: center;
-  
+
     }
     
     h4, h5, h6 {
@@ -139,6 +137,10 @@ body {
       margin: 0;
       text-transform: uppercase;
       text-align: center;
+
+      font-size: large;
+      color: $blanco-azulado;
+
       font-size: 22px;
       color: $blanco-azulado;
 
@@ -151,12 +153,28 @@ body {
      color: $arena-clara;
     }
   
+
+a{
+        margin: 5px;
+        font-size: 15px;
+        font-family: $font-minecraft1;
+        text-align: start;
+       color: $arena-clara;
+}
+    
+    h1 { font-size: 32px; color: $amarillo-oro; }
+    h2 { font-size: 28px; color: $azul-diamante; }
+
   
     
     h1 { font-size: 40px; color: $amarillo-oro; }
     h2 { font-size: 36px; color: $azul-diamante; }
+
     h3 { font-size: 24px; color: $verde-pasto; }
     h4 { font-size: 20px; color: $rojo-intenso; }
     h5 { font-size: 16px; color: $turquesa-brillante; }
     h6 { font-size: 14px; color: $gris-lobo; }
+
+    a { font-size: 14px; color: $arena-clara; }
+
   
