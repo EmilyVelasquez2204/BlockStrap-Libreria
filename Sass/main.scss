@@ -1,7 +1,17 @@
-@use 'Clases_Utilitarias/paleta';
+@use'Clases_Utilitarias/paleta';
+@use 'Clases_Utilitarias/sombras';
+@use 'Componentes/index';
+@use'Clases_Utilitarias/bordes';
+@use'Clases_Utilitarias/movimiento';
+@use'Clases_Utilitarias/breakpoints';
 @use 'Componentes/botones' ;
 @use 'Componentes/formularios';
 @use 'Componentes/alertas';
 @use 'Componentes/nav';
 @use 'Componentes/container';
+@use 'Componentes/badges';
+@use 'Clases_Utilitarias/fuente';
+@use 'fondos';
+@use 'Clases_Utilitarias/redondear_elementos';
+
 

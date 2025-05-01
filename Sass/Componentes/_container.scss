@@ -1,83 +1,319 @@
+// Importamos todas las utilidades
 @use '../Clases_Utilitarias/paleta' as *;
-// ======= BREAKPOINTS PARA RESPONSIVE DESIGN =======
-$breakpoint-sm: 576px;   // Celulares
-$breakpoint-md: 768px;   // Tablets
-$breakpoint-lg: 992px;   // Escritorio
+@use '../Clases_Utilitarias/breakpoints' as *;
+@use '../Clases_Utilitarias/fuente' as *;
+@use '../Clases_Utilitarias/redondear_elementos' as *;
+@use '../Clases_Utilitarias/sombras' as *;
+@use '../Clases_Utilitarias/padding_margenes' as *;
+@use '../Clases_Utilitarias/bordes' as *;
 
 // ======= ESTILO BASE DE TODOS LOS CONTAINERS =======
+
+// Mixin para aplicar efectos compartidos entre todos los containers
+@mixin container-effects {
+  transition: all 0.3s ease; // Suaviza transiciones
+  
+  // Efecto al pasar el mouse (hover)
+  &:hover {
+    transform: translateY(-3px); // Eleva un poco el container
+    box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.6); // Sombra más fuerte
+  }
+}
+
+// Container base con estilo Minecraft
 .container {
-  width: 100%;               // Ocupa todo el ancho disponible
-  margin-left: auto;         // Centrado horizontal
-  margin-right: auto;        // Centrado horizontal
-  padding: 1rem;             // Espaciado interno
-  box-sizing: border-box;    // El padding y border se incluyen en el tamaño total
+  width: 100%;               
+  margin-left: auto;         
+  margin-right: auto;        
+  padding: 4 * $pixel-size;  // Usando la variable de padding_margenes
+  box-sizing: border-box;    
+  position: relative;
+  @extend .rde-m;            // Borde redondeado medio de redondear_elementos
+  @extend .p-3;              // Padding de padding_margenes
+  @extend .m-2;              // Margin de padding_margenes
+  font-family: 'MinecraftFont', sans-serif; // Fuente de fuente.scss
+  color: $color-texto;       // Color de texto de paleta
+  
+  // Aplicamos el mixin con efectos comunes
+  @include container-effects;
+  
+  // Media queries usando los breakpoints
+  @include breakpoints_max('sm') {
+    width: 100%;
+    padding: 2 * $pixel-size;
+  }
+  
+  @include breakpoints_min('md') {
+    width: 90%;
+    padding: 3 * $pixel-size;
+  }
+  
+  @include breakpoints_min('lg') {
+    width: 80%;
+    padding: 4 * $pixel-size;
+  }
 }
 
 // ======= CONTAINER: OVERWORLD (Pasto y tierra) =======
-.container-overworld{
-  background-color: #5E7C16;               // Fondo verde (césped)
-  border: 5px solid $marron-caballo;               // Borde marrón (tierra)
-  box-shadow: 4px 4px 0 #3A5E0E;           // Sombra verde oscura para simular profundidad
-  font-family: 'Press Start 2P', cursive;  // Fuente estilo pixel-art
-  border-radius: 8px;                      // Bordes redondeados
-  color: white;                            // Texto en blanco
-
-  // Breakpoint para celular
-  @media (min-width: $breakpoint-sm) {
-    max-width: 540px;                      // Ancho máximo en pantallas pequeñas
-  }
-
-  // Breakpoint para tablet
-  @media (min-width: $breakpoint-md) {
-    max-width: 720px;                      // Ancho máximo en pantallas medianas
-  }
-
-  // Breakpoint para escritorio
-  @media (min-width: $breakpoint-lg) {
-    max-width: 960px;                      // Ancho máximo en pantallas grandes
+.container-overworld {
+  @extend .borde-basico;     // Implementamos el borde básico
+  background-color: $verde-pasto;
+  @extend .creeper-shadow;     // Sombra de sombras.scss
+  @extend .color-font-hoja;    // Color de texto de fuente.scss
+  @extend .ttxt-PressStart;    // Tipo de fuente
+  
+  // Patrón de fondo tipo césped
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.1) 1px,
+    transparent 1px
+  ),
+  linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.1) 1px,
+    transparent 1px
+  );
+  background-size: 8px 8px;
+  
+  &::before {
+    content: "🌿"; // Ícono decorativo
+    display: inline-block;
+    margin-right: 10px;
   }
 }
 
 // ======= CONTAINER: NETHER (Rojo fuego e infierno) =======
-.container-nether{
-  background-color: #6C0000;               // Fondo rojo oscuro
-  border: 5px dashed #FF4500;              // Borde naranja en estilo "fuego"
-  box-shadow: 4px 4px 0 #300000;           // Sombra negra para simular profundidad infernal
-  font-family: 'Press Start 2P', cursive;  // Fuente estilo pixel
-  color: #FFEEDD;                          // Texto en color crema claro
-  border-radius: 8px;                      // Bordes redondeados
-
-  @media (min-width: $breakpoint-sm) {
-    max-width: 540px;                      // Responsive en celulares
-  }
-
-  @media (min-width: $breakpoint-md) {
-    max-width: 720px;                      // Responsive en tablets
-  }
-
-  @media (min-width: $breakpoint-lg) {
-    max-width: 960px;                      // Responsive en escritorio
+.container-nether {
+  @extend .borde-panel-importante;  // Implementamos el borde de panel importante
+  background-color: $rojo-oscuro;
+  @extend .color-font-oro;     // Color de texto oro
+  @extend .ttxt-Minecraft;     // Tipo de fuente
+  
+  // Patrón de fondo tipo "netherrack"
+  background-image: radial-gradient(
+    circle,
+    rgba(255, 100, 0, 0.15) 2px,
+    transparent 2px
+  );
+  background-size: 16px 16px;
+  
+  &::before {
+    content: "🔥"; // Ícono decorativo
+    display: inline-block;
+    margin-right: 10px;
   }
 }
 
 // ======= CONTAINER: THE END (Púrpura y obsidiana) =======
 .container-end {
-  background-color: #2B0033;               // Fondo púrpura muy oscuro
-  border: 5px dotted #8A2BE2;              // Borde punteado con púrpura brillante
-  box-shadow: 4px 4px 0 #1A001F;           // Sombra oscura simulando obsidiana
-  font-family: 'Press Start 2P', cursive;  // Fuente retro
-  color: #E0D4FF;                          // Texto lila claro
-  border-radius: 8px;                      // Bordes redondeados
-
-  @media (min-width: $breakpoint-sm) {
-    max-width: 540px;                      // Responsive en celulares
+  @extend .borde-end-sombras;  // Implementamos el borde end con sombras
+  background-color: $purpura-oscuro;
+  @extend .color-font-piedraDelEnd; // Color de texto
+  @extend .ttxt-PressStart;      // Tipo de fuente
+  @extend .ta-center;            // Texto centrado
+  
+  // Patrón de fondo tipo "end stone"
+  background-image: 
+    radial-gradient(
+      circle at 30% 30%,
+      rgba(255, 255, 255, 0.1) 1px,
+      transparent 1px
+    ),
+    radial-gradient(
+      circle at 70% 70%,
+      rgba(255, 255, 255, 0.1) 1px,
+      transparent 1px
+    );
+  background-size: 20px 20px;
+  
+  &::before {
+    content: "⭐"; // Ícono decorativo
+    display: inline-block;
+    margin-right: 10px;
   }
+}
 
-  @media (min-width: $breakpoint-md) {
-    max-width: 720px;                      // Responsive en tablets
+// ======= CONTAINER: OCEANO (Azul profundo) =======
+.container-oceano {
+  @extend .borde-diamante;    // Implementamos el borde de diamante
+  background-color: $azul-profundo;
+  @extend .color-font-mar;      // Color de texto
+  @extend .ttxt-ChakraPetch;    // Tipo de fuente
+  @extend .sf-3;                // Tamaño de fuente
+  
+  // Efecto ondulado con fondo decorativo
+  background-image: 
+    linear-gradient(
+      45deg,
+      rgba($azul-mar, 0.2) 25%,
+      transparent 25%,
+      transparent 50%,
+      rgba($azul-mar, 0.2) 50%,
+      rgba($azul-mar, 0.2) 75%,
+      transparent 75%,
+      transparent
+    );
+  background-size: 20px 20px;
+  
+  // Animación de movimiento de olas
+  @keyframes wave {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 40px 40px;
+    }
   }
+  animation: wave 8s linear infinite;
+  
+  &::before {
+    content: "🌊"; // Ícono decorativo
+    display: inline-block;
+    margin-right: 10px;
+  }
+}
 
-  @media (min-width: $breakpoint-lg) {
-    max-width: 960px;                      // Responsive en escritorio
+// ======= CONTAINER: MINA (Piedra y minerales) =======
+.container-mina {
+  @extend .borde-diamante;    // Implementamos el borde de diamante
+  background-color: $gris-lobo;
+  @extend .color-font-diamante; // Color de texto
+  @extend .ttxt-ChakraPetch;    // Tipo de fuente
+  
+  // Patrón tipo piedra con destellos de mineral
+  background-image: 
+    radial-gradient(
+      circle,
+      rgba($azul-diamante, 0.4) 2px,
+      transparent 2px
+    ),
+    radial-gradient(
+      circle,
+      rgba($verde-menta, 0.3) 1px,
+      transparent 1px
+    ),
+    radial-gradient(
+      circle,
+      rgba($rojo-explosivo, 0.2) 1px,
+      transparent 1px
+    );
+  background-size: 30px 30px, 20px 20px, 15px 15px;
+  background-position: 0 0, 10px 10px, 15px 5px;
+  
+  &::before {
+    content: "⛏️"; // Ícono decorativo
+    display: inline-block;
+    margin-right: 10px;
+  }
+}
+
+// ======= CONTAINER: ALDEA (Madera y esmeraldas) =======
+.container-aldea {
+  @extend .borde-oro-redondo;  // Implementamos el borde de oro redondo
+  background-color: $marron-tierra;
+  @extend .ta-left;             // Alineación de texto
+  @extend .ttxt-OpenSans;       // Tipo de fuente
+  @extend .gf;                  // Grosor de fuente
+  @extend .sf-2;                // Tamaño de fuente
+  @extend .color-font-tierra;   // Color de texto
+  
+  // Patrón tipo tablones de madera
+  background-image: 
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.1) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.1) 3px,
+      transparent 3px
+    );
+  background-size: 20px 20px, 20px 10px;
+  
+  &::before {
+    content: "🏠"; // Ícono decorativo
+    display: inline-block;
+    margin-right: 10px;
+  }
+}
+
+// ======= CONTAINER: TNT (Explosivo) =======
+.container-tnt {
+  @extend .borde-panel-importante;  // Implementamos el borde de panel importante
+  background-color: $rojo-intenso;
+  @extend .color-font-TNT;      // Color de texto
+  @extend .ttxt-PressStart;     // Tipo de fuente
+  @extend .ta-center;           // Texto centrado
+  @extend .sf-3;                // Tamaño de fuente
+  
+  // Patrón de rayas de advertencia
+  background-image: 
+    linear-gradient(
+      45deg,
+      $rojo-explosivo 25%,
+      $amarillo-oro 25%,
+      $amarillo-oro 50%,
+      $rojo-explosivo 50%,
+      $rojo-explosivo 75%,
+      $amarillo-oro 75%
+    );
+  background-size: 20px 20px;
+  
+  box-shadow: 0 0 20px rgba($rojo-explosivo, 0.7);
+  
+  // Efecto de pulsación
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.03); }
+    100% { transform: scale(1); }
+  }
+  animation: pulse 2s infinite;
+  
+  &::before {
+    content: "💣"; // Ícono decorativo
+    display: inline-block;
+    margin-right: 10px;
+  }
+}
+
+// ======= CONTAINER: HIELO (Frío y cristalino) =======
+.container-hielo {
+  @extend .borde-diamante;    // Implementamos el borde de diamante
+  background-color: $blanco-azulado;
+  @extend .ttxt-OpenSans;       // Tipo de fuente
+  @extend .sf-3;                // Tamaño de fuente
+  color: $azul-profundo;
+  
+  // Patrón de cristales de hielo
+  background-image: 
+    linear-gradient(
+      135deg,
+      rgba($turquesa-brillante, 0.2) 25%,
+      transparent 25%
+    ),
+    linear-gradient(
+      225deg,
+      rgba($turquesa-brillante, 0.2) 25%,
+      transparent 25%
+    ),
+    linear-gradient(
+      315deg,
+      rgba($turquesa-brillante, 0.2) 25%,
+      transparent 25%
+    ),
+    linear-gradient(
+      45deg,
+      rgba($turquesa-brillante, 0.2) 25%,
+      transparent 25%
+    );
+  background-size: 15px 15px;
+  
+  box-shadow: 0 0 15px rgba($turquesa-brillante, 0.5);
+  
+  &::before {
+    content: "❄️"; // Ícono decorativo
+    display: inline-block;
+    margin-right: 10px;
   }
 }

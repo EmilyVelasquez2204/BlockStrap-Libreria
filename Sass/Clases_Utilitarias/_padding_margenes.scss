@@ -18,7 +18,8 @@ $pixel-size: 4px;
   .pb-#{$i} { padding-bottom: $i * $pixel-size; }
   .pl-#{$i} { padding-left: $i * $pixel-size; }
   .pr-#{$i} { padding-right: $i * $pixel-size; }
-  .px-#{$i} { padding-left: $i * $pixel-size; padding-right: $i * $pixel-size; }
-  .py-#{$i} { padding-top: $i * $pixel-size; padding-bottom: $i * $pixel-size }
+  .px-#{$i} { padding-left: $i * $pixel-size; padding-right: $i * $pixel-size;}
+  .py-#{$i} { padding-top: $i * $pixel-size; padding-bottom: $i * $pixel-size;}
 }
+
 
