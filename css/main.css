@@ -85,7 +85,7 @@
   text-align: center;
 }
 
-.ta-justify, .card .card-p, .card-1 .card-p, .card-info .card-p2, .card-2 .card-p, .card-info-2 .card-p2, .card-3 .card-p, .card-content-3 .card-p3, .card-4 .card-p, .card-4 .card-p4, .card-5 .card-p, .card-5 .card-content-5 .card-p5, .card-6 .card-p, .card-6 .card-overlay .card-p6 {
+.ta-justify, .card .card-p, .card-1 .card-p, .card-info .card-p, .card-2 .card-p, .card-info-2 .card-p2, .card-3 .card-p, .card-content-3 .card-p3, .card-4 .card-p, .card-4 .card-p4, .card-5 .card-p, .card-5 .card-content-5 .card-p5, .card-6 .card-p, .card-6 .card-overlay .card-p6 {
   text-align: justify;
 }
 
@@ -311,7 +311,7 @@ footer {
   margin: 8px;
 }
 
-.mt-2, .card-info .card-p2, .card-info-2 .card-p2 {
+.mt-2, .card-info .card-p, .card-info-2 .card-p2 {
   margin-top: 8px;
 }
 
@@ -405,7 +405,7 @@ footer {
   margin-top: 20px;
 }
 
-.mb-5, .card-info .card-p2, .card-info-2 .card-p2 {
+.mb-5, .card-info .card-p, .card-info-2 .card-p2 {
   margin-bottom: 20px;
 }
 
@@ -1992,7 +1992,7 @@ footer {
   margin: 0;
   font-family: "Press Start 2P";
 }
-.card-info .card-p2 {
+.card-info .card-p {
   letter-spacing: 1px;
   font-size: 15px;
   font-family: "Chakra Petch";
