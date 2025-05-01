@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Press+Start+2P&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+/* Importar fuente de Minecraft */
+.sf-1 {
+  font-size: 1vh;
+}
+
+.sf-2 {
+  font-size: 2.3vh;
+}
+
+.sf-3 {
+  font-size: 3vh;
+}
+
+.sf-4 {
+  font-size: 4vh;
+}
+
+.sf-5 {
+  font-size: 5vh;
+}
+
+.gf {
+  font-weight: bold;
+}
+
+.color-font-mar {
+  color: #5555FF;
+}
+
+.color-font-arena {
+  color: #F0E68C;
+}
+
+.color-font-tierra {
+  color: #835C3B;
+}
+
+.color-font-hoja {
+  color: #3A7425;
+}
+
+.color-font-TNT {
+  color: #E03E3E;
+}
+
+.color-font-oro {
+  color: #FCEE4B;
+}
+
+.color-font-diamante {
+  color: #41C6EC;
+}
+
+.color-font-piedraDelEnd {
+  color: #E3E39C;
+}
+
+.color-font-obsidiana {
+  color: #1A0A24;
+}
+
+.ttxt-Minecraft {
+  font-family: "MinecraftFont", sans-serif;
+}
+
+.ttxt-PressStart {
+  font-family: "Press Start 2P";
+}
+
+.ttxt-ChakraPetch {
+  font-family: "Chakra Petch";
+}
+
+.ttxt-OpenSans {
+  font-family: "Open Sans";
+}
+
+.ta-center {
+  text-align: center;
+}
+
+.ta-justify {
+  text-align: justify;
+}
+
+.ta-left {
+  text-align: left;
+}
+
+.ta-right {
+  text-align: right;
+}
+
+.ta-start {
+  text-align: start;
+}
+
+.ta-end {
+  text-align: end;
+}
+
+body {
+  background: linear-gradient(rgba(60, 109, 55, 0.671), rgba(78, 212, 45, 0.123)), url("/Imagenes/minecraft-inicio.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+h1, h2, h3 {
+  margin: 0;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 0 rgb(88, 46.5, 127.5), 2px 2px 0 rgb(88, 46.5, 127.5);
+  color: #F4F8FB;
+  text-align: center;
+}
+
+h4, h5, h6 {
+  font-family: "Chakra Petch";
+  margin: 0;
+  text-transform: uppercase;
+  text-align: center;
+  color: #F4F8FB;
+}
+
+p {
+  font-family: "Chakra Petch";
+  margin: 0;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: large;
+  color: #F4F8FB;
+}
+
+span {
+  margin: 5px;
+  font-size: 18px;
+  font-family: "Press Start 2P";
+  text-align: start;
+  color: #F0E68C;
+}
+
+h1 {
+  font-size: 32px;
+  color: #FCEE4B;
+}
+
+h2 {
+  font-size: 28px;
+  color: #41C6EC;
+}
+
+h3 {
+  font-size: 24px;
+  color: #5E7C16;
+}
+
+h4 {
+  font-size: 20px;
+  color: #B80000;
+}
+
+h5 {
+  font-size: 16px;
+  color: #38D2C5;
+}
+
+h6 {
+  font-size: 14px;
+  color: #B3B3B3;
+}
+
+/*# sourceMappingURL=style.css.map */
