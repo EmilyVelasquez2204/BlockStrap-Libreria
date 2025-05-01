@@ -1,0 +1,27 @@
+// Solo para visualización 
+.demo-box {
+    background-color: #ddd;
+    padding: 15px;
+    margin: 5px;
+    text-align: center;
+    
+    // Variantes de demo-box 
+    &--primary {
+      background-color: #c8e6ff;
+      border: 1px solid #2196f3;
+    }
+    
+    &--secondary {
+      background-color: #e2e2e2;
+      border: 1px solid #757575;
+    }
+    
+    // Estados diferentes
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+    
+  
+  }
