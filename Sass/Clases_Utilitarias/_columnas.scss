@@ -1,0 +1,106 @@
+
+// Define las clases para columnas en un sistema grid
+
+@use '../Clases_Utilitarias/breakpoints' as *;
+@use '../Clases_Utilitarias/padding_margenes' as *;
+@use '../Clases_Utilitarias/mixins' as *;
+
+// Clases para número de columnas
+@for $i from 1 through $grid-columns {
+  .cols-#{$i} {
+    grid-template-columns: repeat($i, 1fr);
+    
+    // Responsive breakpoints
+    @include breakpoints_max(lg) {
+      @if $i > 4 {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+    
+    @include breakpoints_max(md) {
+      @if $i > 2 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    @include breakpoints_max(sm) {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+// Clases para ancho de columnas (spanning)
+@for $i from 1 through $grid-columns {
+  .col-span-#{$i} {
+    grid-column: span $i;
+    
+    // Responsive breakpoints
+    @include breakpoints_max(md) {
+      @if $i > 2 {
+        grid-column: span 2;
+      }
+    }
+    
+    @include breakpoints_max(sm) {
+      grid-column: span 1;
+    }
+  }
+}
+
+// Clases para iniciar en una columna específica
+@for $i from 1 through $grid-columns {
+  .col-start-#{$i} {
+    grid-column-start: $i;
+    
+    @include breakpoints_max(sm) {
+      grid-column-start: 1;
+    }
+  }
+}
+
+// Clases para terminar en una columna específica
+@for $i from 1 through $grid-columns {
+  .col-end-#{$i} {
+    grid-column-end: $i;
+    
+    @include breakpoints_max(sm) {
+      grid-column-end: auto;
+    }
+  }
+}
+
+// Alineación de columnas
+.cols-start {
+  justify-content: start;
+}
+
+.cols-center {
+  justify-content: center;
+}
+
+.cols-end {
+  justify-content: end;
+}
+
+.cols-stretch {
+  justify-content: stretch;
+}
+
+.cols-space-between {
+  justify-content: space-between;
+}
+
+.cols-space-around {
+  justify-content: space-around;
+}
+
+.cols-space-evenly {
+  justify-content: space-evenly;
+}
+
+// Espaciado entre columnas
+@for $i from 0 through 8 {
+  .cols-gap-#{$i} {
+    column-gap: $i * $pixel-size;
+  }
+}
