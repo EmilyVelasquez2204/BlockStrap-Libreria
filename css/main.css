@@ -1980,21 +1980,21 @@ footer {
 }
 
 /*---------------------ESTILOS NAVS RESPONSIVOS--------------------------*/
-.navbar {
+.nav {
   width: 100%;
   box-sizing: border-box;
   margin-bottom: 20px;
 }
-.navbar ul {
+.nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   display: flex;
 }
-.navbar li {
+.nav li {
   position: relative;
 }
-.navbar a {
+.nav a {
   text-decoration: none;
   display: block;
   text-align: center;
