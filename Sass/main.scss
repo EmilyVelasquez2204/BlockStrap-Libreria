@@ -4,11 +4,18 @@
 @use'Clases_Utilitarias/bordes';
 @use'Clases_Utilitarias/movimiento';
 @use'Clases_Utilitarias/breakpoints';
+@use 'Clases_Utilitarias/fuente';
+@use 'Clases_Utilitarias/padding_margenes';
+@use 'fondos';
+@use 'Clases_Utilitarias/redondear_elementos';
+//importando clases de Componentes
 @use 'Componentes/botones' ;
 @use 'Componentes/formularios';
 @use 'Componentes/alertas';
 @use 'Componentes/nav';
 @use 'Componentes/container';
 @use 'Componentes/badges';
-@use 'Clases_Utilitarias/fuente';
+@use 'Componentes/card';
+
+
 

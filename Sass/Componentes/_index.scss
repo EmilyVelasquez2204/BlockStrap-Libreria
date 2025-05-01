@@ -1,8 +1,38 @@
-.principal {
-  font-family: 'MinecraftFont', Arial, sans-serif;
-  background-color: #292929;
-  color: white;
-  background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('Imagenes/wallpaper_minecraft_pc_bundle_2560x1440.png'); // REEMPLAZAR: Textura de fondo de tierra/piedra
+@use '../Clases_Utilitarias/paleta' as *;
+@use '../Clases_Utilitarias/fuente' as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  background-color: $verde-pasto;
+  padding: 12px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 4px solid $verde-hoja;
+
+
+
+  .navigation {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+
+    a {
+      color: #ffffff;
+      text-decoration: none;
+      margin: 0 10px;
+      font-size: 1.3rem;
+      padding: 8px 16px;
+      background-color: rgba(0, 0, 0, 0.2);
+      border-radius: 4px;
+    }
+  }
+
 }
 
 .hero {
@@ -10,88 +40,74 @@
   height: 600px;
   display: flex;
   align-items: center;
-  background: url(/BlockStrap-Libreria/Imagenes/integrantes.jpg) center/cover; // REEMPLAZAR: Imagen de fondo panorámica de Minecraft
-}
+  background: url('/Imagenes/wallpaper_minecraft_Modular_A_2560x1440.png') center/cover;
 
-.hero-content {
-  padding: 40px;
-  width: 60%;
-  z-index: 2;
-}
+  .floating-blocks {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
 
-.title {
-  font-size: 4rem;
-  color: #ffdb5c;
-  text-shadow: 3px 3px 0 #7d3800, 5px 5px 0 #000;
-  margin-bottom: 20px;
-}
+    .block {
+      position: absolute;
+      width: 48px;
+      height: 48px;
+      background-size: cover;
+      animation: float 8s infinite ease-in-out;
 
-.description {
-  font-size: 1.3rem;
-  line-height: 1.7;
-  color: #ffffff;
-  background-color: rgba(0, 0, 0, 0.7);
-  padding: 20px;
-  border-left: 6px solid #ffdb5c;
-  margin-bottom: 30px;
-}
-
-.minecraft-btn {
-  display: inline-block;
-  padding: 12px 24px;
-  background-color: #5c8d3e;
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  text-transform: uppercase;
-  box-shadow: inset 0 -4px 0 #3d6e2a, 0 4px 0 #000;
-  border-radius: 4px;
-}
-
-.floating-blocks {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-}
-
-.block {
-  position: absolute;
-  width: 48px;
-  height: 48px;
-  background-size: cover;
-  animation: float 8s infinite ease-in-out; // REEMPLAZAR: Texturas de bloques de Minecraft
-
-  &:nth-child(1) {
-    top: 15%;
-    left: 10%;
+      &:nth-child(1) { top: 15%; left: 10%; }
+      &:nth-child(2) { top: 25%; left: 85%; }
+      &:nth-child(3) { top: 65%; left: 5%; }
+      &:nth-child(4) { top: 45%; left: 92%; }
+    }
   }
 
-  &:nth-child(2) {
-    top: 25%;
-    left: 85%;
+  .hero-content {
+    padding: 40px;
+    width: 60%;
+    z-index: 2;
+
+    .title {
+      font-size: 4rem;
+      color: #ffdb5c;
+      text-shadow: 3px 3px 0 #7d3800, 5px 5px 0 #000;
+      margin-bottom: 20px;
+    }
+
+    .description {
+      font-size: 1.3rem;
+      line-height: 1.7;
+      color: #ffffff;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 20px;
+      border-left: 6px solid #ffdb5c;
+      margin-bottom: 30px;
+    }
+
+    .minecraft-btn {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #5c8d3e;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      text-transform: uppercase;
+      box-shadow: inset 0 -4px 0 #3d6e2a, 0 4px 0 #000;
+      border-radius: 4px;
+    }
+    
   }
 
-  &:nth-child(3) {
-    top: 65%;
-    left: 5%;
+  .minecraft-character {
+    position: absolute;
+    right: 10%;
+    bottom: 0;
+    width: 300px;
+    height: 500px;
+    background: url('/api/placeholder/300/500') no-repeat bottom center;
+    background-size: contain;
+    z-index: 2;
   }
-
-  &:nth-child(4) {
-    top: 45%;
-    left: 92%;
-  }
-}
-
-.minecraft-character {
-  position: absolute;
-  right: 10%;
-  bottom: 0;
-  width: 300px;
-  height: 500px;
-  background: url('/api/placeholder/300/500') no-repeat bottom center; // REEMPLAZAR: Imagen de personaje de Minecraft
-  background-size: contain;
-  z-index: 2;
 }
 
 @keyframes float {
@@ -109,4 +125,3 @@ footer {
   text-align: center;
   border-top: 4px solid #5c8d3e;
 }
-
