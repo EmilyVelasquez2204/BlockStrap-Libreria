@@ -14,7 +14,7 @@
 $border-width: 3px; // Grosor del borde de las alertas
 $alert-padding: 1rem; // Espaciado interior (padding) de la alerta
 $shadow-default: 3px 3px 0 rgba(0, 0, 0, 0.4); // Sombra predeterminada tipo pixel
-$pixel-size: 4px; // Tamaño de píxel para paddings y márgenes
+$pixel-size: 4px; // Tamaño base para padding y márgenes
 
 // Mixin para aplicar efectos compartidos entre todas las alertas
 @mixin alert-effects {
@@ -56,7 +56,7 @@ $pixel-size: 4px; // Tamaño de píxel para paddings y márgenes
   @include breakpoints_max(sm) {
     font-size: 0.9rem;
     padding: 0.7rem;
-    padding: 2 * $pixel-size; // p-2 directo en lugar de @extend
+    padding: 2 * $pixel-size; // p-2
     
     &::before {
       width: 18px;
@@ -68,21 +68,21 @@ $pixel-size: 4px; // Tamaño de píxel para paddings y márgenes
   
   // Para tablets
   @include breakpoints_between(sm, lg) {
-    margin: 3 * $pixel-size; // m-3 directo en lugar de @extend
+    margin: 3 * $pixel-size; // m-3
   }
   
   // Para pantallas medianas
   @include breakpoints_min(md) {
-    padding-top: 3 * $pixel-size; // py-3 (parte superior) directo
-    padding-bottom: 3 * $pixel-size; // py-3 (parte inferior) directo
-    padding-left: 4 * $pixel-size; // px-4 (parte izquierda) directo
-    padding-right: 4 * $pixel-size; // px-4 (parte derecha) directo
+    padding-top: 3 * $pixel-size; // py-3
+    padding-bottom: 3 * $pixel-size; // py-3
+    padding-left: 4 * $pixel-size; // px-4
+    padding-right: 4 * $pixel-size; // px-4
   }
   
   // Para pantallas grandes
   @include breakpoints_min(xl) {
-    margin: 4 * $pixel-size; // m-4 directo en lugar de @extend
-    @extend .sf-3;
+    margin: 4 * $pixel-size; // m-4
+    font-size: 1.17rem; // equivalente a sf-3
   }
 }
 
@@ -90,7 +90,7 @@ $pixel-size: 4px; // Tamaño de píxel para paddings y márgenes
 .alert-creeper {
   background-color: $verde-oscuro;
   border: $border-width solid $verde-pasto;
-  @extend .rde-s; // Bordes redondeados pequeños
+  border-radius: 2px; // rde-s (bordes redondeados pequeños)
 
   &::before {
     content: "💥"; // Ícono de explosión
@@ -100,7 +100,7 @@ $pixel-size: 4px; // Tamaño de píxel para paddings y márgenes
   &:hover {
     // Sombra verdosa al pasar el mouse
     box-shadow: 0 0 10px rgba($verde-pasto, 0.7);
-    @extend .move-up; // Aplicamos movimiento hacia arriba
+    transform: translateY(-5px); // move-up
   }
 }
 
@@ -108,7 +108,7 @@ $pixel-size: 4px; // Tamaño de píxel para paddings y márgenes
 .alert-zombie {
   background-color: $verde-lodoso;
   border: $border-width solid darken($verde-lodoso, 10%);
-  @extend .creeper-shadow; // Aplicamos sombra estilo creeper
+  box-shadow: $creeper-shadow; // creeper-shadow
 
   &::before {
     content: "🧟"; // Ícono de zombie
@@ -134,7 +134,7 @@ $pixel-size: 4px; // Tamaño de píxel para paddings y márgenes
   background-color: $gris-lobo;
   color: #111; // Texto oscuro
   border: $border-width solid darken($gris-lobo, 20%);
-  @extend .skelet-text; // Aplicamos estilo de texto esqueleto
+  font-family: $skelet-text; // skelet-text
 
   &::before {
     content: "🏹"; // Ícono de arco
@@ -148,7 +148,7 @@ $pixel-size: 4px; // Tamaño de píxel para paddings y márgenes
   background-color: $purpura-oscuro;
   border: $border-width solid $purpura-cristal;
   color: lighten($purpura-cristal, 20%); // Texto más claro
-  @extend .borde-end-sombras; // Usamos el borde del end con sombras
+  box-shadow: 0 0 8px $purpura-oscuro; // borde-end-sombras
 
   &::before {
     content: "👁️"; // Ícono de ojo
@@ -164,7 +164,7 @@ $pixel-size: 4px; // Tamaño de píxel para paddings y márgenes
 .alert-steve {
   background-color: $azul-profundo;
   border: $border-width solid $marron-caballo;
-  @extend .borde-basico; // Aplicamos el borde básico
+  border-style: solid; // borde-basico
 
   &::before {
     content: "⛏️"; // Ícono de pico
@@ -176,7 +176,7 @@ $pixel-size: 4px; // Tamaño de píxel para paddings y márgenes
 .alert-aldeano {
   background-color: $marron-tierra;
   border: $border-width solid $verde-menta;
-  @extend .ta-center; // Centramos el texto
+  text-align: center; // ta-center
 
   &::before {
     content: "✧"; // Ícono de esmeralda
@@ -188,7 +188,7 @@ $pixel-size: 4px; // Tamaño de píxel para paddings y márgenes
 .alert-redstone {
   background-color: $rojo-intenso;
   border: $border-width solid $rojo-explosivo;
-  @extend .color-font-TNT; // Usamos el color de fuente TNT
+  color: $amarillo-oro; // color-font-TNT
 
   &::before {
     content: "⚡"; // Ícono de energía
@@ -197,7 +197,7 @@ $pixel-size: 4px; // Tamaño de píxel para paddings y márgenes
 
   &:hover {
     box-shadow: 0 0 10px $rojo-explosivo;
-    @extend .move-right; // Se mueve a la derecha en hover
+    transform: translateX(5px); // move-right
   }
 }
 
@@ -205,7 +205,7 @@ $pixel-size: 4px; // Tamaño de píxel para paddings y márgenes
 .alert-agua {
   background-color: $azul-profundo;
   border: $border-width solid $azul-mar;
-  @extend .rde-m; // Bordes redondeados medianos
+  border-radius: 4px; // rde-m (bordes redondeados medianos)
 
   &::before {
     content: "🌊"; // Ícono de ola
@@ -231,7 +231,7 @@ $pixel-size: 4px; // Tamaño de píxel para paddings y márgenes
   background-color: $rojo-oscuro;
   border: $border-width solid $naranja-lava;
   color: $amarillo-oro;
-  @extend .sf-3; // Tamaño de fuente 3
+  font-size: 1.17rem; // sf-3
 
   &::before {
     content: "🔥"; // Ícono de fuego
@@ -243,8 +243,8 @@ $pixel-size: 4px; // Tamaño de píxel para paddings y márgenes
 .alert-exito {
   background-color: darken($azul-diamante, 20%);
   border: $border-width solid $azul-diamante;
-  @extend .borde-diamante; // Aplicamos el borde de diamante
-  @extend .move-center; // Centramos el contenido
+  border-style: dashed; // borde-diamante
+  text-align: center; // move-center
 
   &::before {
     content: "💎"; // Ícono de diamante
@@ -253,7 +253,7 @@ $pixel-size: 4px; // Tamaño de píxel para paddings y márgenes
 
   &:hover {
     box-shadow: 0 0 10px $azul-diamante;
-    @extend .rde-l; // Bordes redondeados grandes en hover
+    border-radius: 8px; // rde-l (bordes redondeados grandes en hover)
   }
 }
 
@@ -290,5 +290,3 @@ $pixel-size: 4px; // Tamaño de píxel para paddings y márgenes
     box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
   }
 }
-
-
