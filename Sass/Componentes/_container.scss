@@ -87,7 +87,7 @@
   @extend .borde-panel-importante;  // Implementamos el borde de panel importante
   background-color: $rojo-oscuro;
   @extend .color-font-oro;     // Color de texto oro
-  @extend .ttxt-Minecraft;     // Tipo de fuente
+  //@extend .ttxt-Minecraft;     // Tipo de fuente
   
   // Patrón de fondo tipo "netherrack"
   background-image: radial-gradient(

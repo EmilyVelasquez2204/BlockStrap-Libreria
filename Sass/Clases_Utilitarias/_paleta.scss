@@ -60,6 +60,34 @@ $color-etiqueta: #ff5555;
 $color-atributo: #00ffff;
 $color-texto: #fff;
 $color-input: #dad2c6;
-$color-fondo: #f4f1ee;
+
 $sombra-oscura-marron:#5d3a00;
+
+
+//COLORES DE FONDO
+$color-solido: (
+   "pasto":$verde-pasto,
+"tierra":$marron-tierra,
+"neon":$verde-neon,
+"madera": $marron-madera,
+"azul-pofundo": $azul-profundo,
+"azul-mar": $azul-mar,
+"gel": $verde-gel,
+"negro-purpura":$negro-purpura,
+"diamante":$azul-diamante,
+"fantasma": $palido-fantasma,
+"fuego": $amarillo-fuego,
+"turquesa-grisaceo": $turquesa-grisaceo,
+"purpura-cristal": $purpura-cristal,
+"verde-menta":$verde-menta,
+ "turquesa-brillante":$turquesa-brillante,
+ "oro":$amarillo-oro
+);
+
+
+@each $color, $valorcolor in $color-solido {
+    .cf-#{$color} {   
+        background-color: $valorcolor;
+    }
+}
 
