@@ -38,6 +38,19 @@ color: $rojo-intenso;
 }
 */
 
+.form-simple{
+  
+    display: flex;
+    flex-direction: column;
+    border: 1px solid $border;
+    border-radius: $radio;
+    margin: 5vh auto;
+    padding: 1vh;
+    width: 50px;
+    
+  
+}
+
 .minecraft-form{
   background-color: $color-tierra; 
   border: 4px solid $sombra-oscura-marron; // cambiar
