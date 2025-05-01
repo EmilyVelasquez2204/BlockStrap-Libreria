@@ -324,7 +324,7 @@ $circle: 50%;
     
     .card-p3 {
         @extend .sf-2;
-        color: $color-texto;
+        color: #080808;
         display: -webkit-box;
         -webkit-line-clamp: 3;
         line-clamp: 3;
@@ -368,46 +368,50 @@ $circle: 50%;
 }
 
   
-  .card-5 {
-    @extend .card;
-    width: 320px;
-    height: 400px;
+.card-5 {
+  @extend .card;
+  width: 400px;
+  height: 400px;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  @extend .mb-3;
+  @extend .borde-diamante;
+  background-color: $marron-tierra;
+
+  .card-img-5 {
+    width: 40%;             // ocupa un 40% fijo del ancho
+    height: 100%;
+    object-fit: cover;
+    flex-shrink: 0;         // evita que se reduzca
+  }
+
+  .card-content-5 {
+    flex: 1;                // ocupa el resto del espacio
+    min-width: 0;           // evita que crezca más de lo necesario
+    padding: 0.8rem;
     display: flex;
-    flex-direction: row;
-    overflow: hidden;
-    @extend .mb-3;
-    @extend .borde-diamante;
-  
-    .card-img-5 {
-      width: 200px;
-      height: 100%;
-      object-fit: cover;
+    flex-direction: column;
+    justify-content: center;
+    background-color: transparent;
+    box-sizing: border-box;
+
+    .card-titulo5 {
+      @extend .sf-3;
+      font-family: $font-minecraft1;
+      @extend .color-font-hoja;
+      margin-bottom: 0.5rem;
     }
-  
-    .card-content-5 {
-      width: 60%;
-      padding: 1rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      background-color: transparent;
-  
-      .card-titulo5 {
-        @extend .sf-3;
-        font-family: $font-minecraft1;
-        @extend .color-font-obsidiana;
-        margin-bottom: 0.5rem;
-      }
-  
-      .card-p5 {
-        @extend .sf-2;
-        font-family: $font-minecraft2;
-        //color: $color-texto;
-        color: #080808;
-        @extend .ta-justify;
-      }
+
+    .card-p5 {
+      @extend .sf-2;
+      font-family: $font-minecraft2;
+      color: #080808;
+      @extend .ta-justify;
     }
   }
+}
+
 
 
   .card-6 {
