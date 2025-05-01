@@ -256,3 +256,36 @@ $shadow-default: 3px 3px 0 rgba(0, 0, 0, 0.4); // Sombra predeterminada tipo pix
   }
 }
 
+ // Elemento de enlace dentro de la alerta
+ .alert-link-button {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  background-color: $verde-brillante;
+  color: $color-texto;
+  border: 2px solid darken($verde-brillante, 15%);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 18px;
+  transition: all 0.2s ease;
+  
+  &::after {
+    content: "→";
+  }
+  
+  &:hover {
+    background-color: lighten($verde-brillante, 10%);
+    transform: translateY(-50%) scale(1.1);
+  }
+  
+  &:active {
+    transform: translateY(-50%) scale(0.95);
+    box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
+  }
+}
