@@ -101,6 +101,51 @@
   text-align: end;
 }
 
+h1, h2, h3 {
+  font-family: "Press Start 2P";
+  margin: 0;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 0 rgb(88, 46.5, 127.5), 2px 2px 0 rgb(88, 46.5, 127.5);
+  color: #F4F8FB;
+}
+
+h4, h5, h6, p {
+  font-family: "Chakra Petch";
+  margin: 0;
+  text-transform: uppercase;
+  color: #F4F8FB;
+}
+
+h1 {
+  font-size: 32px;
+  color: #FCEE4B;
+}
+
+h2 {
+  font-size: 28px;
+  color: #41C6EC;
+}
+
+h3 {
+  font-size: 24px;
+  color: #5E7C16;
+}
+
+h4 {
+  font-size: 20px;
+  color: #B80000;
+}
+
+h5 {
+  font-size: 16px;
+  color: #38D2C5;
+}
+
+h6 {
+  font-size: 14px;
+  color: #B3B3B3;
+}
+
 .creeper-shadow, .container-overworld, .borde-basico, .borde-panel-importante, .borde-end-sombras, .container-nether, .container-tnt, .container-end {
   border: 1px solid #000;
   font-family: "Press Start 2P";
@@ -121,11 +166,33 @@
   text-shadow: 2px 2px 0 #F4F8FB, 20px 20px 7px #5A3A1A; /* sombra negra tipo bloque */
 }
 
-.principal {
-  font-family: "MinecraftFont", Arial, sans-serif;
-  background-color: #292929;
-  color: white;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("Imagenes/wallpaper_minecraft_pc_bundle_2560x1440.png");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  background-color: #5E7C16;
+  padding: 12px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 4px solid #3A7425;
+}
+.header .navigation {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+}
+.header .navigation a {
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 1.3rem;
+  padding: 8px 16px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
 }
 
 .hero {
@@ -133,23 +200,49 @@
   height: 600px;
   display: flex;
   align-items: center;
-  background: url(/BlockStrap-Libreria/Imagenes/integrantes.jpg) center/cover;
+  background: url(/BlockStrap-Libreria/Imagenes/wallpaper_minecraft_Modular_A_2560x1440.png) center/cover;
 }
-
-.hero-content {
+.hero .floating-blocks {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.hero .floating-blocks .block {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  background-size: cover;
+  animation: float 8s infinite ease-in-out;
+}
+.hero .floating-blocks .block:nth-child(1) {
+  top: 15%;
+  left: 10%;
+}
+.hero .floating-blocks .block:nth-child(2) {
+  top: 25%;
+  left: 85%;
+}
+.hero .floating-blocks .block:nth-child(3) {
+  top: 65%;
+  left: 5%;
+}
+.hero .floating-blocks .block:nth-child(4) {
+  top: 45%;
+  left: 92%;
+}
+.hero .hero-content {
   padding: 40px;
   width: 60%;
   z-index: 2;
 }
-
-.title {
+.hero .hero-content .title {
   font-size: 4rem;
   color: #ffdb5c;
   text-shadow: 3px 3px 0 #7d3800, 5px 5px 0 #000;
   margin-bottom: 20px;
 }
-
-.description {
+.hero .hero-content .description {
   font-size: 1.3rem;
   line-height: 1.7;
   color: #ffffff;
@@ -158,8 +251,7 @@
   border-left: 6px solid #ffdb5c;
   margin-bottom: 30px;
 }
-
-.minecraft-btn {
+.hero .hero-content .minecraft-btn {
   display: inline-block;
   padding: 12px 24px;
   background-color: #5c8d3e;
@@ -170,39 +262,7 @@
   box-shadow: inset 0 -4px 0 #3d6e2a, 0 4px 0 #000;
   border-radius: 4px;
 }
-
-.floating-blocks {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-}
-
-.block {
-  position: absolute;
-  width: 48px;
-  height: 48px;
-  background-size: cover;
-  animation: float 8s infinite ease-in-out;
-}
-.block:nth-child(1) {
-  top: 15%;
-  left: 10%;
-}
-.block:nth-child(2) {
-  top: 25%;
-  left: 85%;
-}
-.block:nth-child(3) {
-  top: 65%;
-  left: 5%;
-}
-.block:nth-child(4) {
-  top: 45%;
-  left: 92%;
-}
-
-.minecraft-character {
+.hero .minecraft-character {
   position: absolute;
   right: 10%;
   bottom: 0;
@@ -1698,6 +1758,48 @@ footer {
 
 .link-:hover {
   background-color: #D8AF93;
+}
+
+.principal {
+  background-image: url("BlockStrap-Libreria/Imagenes/minecraft-inicio.png");
+}
+
+.header {
+  font-family: "Press Start 2P";
+  color: #F4F8FB;
+}
+.header .navbar {
+  background: #1D1D1D;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  flex-wrap: wrap;
+}
+.header .navbar .logo {
+  display: flex;
+  align-items: center;
+}
+.header .navbar .logo img {
+  width: 32px;
+  margin-right: 0.5rem;
+}
+.header .navbar .logo span {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.header .navbar .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+.header .navbar .nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+.header .navbar .nav-links li a:hover {
+  color: #00ff8c;
 }
 
 .container {
