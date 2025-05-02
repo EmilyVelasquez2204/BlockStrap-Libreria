@@ -35,6 +35,7 @@ Estas instrucciones te permitirán obtener una copia del proyecto en funcionamie
 * Crear una carpeta de manera local en el directorio de tu computadora.
 * Estando en la carpeta, abrir la consola con Crtl + ñ y agregar el siguiente comando "npm i npm-blockstrap-libreria"
 * Le damos aceptar y ya tendriamos el repositorio en nuestro ordenador
+* Luego hacemos el llamado del main.css para que funcione
 
 ### Pre-Requisitos 
 
