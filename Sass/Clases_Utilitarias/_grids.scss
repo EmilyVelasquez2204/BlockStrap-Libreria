@@ -1,0 +1,100 @@
+// Estilos básicos para ver el grid correctamente
+.grid-container,
+.grid-container-bordered,
+.grid-container-diamante,
+.grid-container-tierra,
+.grid-container-end,
+.grid-navbar,
+.grid-cards,
+.grid-footer,
+.grid-areas-container {
+  display: grid;
+  gap: 10px;
+}
+
+// Estilo para los elementos dentro del grid (divs dentro de los containers)
+.grid-container > div,
+.grid-container-bordered > div,
+.grid-container-diamante > div,
+.grid-container-tierra > div,
+.grid-container-end > div,
+.grid-navbar > div,
+.grid-cards > div,
+.grid-footer > div,
+.grid-areas-container > .header,
+.grid-areas-container > .sidebar,
+.grid-areas-container > .main,
+.grid-areas-container > .footer {
+  padding: 10px;
+  background-color: rgb(216, 160, 234);
+  border: 1px solid #ccc;
+}
+
+// Estilos para el grid container
+.grid-container {
+  grid-template-columns: repeat(4, 1fr); 
+}
+
+.grid-container-bordered {
+  border: 2px solid #333;
+}
+
+.grid-container-diamante {
+  border: 4px double blue;
+  background-color: #e0f7fa;
+}
+
+.grid-container-tierra {
+  border: 3px solid brown;
+  background-color: #f4e1d2;
+}
+
+.grid-container-end {
+  border: 2px groove purple;
+  background-color: #f3e5ab;
+}
+
+.grid-navbar {
+  grid-template-columns: 1fr 2fr 1fr;
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+.grid-cards {
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  background-color: #f9f9f9;
+}
+
+.grid-footer {
+  grid-template-columns: repeat(4, 1fr);
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+// Contenedor con áreas nombradas para un layout
+.grid-areas-container {
+  grid-template-columns: 1fr 3fr;
+  grid-template-areas:
+    "header header"
+    "sidebar main"
+    "footer footer";
+  gap: 20px;
+  min-height: 100vh; // Asegura que el contenedor ocupe toda la altura disponible
+}
+
+// Estilos para los elementos dentro del grid-areas-container
+.grid-areas-container .header {
+  grid-area: header;
+}
+
+.grid-areas-container .sidebar {
+  grid-area: sidebar;
+}
+
+.grid-areas-container .main {
+  grid-area: main;
+}
+
+.grid-areas-container .footer {
+  grid-area: footer;
+}
